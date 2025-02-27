@@ -1,0 +1,174 @@
+---
+layout: default
+title: Blog - Financial Insights & Tips
+description: Expert advice, industry trends, and actionable tips to help your small business thrive financially.
+---
+
+<div class="blog-container">
+    <div class="container">
+        <div class="blog-header">
+            <h1>Financial Insights & Tips</h1>
+            <p>Expert advice, industry trends, and actionable tips to help your small business thrive financially.</p>
+        </div>
+        
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" id="searchInput" class="search-input" placeholder="Search for articles...">
+            <button class="search-btn" id="searchBtn">Search</button>
+        </div>
+        
+        <!-- Blog Tags -->
+        <div class="tag-container">
+            <div class="tag active" data-tag="all">All</div>
+            {% assign all_tags = "" | split: "" %}
+            {% for post in site.posts %}
+                {% for tag in post.tags %}
+                    {% assign all_tags = all_tags | push: tag %}
+                {% endfor %}
+            {% endfor %}
+            {% assign unique_tags = all_tags | uniq | sort %}
+            {% for tag in unique_tags %}
+                <div class="tag" data-tag="{{ tag | slugify }}">{{ tag }}</div>
+            {% endfor %}
+        </div>
+        
+        <!-- Blog Grid -->
+        <div class="blog-grid" id="blogGrid">
+            {% for post in site.posts %}
+            <article class="blog-card" data-tags="{% for tag in post.tags %}{{ tag | slugify }}{% unless forloop.last %},{% endunless %}{% endfor %}">
+                <div class="blog-image" {% if post.image %}style="background-image: url('{{ post.image }}');"{% else %}style="background-image: url('https://placehold.co/600x400/e2e8f0/1a365d?text=Jcampbell+Bookkeeping');"{% endif %}></div>
+                <div class="blog-content">
+                    <div class="blog-tags">
+                        {% for tag in post.tags limit:3 %}
+                        <span class="blog-tag">{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                    <h2 class="blog-title">{{ post.title }}</h2>
+                    <div class="blog-meta">
+                        <span>📅 {{ post.date | date: "%B %d, %Y" }}</span>
+                        {% if post.author %}<span>👤 {{ post.author }}</span>{% endif %}
+                    </div>
+                    <p class="blog-excerpt">
+                        {% if post.excerpt %}
+                            {{ post.excerpt | strip_html | truncatewords: 30 }}
+                        {% endif %}
+                    </p>
+                    <a href="{{ post.url }}" class="btn btn-outline blog-readmore">Read More</a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+        
+        <!-- No Results Message (hidden by default) -->
+        <div class="no-results" id="noResults" style="display: none;">
+            <h3>No matching articles found</h3>
+            <p>Try adjusting your search or browse all articles by clearing filters.</p>
+            <button class="btn btn-outline" id="clearFilters">Clear All Filters</button>
+        </div>
+        
+        <!-- Pagination -->
+        {% if paginator.total_pages > 1 %}
+        <div class="pagination">
+            {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path | relative_url }}" class="page-link">←</a>
+            {% endif %}
+            
+            {% for page in (1..paginator.total_pages) %}
+            <a href="{% if page == 1 %}{{ '/' | relative_url }}{% else %}{{ site.paginate_path | relative_url | replace: ':num', page }}{% endif %}" 
+               class="page-link {% if page == paginator.page %}active{% endif %}">
+                {{ page }}
+            </a>
+            {% endfor %}
+            
+            {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | relative_url }}" class="page-link">→</a>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<script>
+    // Blog filtering and search functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const blogGrid = document.getElementById('blogGrid');
+        const blogCards = document.querySelectorAll('.blog-card');
+        const tags = document.querySelectorAll('.tag');
+        const searchInput = document.getElementById('searchInput');
+        const searchBtn = document.getElementById('searchBtn');
+        const noResults = document.getElementById('noResults');
+        const clearFilters = document.getElementById('clearFilters');
+        
+        // Tag filtering
+        tags.forEach(tag => {
+            tag.addEventListener('click', function() {
+                // Update active tag
+                tags.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                const tagFilter = this.getAttribute('data-tag');
+                filterContent(tagFilter, searchInput.value);
+            });
+        });
+        
+        // Search functionality
+        searchBtn.addEventListener('click', function() {
+            const activeTag = document.querySelector('.tag.active').getAttribute('data-tag');
+            filterContent(activeTag, searchInput.value);
+        });
+        
+        // Enter key in search input
+        searchInput.addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') {
+                const activeTag = document.querySelector('.tag.active').getAttribute('data-tag');
+                filterContent(activeTag, searchInput.value);
+            }
+        });
+        
+        // Clear filters
+        clearFilters.addEventListener('click', function() {
+            searchInput.value = '';
+            const allTag = document.querySelector('.tag[data-tag="all"]');
+            tags.forEach(t => t.classList.remove('active'));
+            allTag.classList.add('active');
+            filterContent('all', '');
+        });
+        
+        // Filter blog posts based on tag and search query
+        function filterContent(tagFilter, searchQuery) {
+            let visibleCount = 0;
+            
+            blogCards.forEach(card => {
+                const cardTags = card.getAttribute('data-tags').split(',');
+                const cardTitle = card.querySelector('.blog-title').textContent.toLowerCase();
+                const cardExcerpt = card.querySelector('.blog-excerpt').textContent.toLowerCase();
+                
+                // Check if card matches tag filter
+                const matchesTag = tagFilter === 'all' || cardTags.includes(tagFilter);
+                
+                // Check if card matches search query
+                const searchLower = searchQuery.toLowerCase();
+                const matchesSearch = searchLower === '' || 
+                                    cardTitle.includes(searchLower) || 
+                                    cardExcerpt.includes(searchLower);
+                
+                // Show/hide card based on filters
+                if (matchesTag && matchesSearch) {
+                    card.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // Show/hide no results message
+            if (visibleCount === 0) {
+                noResults.style.display = 'block';
+                blogGrid.style.display = 'none';
+            } else {
+                noResults.style.display = 'none';
+                blogGrid.style.display = 'grid';
+            }
+        }
+    });
+</script>
