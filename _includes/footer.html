@@ -1,0 +1,119 @@
+<style>
+    /* Critical footer styles */
+    footer {
+        background-color: #1a202c;
+        color: white;
+        padding: 60px 0 20px;
+    }
+    
+    .footer-top {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+    
+    .footer-info h3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        color: white;
+    }
+    
+    .footer-info p {
+        margin-bottom: 20px;
+        color: #a0aec0;
+        max-width: 400px;
+    }
+    
+    .footer-links h4 {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        color: white;
+    }
+    
+    .footer-links ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .footer-links ul li {
+        margin-bottom: 10px;
+    }
+    
+    .footer-links ul li a {
+        color: #a0aec0;
+        transition: all 0.3s ease;
+        text-decoration: none;
+    }
+    
+    .footer-links ul li a:hover {
+        color: #ed8936;
+        padding-left: 5px;
+    }
+    
+    .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 20px;
+        text-align: center;
+        color: #a0aec0;
+        font-size: 0.9rem;
+    }
+    
+    @media (max-width: 992px) {
+        .footer-top {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<footer>
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-info">
+                <h3>Jcampbell Bookkeeping</h3>
+                <p>Professional bookkeeping services designed to give small businesses the financial clarity they need to thrive and grow.</p>
+                <p>Email: Jcampbellbookkeeping@gmail.com<br>
+                Phone: 978-273-0229</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/#services">Services</a></li>
+                    <li><a href="/#process">How It Works</a></li>
+                    <li><a href="/#about">About</a></li>
+                    <li><a href="/#faq">FAQ</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Blog Categories</h4>
+                <ul>
+                    <li><a href="/blog/?tag=tax">Tax Tips</a></li>
+                    <li><a href="/blog/?tag=bookkeeping">Bookkeeping Basics</a></li>
+                    <li><a href="/blog/?tag=small-business">Small Business</a></li>
+                    <li><a href="/blog/?tag=finance">Financial Planning</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> Jcampbell Bookkeeping. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Mobile Menu Toggle
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        
+        if (mobileToggle && navMenu) {
+            mobileToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                mobileToggle.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+            });
+        }
+    });
+</script>
