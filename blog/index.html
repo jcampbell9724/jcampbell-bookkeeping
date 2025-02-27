@@ -272,7 +272,7 @@ permalink: /blog/
                             {{ post.excerpt | strip_html | truncatewords: 30 }}
                         {% endif %}
                     </p>
-                    <a href="{{ post.url }}" class="blog-readmore">Read More</a>
+                    <a href="{{ post.url | relative_url }}" class="blog-readmore">Read More</a>
                 </div>
             </article>
             {% endfor %}
