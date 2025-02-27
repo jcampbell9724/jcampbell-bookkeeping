@@ -1,8 +1,9 @@
 title: Jcampbell Bookkeeping Blog
 description: Financial insights for small businesses
 theme: minima
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+
+url: "https://jcampbell9724.github.io"
+baseurl: "/jcampbell-bookkeeping"
 
 # Build settings
 markdown: kramdown
