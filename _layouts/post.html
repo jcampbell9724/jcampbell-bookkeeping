@@ -2,75 +2,184 @@
 layout: default
 ---
 
-<div class="post-container">
+<div class="blog-container">
     <article class="post">
-        <header class="post-header">
-            <h1 class="post-title">{{ page.title }}</h1>
-            <div class="post-meta">
-                <span>📅 {{ page.date | date: "%B %d, %Y" }}</span>
-                {% if page.author %}<span>👤 {{ page.author }}</span>{% endif %}
-            </div>
-            
-            {% if page.tags.size > 0 %}
-            <div class="post-tags">
-                {% for tag in page.tags %}
-                <span class="post-tag">{{ tag }}</span>
-                {% endfor %}
-            </div>
-            {% endif %}
-            
-            {% if page.image %}
-            <img src="{{ page.image }}" alt="{{ page.title }}" class="post-image">
-            {% endif %}
-        </header>
+        <div class="container">
+            <header class="post-header">
+                <h1 class="post-title">{{ page.title }}</h1>
+                <div class="post-meta">
+                    <span>📅 {{ page.date | date: "%B %d, %Y" }}</span>
+                    {% if page.author %}<span>👤 {{ page.author }}</span>{% endif %}
+                </div>
+                
+                {% if page.tags.size > 0 %}
+                <div class="post-tags">
+                    {% for tag in page.tags %}
+                    <span class="post-tag">{{ tag }}</span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                
+                {% if page.image %}
+                <img src="{{ page.image }}" alt="{{ page.title }}" class="post-image">
+                {% endif %}
+            </header>
 
-        <div class="post-content">
-            {{ content }}
-        </div>
-        
-        {% if page.author %}
-        <div class="post-author">
-            <img src="/assets/images/avatar.jpg" alt="{{ page.author }}" class="author-image">
-            <div class="author-bio">
-                <h3>{{ page.author }}</h3>
-                <p>Professional bookkeeper specializing in small business finances, tax preparation, and financial analysis.</p>
+            <div class="post-content">
+                {{ content }}
             </div>
-        </div>
-        {% endif %}
-        
-        <div class="post-navigation">
-            {% if page.previous.url %}
-            <a href="{{ page.previous.url }}" class="post-nav-link">
-                <span class="post-nav-label">← Previous Article</span>
-                <span class="post-nav-title">{{ page.previous.title }}</span>
-            </a>
-            {% else %}
-            <div></div>
-            {% endif %}
-            
-            {% if page.next.url %}
-            <a href="{{ page.next.url }}" class="post-nav-link" style="text-align: right;">
-                <span class="post-nav-label">Next Article →</span>
-                <span class="post-nav-title">{{ page.next.title }}</span>
-            </a>
-            {% endif %}
-        </div>
-        
-        {% if site.related_posts.size > 0 %}
-        <section class="related-posts">
-            <h2>Related Articles</h2>
-            <div class="related-grid">
-                {% for post in site.related_posts limit:3 %}
-                <a href="{{ post.url }}" class="related-card">
-                    <div class="related-image" {% if post.image %}style="background-image: url('{{ post.image }}');"{% else %}style="background-image: url('https://placehold.co/600x400/e2e8f0/1a365d?text=Jcampbell+Bookkeeping');"{% endif %}></div>
-                    <div class="related-content">
-                        <h3 class="related-title">{{ post.title }}</h3>
-                        <div class="related-meta">{{ post.date | date: "%B %d, %Y" }}</div>
-                    </div>
+
+            <div class="post-navigation">
+                {% if page.previous.url %}
+                <a href="{{ page.previous.url }}" class="post-nav-link">
+                    <span class="post-nav-label">← Previous Article</span>
+                    <span class="post-nav-title">{{ page.previous.title }}</span>
                 </a>
-                {% endfor %}
+                {% else %}
+                <div></div>
+                {% endif %}
+                
+                {% if page.next.url %}
+                <a href="{{ page.next.url }}" class="post-nav-link" style="text-align: right;">
+                    <span class="post-nav-label">Next Article →</span>
+                    <span class="post-nav-title">{{ page.next.title }}</span>
+                </a>
+                {% endif %}
             </div>
-        </section>
-        {% endif %}
+        </div>
     </article>
 </div>
+
+<style>
+    /* Basic post styles for consistent display */
+    .post {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    .post-header {
+        margin-bottom: 40px;
+    }
+    
+    .post-title {
+        font-size: 2.5rem;
+        color: #1a365d;
+        margin-bottom: 15px;
+        line-height: 1.2;
+    }
+    
+    .post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        color: #718096;
+        margin-bottom: 20px;
+    }
+    
+    .post-image {
+        width: 100%;
+        border-radius: 12px;
+        margin-bottom: 30px;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        max-height: 400px;
+        object-fit: cover;
+    }
+    
+    .post-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .post-tag {
+        background-color: rgba(43, 108, 176, 0.1);
+        color: #1a365d;
+        padding: 6px 15px;
+        border-radius: 50px;
+        font-size: 0.9rem;
+    }
+    
+    .post-content {
+        line-height: 1.8;
+        color: #1a202c;
+    }
+    
+    .post-content h2 {
+        font-size: 1.8rem;
+        color: #1a365d;
+        margin: 40px 0 20px;
+    }
+    
+    .post-content h3 {
+        font-size: 1.4rem;
+        color: #1a202c;
+        margin: 30px 0 15px;
+    }
+    
+    .post-content p {
+        margin-bottom: 20px;
+    }
+    
+    .post-content ul, .post-content ol {
+        margin: 0 0 20px 20px;
+    }
+    
+    .post-content li {
+        margin-bottom: 10px;
+    }
+    
+    .post-content blockquote {
+        border-left: 4px solid #ed8936;
+        padding-left: 20px;
+        margin: 30px 0;
+        font-style: italic;
+        color: #718096;
+    }
+    
+    .post-content img {
+        max-width: 100%;
+        border-radius: 8px;
+        margin: 20px 0;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+    
+    .post-navigation {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .post-nav-link {
+        max-width: 45%;
+        text-decoration: none;
+        color: #1a365d;
+    }
+    
+    .post-nav-label {
+        display: block;
+        color: #718096;
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+    }
+    
+    .post-nav-title {
+        font-weight: 500;
+    }
+    
+    @media (max-width: 768px) {
+        .post-title {
+            font-size: 2rem;
+        }
+        
+        .post-navigation {
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .post-nav-link {
+            max-width: 100%;
+        }
+    }
+</style>
