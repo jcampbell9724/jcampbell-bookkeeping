@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Jcampbell Bookkeeping | Financial Insights for Small Businesses</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore financial insights, bookkeeping tips, tax strategies, and small business advice on the Jcampbell Bookkeeping blog.">
+    <meta name="keywords" content="bookkeeping blog, small business finance, tax tips, accounting advice, business growth, financial insights, bookkeeping best practices">
+    <meta name="author" content="Jcampbell Bookkeeping">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Jcampbell Bookkeeping Blog - Financial Insights for Small Businesses">
+    <meta property="og:description" content="Expert bookkeeping advice and financial insights to help your small business thrive.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jcampbellbookkeeping.com/blog.html">
+    
+    <!-- Canonical URL -->
+    <meta rel="canonical" href="https://jcampbellbookkeeping.com/blog.html">
+    <meta name="theme-color" content="#1a365d">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="7 days">
+    
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #2b6cb0;
+            --accent-color: #ed8936;
+            --light-color: #f7fafc;
+            --dark-color: #1a202c;
+            --success-color: #48bb78;
+            --grey-color: #718096;
+            --font-main: 'Segoe UI', Roboto, Oxygen, 'Helvetica Neue', sans-serif;
+            --box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-main);
+            line-height: 1.7;
+            color: var(--dark-color);
+            background-color: #ffffff;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section-padding {
+            padding: 100px 0;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 6px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-accent {
+            background-color: var(--accent-color);
+        }
+        
+        .btn-accent:hover {
+            background-color: #dd6b20;
+        }
+        
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            padding: 10px 0;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-icon {
+            margin-right: 10px;
+            color: var(--accent-color);
+        }
+        
+        .nav-menu {
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-link {
+            margin: 0 15px;
+            font-weight: 500;
+            position: relative;
+            padding: 5px 0;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background-color: var(--accent-color);
+            transition: var(--transition);
+        }
+        
+        .nav-link:hover {
+            color: var(--accent-color);
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: var(--primary-color);
+        }
+        
+        /* Blog Header Section */
+        .blog-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 150px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .blog-header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255, 255, 255, 0.1)" d="M0,224L48,213.3C96,203,192,181,288,170.7C384,160,480,160,576,165.3C672,171,768,181,864,186.7C960,192,1056,192,1152,176C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.8;
+        }
+        
+        .blog-header-content {
+            position: relative;
+            z-index: 10;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .blog-header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            font-weight: 800;
+        }
+        
+        .blog-header p {
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        /* Blog Content Section */
+        .blog-content {
+            padding: 80px 0;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
+        }
+        
+        .blog-main {
+            margin-bottom: 40px;
+        }
+        
+        .blog-post {
+            margin-bottom: 60px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 40px;
+        }
+        
+        .blog-post:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        
+        .post-meta {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            color: var(--grey-color);
+            font-size: 0.9rem;
+        }
+        
+        .post-meta span {
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .post-meta i {
+            margin-right: 8px;
+        }
+        
+        .post-category {
+            background-color: rgba(43, 108, 176, 0.1);
+            color: var(--primary-color);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-weight: 500;
+            font-size: 0.85rem;
+        }
+        
+        .blog-post h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+        }
+        
+        .blog-post h2 a {
+            color: inherit;
+            transition: var(--transition);
+        }
+        
+        .blog-post h2 a:hover {
+            color: var(--primary-color);
+        }
+        
+        .post-excerpt {
+            margin-bottom: 25px;
+            color: var(--grey-color);
+        }
+        
+        .post-image {
+            width: 100%;
+            height: 350px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 25px;
+            background-color: var(--light-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+        
+        .read-more {
+            font-weight: 600;
+            color: var(--primary-color);
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .read-more:hover {
+            color: var(--accent-color);
+        }
+        
+        .read-more span {
+            margin-left: 5px;
+        }
+        
+        /* Sidebar */
+        .blog-sidebar {
+            position: sticky;
+            top: 100px;
+        }
+        
+        .sidebar-widget {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: var(--box-shadow);
+            margin-bottom: 30px;
+        }
+        
+        .sidebar-widget h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .sidebar-widget h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+        
+        .search-form {
+            display: flex;
+        }
+        
+        .search-input {
+            flex-grow: 1;
+            padding: 10px 15px;
+            border: 1px solid #e2e8f0;
+            border-right: none;
+            border-radius: 6px 0 0 6px;
+            font-family: var(--font-main);
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+        }
+        
+        .search-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0 15px;
+            border-radius: 0 6px 6px 0;
+            cursor: pointer;
+        }
+        
+        .search-btn:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        .categories-list li {
+            margin-bottom: 12px;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 12px;
+        }
+        
+        .categories-list li:last-child {
+            margin-bottom: 0;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        
+        .categories-list a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+        
+        .categories-list a:hover {
+            color: var(--accent-color);
+            padding-left: 5px;
+        }
+        
+        .categories-list .count {
+            background-color: rgba(43, 108, 176, 0.1);
+            color: var(--primary-color);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+        
+        .recent-posts li {
+            display: flex;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .recent-posts li:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .post-thumb {
+            width: 70px;
+            height: 70px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-right: 15px;
+            flex-shrink: 0;
+            background-color: var(--light-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+        
+        .post-info h4 {
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+        
+        .post-info h4 a {
+            color: var(--dark-color);
+        }
+        
+        .post-info h4 a:hover {
+            color: var(--primary-color);
+        }
+        
+        .post-date {
+            font-size: 0.85rem;
+            color: var(--grey-color);
+        }
+        
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .tag {
+            background-color: rgba(43, 108, 176, 0.1);
+            color: var(--primary-color);
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            transition: var(--transition);
+        }
+        
+        .tag:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        
+        .page-numbers {
+            display: flex;
+            align-items: center;
+        }
+        
+        .page-numbers li {
+            margin: 0 5px;
+        }
+        
+        .page-numbers a, .page-numbers span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+            color: var(--dark-color);
+            font-weight: 500;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+        
+        .page-numbers a:hover, .page-numbers .current {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .page-numbers .prev, .page-numbers .next {
+            width: auto;
+            padding: 0 15px;
+            border-radius: 20px;
+        }
+        
+        /* CTA */
+        .blog-cta {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .blog-cta::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255, 255, 255, 0.1)" d="M0,160L48,144C96,128,192,96,288,90.7C384,85,480,107,576,122.7C672,139,768,149,864,144C960,139,1056,117,1152,117.3C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.8;
+        }
+        
+        .blog-cta-content {
+            position: relative;
+            z-index: 10;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .blog-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .blog-cta p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        /* Newsletter */
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .newsletter-input {
+            flex-grow: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 6px 0 0 6px;
+            font-family: var(--font-main);
+        }
+        
+        .newsletter-input:focus {
+            outline: none;
+        }
+        
+        .newsletter-btn {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 0 20px;
+            border-radius: 0 6px 6px 0;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .newsletter-btn:hover {
+            background-color: #dd6b20;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .footer-info p {
+            margin-bottom: 20px;
+            color: #a0aec0;
+            max-width: 400px;
+        }
+        
+        .footer-links h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links ul li a {
+            color: #a0aec0;
+            transition: var(--transition);
+        }
+        
+        .footer-links ul li a:hover {
+            color: var(--accent-color);
+            padding-left: 5px;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            text-align: center;
+            color: #a0aec0;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 992px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .blog-sidebar {
+                position: static;
+            }
+            
+            .footer-top {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .section-padding {
+                padding: 70px 0;
+            }
+            
+            .blog-header {
+                padding: 150px 0 80px;
+            }
+            
+            .blog-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                background-color: white;
+                width: 100%;
+                height: calc(100vh - 70px);
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 50px;
+                transition: var(--transition);
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .nav-link {
+                margin: 15px 0;
+                font-size: 1.2rem;
+            }
+            
+            .mobile-toggle {
+                display: block;
+            }
+            
+            .blog-post h2 {
+                font-size: 1.8rem;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+            
+            .newsletter-input {
+                border-radius: 6px;
+                margin-bottom: 10px;
+            }
+            
+            .newsletter-btn {
+                border-radius: 6px;
+                padding: 12px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .blog-header h1 {
+                font-size: 2rem;
+            }
+            
+            .post-image {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">📚</span>
+                    Jcampbell Bookkeeping
+                </a>
+                <button class="mobile-toggle" id="mobile-toggle">
+                    <i>☰</i>
+                </button>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#services" class="nav-link">Services</a></li>
+                    <li><a href="index.html#process" class="nav-link">How It Works</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                    <li><a href="index.html#contact" class="btn">Free Consultation</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Blog Header Section -->
+    <section class="blog-header">
+        <div class="container">
+            <div class="blog-header-content">
+                <h1>Financial Insights & Bookkeeping Tips</h1>
+                <p>Expert advice to help your small business thrive financially</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Content Section -->
+    <section class="blog-content">
+        <div class="container">
+            <div class="blog-grid">
+                <div class="blog-main">
+                    <!-- Blog Post 1 -->
+                    <article class="blog-post">
+                        <div class="post-meta">
+                            <span><i>📅</i> February 15, 2025</span>
+                            <span><i>👤</i> Jcampbell</span>
+                            <span class="post-category">Tax Preparation</span>
+                        </div>
+                        <div class="post-image">
+                            📊
+                        </div>
+                        <h2><a href="#">5 Tax Deductions Small Business Owners Often Miss</a></h2>
+                        <p class="post-excerpt">Small business owners are often so focused on day-to-day operations that they overlook valuable tax deductions. Here are five commonly missed deductions that could potentially save your business thousands of dollars each year.</p>
+                        <p class="post-excerpt">From home office expenses to business travel, professional development, and retirement contributions, understanding the tax code can significantly reduce your tax burden. This guide walks through each deduction with practical examples and documentation requirements.</p>
+                        <a href="#" class="read-more">Read More <span>→</span></a>
+                    </article>
+                    
+                    <!-- Blog Post 2 -->
+                    <article class="blog-post">
+                        <div class="post-meta">
+                            <span><i>📅</i> February 8, 2025</span>
+                            <span><i>👤</i> Jcampbell</span>
+                            <span class="post-category">Financial Management</span>
+                        </div>
+                        <div class="post-image">
+                            💹
+                        </div>
+                        <h2><a href="#">Why Cash Flow Management Is More Important Than Profit</a></h2>
+                        <p class="post-excerpt">While profit looks good on paper, cash flow keeps your business alive. Many profitable businesses fail because they run out of cash. This article explains the critical difference between profit and cash flow, and why prioritizing the latter could save your business.</p>
+                        <p class="post-excerpt">Learn practical strategies for managing cash flow effectively, including invoice timing, inventory management, and expense planning. We'll show you how to create a cash flow forecast that helps you anticipate and prevent cash shortages before they become critical.</p>
+                        <a href="#" class="read-more">Read More <span>→</span></a>
+                    </article>
+                    
+                    <!-- Blog Post 3 -->
+                    <article class="blog-post">
+                        <div class="post-meta">
+                            <span><i>📅</i> January 25, 2025</span>
+                            <span><i>👤</i> Jcampbell</span>
+                            <span class="post-category">Data Visualization</span>
+                        </div>
+                        <div class="post-image">
+                            📈
+                        </div>
+                        <h2><a href="#">Using Data Visualization to Make Better Business Decisions</a></h2>
+                        <p class="post-excerpt">Financial data doesn't have to be intimidating. With the right visualization techniques, your numbers can tell a compelling story about your business and guide smarter decision-making. This post explores how modern data visualization transforms complex financial information into actionable insights.</p>
+                        <p class="post-excerpt">Discover the most effective chart types for different financial metrics, learn which KPIs to track for your industry, and see real-world examples of how small businesses have used visual data to identify trends and opportunities they would have otherwise missed.</p>
+                        <a href="#" class="read-more">Read More <span>→</span></a>
+                    </article>
+                    
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <ul class="page-numbers">
+                            <li><a href="#" class="prev">Previous</a></li>
+                            <li><span class="current">1</span></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#" class="next">Next</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Blog Sidebar -->
+                <div class="blog-sidebar">
+                    <!-- Search Widget -->
+                    <div class="sidebar-widget">
+                        <h3>Search</h3>
+                        <form class="search-form">
+                            <input type="text" class="search-input" placeholder="Search articles...">
+                            <button type="submit" class="search-btn">🔍</button>
+                        </form>
+                    </div>
+                    
+                    <!-- Categories Widget -->
+                    <div class="sidebar-widget">
+                        <h3>Categories</h3>
+                        <ul class="categories-list">
+                            <li><a href="#">Tax Preparation <span class="count">8</span></a></li>
+                            <li><a href="#">Financial Management <span class="count">12</span></a></li>
+                            <li><a href="#">Bookkeeping Tips <span class="count">9</span></a></li>
+                            <li><a href="#">Data Visualization <span class="count">6</span></a></li>
+                            <li><a href="#">Small Business Advice <span class="count">15</span></a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Recent Posts Widget -->
+                    <div class="sidebar-widget">
+                        <h3>Recent Posts</h3>
+                        <ul class="recent-posts">
+                            <li>
+                                <div class="post-thumb">📝</div>
+                                <div class="post-info">
+                                    <h4><a href="#">Year-End Bookkeeping Checklist for Small Businesses</a></h4>
+                                    <span class="post-date">January 15, 2025</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="post-thumb">💰</div>
+                                <div class="post-info">
+                                    <h4><a href="#">How to Choose the Right Accounting Software</a></h4>
+                                    <span class="post-date">January 8, 2025</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="post-thumb">🧾</div>
+                                <div class="post-info">
+                                    <h4><a href="#">Understanding Financial Statements: A Beginner's Guide</a></h4>
+                                    <span class="post-date">December 28, 2024</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Tags Widget -->
+                    <div class="sidebar-widget">
+                        <h3>Popular Tags</h3>
+                        <div class="tag-cloud">
+                            <a href="#" class="tag">Bookkeeping</a>
+                            <a href="#" class="tag">Tax Tips</a>
+                            <a href="#" class="tag">Small Business</a>
+                            <a href="#" class="tag">Financial Planning</a>
+                            <a href="#" class="tag">Cash Flow</a>
+                            <a href="#" class="tag">Expenses</a>
+                            <a href="#" class="tag">Data Analysis</a>
+                            <a href="#" class="tag">QuickBooks</a>
+                            <a href="#" class="tag">Tax Season</a>
+                            <a href="#" class="tag">Accounting</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Newsletter CTA Section -->
+    <section class="blog-cta">
+        <div class="container">
+            <div class="blog-cta-content">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get the latest financial insights, tax updates, and bookkeeping tips delivered to your inbox monthly.</p>
+                <form class="newsletter-form" action="https://formspree.io/f/xvgzjeak" method="POST">
+                    <input type="email" name="email" class="newsletter-input" placeholder="Your email address" required>
+                    <input type="hidden" name="form-type" value="newsletter">
+                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-info">
+                    <h3>Jcampbell Bookkeeping</h3>
+                    <p>Professional bookkeeping services designed to give small businesses the financial clarity they need to thrive and grow.</p>
+                    <p>Email: Jcampbellbookkeeping@gmail.com<br>
+                    Phone: 978-273-0229</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#process">How It Works</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="index.html#services">Full Cycle Accounting</a></li>
+                        <li><a href="index.html#services">Data Visualization</a></li>
+                        <li><a href="index.html#services">Tax Preparation</a></li>
+                        <li><a href="index.html#contact">Free Consultation</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> Jcampbell Bookkeeping. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        
+        if (mobileToggle && navMenu) {
+            mobileToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                const icon = mobileToggle.querySelector('i');
+                if (icon) {
+                    if (navMenu.classList.contains('active')) {
+                        icon.textContent = '✕';
+                    } else {
+                        icon.textContent = '☰';
+                    }
+                }
+            });
+        }
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                if (navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    const icon = mobileToggle.querySelector('i');
+                    if (icon) {
+                        icon.textContent = '☰';
+                    }
+                }
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

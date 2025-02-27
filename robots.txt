@@ -1,0 +1,6 @@
+# Allow all web crawlers (search engine bots)
+User-agent: *
+Allow: /
+
+# Point to sitemap location
+Sitemap: https://jcampbellbookkeeping.com/sitemap.xml
