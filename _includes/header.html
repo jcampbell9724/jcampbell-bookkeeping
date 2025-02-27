@@ -136,7 +136,7 @@
 <header>
     <div class="container">
         <nav class="navbar">
-            <a href="/" class="logo">
+            <a href="{{ site.baseurl }}/" class="logo">
                 📚
                 Jcampbell Bookkeeping
             </a>
@@ -144,13 +144,13 @@
                 ☰
             </button>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="/" class="nav-link{% if page.url == '/' %} active{% endif %}">Home</a></li>
-                <li><a href="/#services" class="nav-link">Services</a></li>
-                <li><a href="/#process" class="nav-link">How It Works</a></li>
-                <li><a href="/#about" class="nav-link">About</a></li>
-                <li><a href="/blog/" class="nav-link{% if page.url contains '/blog/' %} active{% endif %}">Blog</a></li>
-                <li><a href="/#contact" class="nav-link">Contact</a></li>
-                <li><a href="/#contact" class="btn">Free Consultation</a></li>
+                <li><a href="{{ site.baseurl }}/" class="nav-link{% if page.url == '/' %} active{% endif %}">Home</a></li>
+                <li><a href="{{ site.baseurl }}/#services" class="nav-link">Services</a></li>
+                <li><a href="{{ site.baseurl }}/#process" class="nav-link">How It Works</a></li>
+                <li><a href="{{ site.baseurl }}/#about" class="nav-link">About</a></li>
+                <li><a href="{{ site.baseurl }}/blog/" class="nav-link{% if page.url contains '/blog/' %} active{% endif %}">Blog</a></li>
+                <li><a href="{{ site.baseurl }}/#contact" class="nav-link">Contact</a></li>
+                <li><a href="{{ site.baseurl }}/#contact" class="btn">Free Consultation</a></li>
             </ul>
         </nav>
     </div>
