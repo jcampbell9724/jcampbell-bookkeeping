@@ -1,20 +1,22 @@
-title: Jcampbell Bookkeeping
-description: Professional bookkeeping services for small businesses
-permalink: pretty
-baseurl: ""
+title: Jcampbell Bookkeeping Blog
+description: Financial insights for small businesses
+theme: minima
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
 
-# Blog settings
-paginate: 6
-paginate_path: "/blog/page:num/"
-
-# Default front matter for posts
+# Default front matter
 defaults:
   - scope:
-      path: "" # all files in the project
+      path: ""
       type: "posts"
     values:
       layout: "post"
-      permalink: "/blog/:title/"
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:title/
