@@ -4,9 +4,11 @@ title: "5 Tax Deductions Small Business Owners Often Miss"
 date: 2025-02-26
 author: J. Campbell
 categories: [Tax, Small Business]
-tags: [tax deductions, tax tips, small business finances]
-image: /assets/images/tax-deductions.jpg
-excerpt: "Many small business owners pay more in taxes than necessary simply because they overlook valuable deductions. Here are five commonly missed tax breaks that could save your business significant money."
+tags: [tax deductions, small business finances, tax tips]
+image: /assets/images/tax-deductions.png
+description: "Discover five commonly missed tax deductions that can save your small business significant money at tax time."
+keywords: "tax deductions, small business taxes, business tax write-offs, tax preparation, tax savings"
+permalink: /blog/tax-deductions-small-business/
 ---
 
 ## Introduction
@@ -72,4 +74,4 @@ Before implementing any tax strategy, we recommend consulting with a qualified t
 
 *This article is for informational purposes only and should not be considered tax, legal, or financial advice. Consult with a qualified professional regarding your specific circumstances.*
 
-*Need help optimizing your tax strategy? [Contact us](/contact) for a free consultation to discuss how our bookkeeping and tax preparation services can help your business save money and stay compliant.*
+*Need help optimizing your tax strategy? [Contact us](/#contact) for a free consultation to discuss how our bookkeeping and tax preparation services can help your business save money and stay compliant.*
