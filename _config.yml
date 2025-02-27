@@ -2,3 +2,29 @@ title: Jcampbell Bookkeeping Blog
 description: Financial insights for small businesses
 theme: minima
 permalink: /blog/:title/
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-paginate
+  - jekyll-relative-links
+
+# Paginate settings
+paginate: 6
+paginate_path: "/blog/page:num/"
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
