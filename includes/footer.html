@@ -1,0 +1,48 @@
+<footer>
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-info">
+                <h3>Jcampbell Bookkeeping</h3>
+                <p>Professional bookkeeping services designed to give small businesses the financial clarity they need to thrive and grow.</p>
+                <p>Email: Jcampbellbookkeeping@gmail.com<br>
+                Phone: 978-273-0229</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="{{ '/' | relative_url }}">Home</a></li>
+                    <li><a href="{{ '/#services' | relative_url }}">Services</a></li>
+                    <li><a href="{{ '/#process' | relative_url }}">How It Works</a></li>
+                    <li><a href="{{ '/#about' | relative_url }}">About</a></li>
+                    <li><a href="{{ '/#faq' | relative_url }}">FAQ</a></li>
+                    <li><a href="{{ '/#contact' | relative_url }}">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Blog Categories</h4>
+                <ul>
+                    <li><a href="{{ '/blog/' | relative_url }}?tag=tax">Tax Tips</a></li>
+                    <li><a href="{{ '/blog/' | relative_url }}?tag=bookkeeping">Bookkeeping Basics</a></li>
+                    <li><a href="{{ '/blog/' | relative_url }}?tag=small-business">Small Business</a></li>
+                    <li><a href="{{ '/blog/' | relative_url }}?tag=finance">Financial Planning</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> Jcampbell Bookkeeping. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Mobile Menu Toggle
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    
+    if (mobileToggle && navMenu) {
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileToggle.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+        });
+    }
+</script>
