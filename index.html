@@ -4,24 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jcampbell Bookkeeping - Professional Financial Services for Small Businesses</title>
-    
+
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
-    
+
     <!-- SEO Meta Tags -->
     <meta name="description" content="Professional bookkeeping services for small businesses. Full cycle accounting, data visualization, and tax preparation services by Jcampbell Bookkeeping.">
     <meta name="keywords" content="bookkeeping, small business accounting, tax preparation, financial services, data visualization, business finances">
     <meta name="author" content="Jcampbell Bookkeeping">
-    
+
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:title" content="Jcampbell Bookkeeping - Professional Financial Services">
     <meta property="og:description" content="Expert bookkeeping services tailored for small businesses. Let us handle your numbers so you can focus on growth.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jcampbellbookkeeping.com">
-    
+
     <!-- Canonical URL -->
     <meta rel="canonical" href="https://jcampbellbookkeeping.com">
-    
+
     <!-- Link to external CSS file -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -147,7 +147,7 @@
                     <h3>Customized Plan</h3>
                     <p>Based on your needs, we'll create a tailored service package and implementation strategy for your business.</p>
                     <div class="process-arrow">
-                        <i class="fas fa-long-arrow-alt-right"></i>
+                        →
                     </div>
                 </div>
                 <div class="process-step">
@@ -155,7 +155,7 @@
                     <h3>Seamless Onboarding</h3>
                     <p>We'll set up your financial systems, organize your existing records, and establish efficient workflows.</p>
                     <div class="process-arrow">
-                        <i class="fas fa-long-arrow-alt-right"></i>
+                        →
                     </div>
                 </div>
                 <div class="process-step">
@@ -176,7 +176,7 @@
                         <div class="about-logo">Jcampbell Bookkeeping</div>
                         <div class="about-tagline">Financial Clarity for Business Growth</div>
                         <div class="about-visual">
-                            <div class="visual-icon"><i class="fas fa-calculator"></i></div>
+                            <div class="visual-icon">📈</i></div>
                             <div class="visual-icon">📊</div>
                             <div class="visual-icon">📄</div>
                         </div>
@@ -253,7 +253,7 @@
                     <div class="accordion-header">
                         <h3>How often will I receive financial reports?</h3>
                         <div class="accordion-icon">
-                            <i class="fas fa-chevron-down"></i>
+                            ▼
                         </div>
                     </div>
                     <div class="accordion-content">
@@ -264,7 +264,7 @@
                     <div class="accordion-header">
                         <h3>Do you work remotely or do I need to provide office space?</h3>
                         <div class="accordion-icon">
-                            <i class="fas fa-chevron-down"></i>
+                            ▼
                         </div>
                     </div>
                     <div class="accordion-content">
@@ -275,7 +275,7 @@
                     <div class="accordion-header">
                         <h3>What accounting software do you use?</h3>
                         <div class="accordion-icon">
-                            <i class="fas fa-chevron-down"></i>
+                            ▼
                         </div>
                     </div>
                     <div class="accordion-content">
@@ -286,7 +286,7 @@
                     <div class="accordion-header">
                         <h3>How do I get started with your services?</h3>
                         <div class="accordion-icon">
-                            <i class="fas fa-chevron-down"></i>
+                            ▼
                         </div>
                     </div>
                     <div class="accordion-content">
@@ -359,7 +359,7 @@
                 </div>
                 <div class="contact-form">
                     <h3>Send Us a Message</h3>
-                <form action="https://formspree.io/f/xvgzjeak" method="POST">
+                    <form action="https://formspree.io/f/xvgzjeak" method="POST">
                         <div class="form-group">
                             <label for="name">Full Name</label>
                             <input type="text" id="name" name="name" class="form-control" placeholder="Your name" required>
@@ -396,8 +396,10 @@
                 <div class="footer-info">
                     <h3>Jcampbell Bookkeeping</h3>
                     <p>Professional bookkeeping services designed to give small businesses the financial clarity they need to thrive and grow.</p>
-                    <p>Email: Jcampbellbookkeeping@gmail.com<br>
-                    Phone: 978-273-0229</p>
+                    <p>
+                        Email: Jcampbellbookkeeping@gmail.com<br>
+                        Phone: 978-273-0229
+                    </p>
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
@@ -421,7 +423,8 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; <script>document.write(new Date().getFullYear())</script> Jcampbell Bookkeeping. All rights reserved.</p>
+                <p>&copy;
+                <script>document.write(new Date().getFullYear())</script> Jcampbell Bookkeeping. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -431,7 +434,7 @@
         // Mobile Menu Toggle
         const mobileToggle = document.getElementById('mobile-toggle');
         const navMenu = document.getElementById('nav-menu');
-        
+
         if (mobileToggle && navMenu) {
             mobileToggle.addEventListener('click', () => {
                 navMenu.classList.toggle('active');
@@ -445,12 +448,12 @@
                 }
             });
         }
-        
+
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
+
                 if (navMenu.classList.contains('active')) {
                     navMenu.classList.remove('active');
                     const icon = mobileToggle.querySelector('i');
@@ -458,10 +461,10 @@
                         icon.textContent = '☰';
                     }
                 }
-                
+
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
-                
+
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     window.scrollTo({
@@ -471,23 +474,23 @@
                 }
             });
         });
-        
+
         // FAQ Accordion
         const accordionItems = document.querySelectorAll('.accordion-item');
-        
+
         accordionItems.forEach(item => {
             const header = item.querySelector('.accordion-header');
-            
+
             header.addEventListener('click', () => {
                 const isActive = item.classList.contains('active');
-                
+
                 // Close all accordion items
                 accordionItems.forEach(accItem => {
                     accItem.classList.remove('active');
                     const content = accItem.querySelector('.accordion-content');
                     content.style.maxHeight = null;
                 });
-                
+
                 // Open the clicked item if it was not already active
                 if (!isActive) {
                     item.classList.add('active');
@@ -496,14 +499,14 @@
                 }
             });
         });
-        
+
         // Form validation
         const contactForm = document.querySelector('.contact-form form');
         if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
+            contactForm.addEventListener('submit', function (e) {
                 const emailInput = document.getElementById('email');
                 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                
+
                 if (!emailPattern.test(emailInput.value)) {
                     e.preventDefault();
                     alert('Please enter a valid email address.');
