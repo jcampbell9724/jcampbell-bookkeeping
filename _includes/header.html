@@ -31,11 +31,6 @@
         text-decoration: none;
     }
     
-    .logo-icon {
-        margin-right: 10px;
-        color: #ed8936;
-    }
-    
     .nav-menu {
         display: flex;
         align-items: center;
@@ -53,23 +48,8 @@
         text-decoration: none;
     }
     
-    .nav-link::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0%;
-        height: 2px;
-        background-color: #ed8936;
-        transition: all 0.3s ease;
-    }
-    
     .nav-link:hover {
         color: #ed8936;
-    }
-    
-    .nav-link:hover::after, .nav-link.active::after {
-        width: 100%;
     }
     
     .mobile-toggle {
@@ -136,6 +116,7 @@
 <header>
     <div class="container">
         <nav class="navbar">
+            <!-- Use baseurl so it goes to /jcampbell-bookkeeping/ (home) -->
             <a href="{{ site.baseurl }}/" class="logo">
                 📚
                 Jcampbell Bookkeeping
@@ -144,14 +125,28 @@
                 ☰
             </button>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="{{ site.baseurl }}/" class="nav-link{% if page.url == '/' %} active{% endif %}">Home</a></li>
+                <li><a href="{{ site.baseurl }}/" class="nav-link">Home</a></li>
                 <li><a href="{{ site.baseurl }}/#services" class="nav-link">Services</a></li>
                 <li><a href="{{ site.baseurl }}/#process" class="nav-link">How It Works</a></li>
                 <li><a href="{{ site.baseurl }}/#about" class="nav-link">About</a></li>
-                <li><a href="{{ site.baseurl }}/blog/" class="nav-link{% if page.url contains '/blog/' %} active{% endif %}">Blog</a></li>
+                <li><a href="{{ site.baseurl }}/blog/" class="nav-link">Blog</a></li>
                 <li><a href="{{ site.baseurl }}/#contact" class="nav-link">Contact</a></li>
                 <li><a href="{{ site.baseurl }}/#contact" class="btn">Free Consultation</a></li>
             </ul>
         </nav>
     </div>
 </header>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    
+    if (mobileToggle && navMenu) {
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileToggle.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+        });
+    }
+});
+</script>
