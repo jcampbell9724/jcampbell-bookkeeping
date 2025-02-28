@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Services
 permalink: /services/
 description: Comprehensive bookkeeping services, financial analysis, tax preparation, and PowerBI dashboards for small businesses by Jcampbell Bookkeeping.
