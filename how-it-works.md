@@ -8,13 +8,18 @@ description: Learn about our proven process for helping small businesses manage 
 <style>
     /* Layout fixes */
     .process-container {
-        max-width: T1200px;
+        width: 100%;
+        max-width: 100%;
         margin: 0 auto;
-        padding: 0 30px;
+        padding: 0;
     }
     
     .process-content {
         padding-top: 100px; /* Ensures content isn't hidden behind the header */
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-left: 30px;
+        padding-right: 30px;
     }
     
     /* Process page specific styles */
@@ -25,6 +30,7 @@ description: Learn about our proven process for helping small businesses manage 
         text-align: center;
         margin-bottom: 60px;
         border-radius: 8px;
+        width: 100%;
     }
     
     .process-hero h1 {
@@ -40,14 +46,16 @@ description: Learn about our proven process for helping small businesses manage 
     
     .process-steps {
         position: relative;
-        max-width: 900px;
+        max-width: 1000px;
         margin: 0 auto 70px;
+        width: 100%;
     }
     
     .process-step {
         display: flex;
         margin-bottom: 80px;
         position: relative;
+        width: 100%;
     }
     
     .process-step:last-child {
@@ -72,6 +80,7 @@ description: Learn about our proven process for helping small businesses manage 
     
     .step-content {
         padding-top: 10px;
+        width: calc(100% - 100px);
     }
     
     .step-content h3 {
@@ -91,6 +100,7 @@ description: Learn about our proven process for helping small businesses manage 
         box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
         padding: 25px;
         margin-top: 15px;
+        width: 100%;
     }
     
     .timeline-line {
@@ -110,6 +120,7 @@ description: Learn about our proven process for helping small businesses manage 
         text-align: center;
         margin: 60px 0 40px;
         border-radius: 8px;
+        width: 100%;
     }
     
     .cta-section h2 {
@@ -144,7 +155,8 @@ description: Learn about our proven process for helping small businesses manage 
     }
     
     .faq-section {
-        max-width: 800px;
+        max-width: 100%;
+        width: 100%;
         margin: 60px auto;
     }
     
@@ -160,6 +172,7 @@ description: Learn about our proven process for helping small businesses manage 
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         margin-bottom: 20px;
         overflow: hidden;
+        width: 100%;
     }
     
     .faq-question {
@@ -182,6 +195,7 @@ description: Learn about our proven process for helping small businesses manage 
         padding: 60px 30px;
         margin: 60px 0;
         border-radius: 8px;
+        width: 100%;
     }
     
     .testimonials-section h2 {
@@ -226,9 +240,20 @@ description: Learn about our proven process for helping small businesses manage 
         line-height: 1;
     }
     
+    /* Override any theme limitations */
+    .page-content .wrapper {
+        max-width: 100% !important;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+    
     @media (max-width: 768px) {
         .process-content {
             padding-top: 80px;
+            padding-left: 15px;
+            padding-right: 15px;
         }
         
         .process-step {
@@ -238,6 +263,10 @@ description: Learn about our proven process for helping small businesses manage 
         .step-number {
             margin-right: 0;
             margin-bottom: 20px;
+        }
+        
+        .step-content {
+            width: 100%;
         }
         
         .timeline-line {
