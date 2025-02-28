@@ -1,13 +1,10 @@
 title: Jcampbell Bookkeeping Blog
 description: Financial insights for small businesses
 theme: minima
-
 url: "https://jcampbell9724.github.io"
 baseurl: "/jcampbell-bookkeeping"
-
 # Build settings
 markdown: kramdown
-
 # Default front matter
 defaults:
   - scope:
@@ -15,12 +12,14 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-
+  - scope:
+      path: "services.md"
+    values:
+      layout: "page"
 # Collections
 collections:
   posts:
     output: true
     permalink: /blog/:title/
-
 include:
-  - services.html
+  - services.md  # Changed from services.html to services.md
