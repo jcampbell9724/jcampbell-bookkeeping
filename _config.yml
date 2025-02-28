@@ -23,3 +23,4 @@ collections:
     permalink: /blog/:title/
 include:
   - services.md  # Changed from services.html to services.md
+  - how-it-works.md
