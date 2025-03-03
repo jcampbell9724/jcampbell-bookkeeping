@@ -1,5 +1,6 @@
-// Mobile Menu Toggle
+// Main JavaScript file with all functionality
 document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Menu Toggle
     const mobileToggle = document.getElementById('mobile-toggle');
     const navMenu = document.getElementById('nav-menu');
     
@@ -15,9 +16,11 @@ document.addEventListener('DOMContentLoaded', function() {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
 
-            if (navMenu.classList.contains('active')) {
+            if (navMenu && navMenu.classList.contains('active')) {
                 navMenu.classList.remove('active');
-                mobileToggle.textContent = '☰';
+                if (mobileToggle) {
+                    mobileToggle.textContent = '☰';
+                }
             }
 
             const targetId = this.getAttribute('href');
@@ -33,13 +36,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // FAQ Accordion functionality
+    // FAQ Accordion functionality - FIXED VERSION
     const accordionItems = document.querySelectorAll('.accordion-item');
     if (accordionItems.length > 0) {
         accordionItems.forEach(item => {
             const header = item.querySelector('.accordion-header');
             if (header) {
                 header.addEventListener('click', () => {
+                    // Check if this item is already active
                     const isActive = item.classList.contains('active');
 
                     // Close all accordion items
@@ -64,17 +68,27 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Simple toggle for FAQ questions on individual pages
+    // Simple toggle for FAQ questions on individual pages - FIXED VERSION
     const faqQuestions = document.querySelectorAll('.faq-question');
     if (faqQuestions.length > 0) {
+        // Initialize all FAQ answers as hidden
+        document.querySelectorAll('.faq-answer').forEach(answer => {
+            answer.style.display = 'none';
+        });
+        
         faqQuestions.forEach(question => {
             question.addEventListener('click', () => {
+                // Toggle active class
+                question.classList.toggle('active');
+                
+                // Get the answer element
                 const answer = question.nextElementSibling;
                 
-                if (answer.style.display === 'none' || answer.style.display === '') {
-                    answer.style.display = 'block';
-                } else {
+                // Toggle display of the answer
+                if (answer.style.display === 'block') {
                     answer.style.display = 'none';
+                } else {
+                    answer.style.display = 'block';
                 }
             });
         });
@@ -93,14 +107,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Annual pricing
                 monthlyPrices.forEach(price => price.style.display = 'none');
                 annualPrices.forEach(price => price.style.display = 'block');
-                monthlyLabel.classList.remove('toggle-active');
-                annualLabel.classList.add('toggle-active');
+                
+                if (monthlyLabel) monthlyLabel.classList.remove('toggle-active');
+                if (annualLabel) annualLabel.classList.add('toggle-active');
             } else {
                 // Monthly pricing
                 monthlyPrices.forEach(price => price.style.display = 'block');
                 annualPrices.forEach(price => price.style.display = 'none');
-                monthlyLabel.classList.add('toggle-active');
-                annualLabel.classList.remove('toggle-active');
+                
+                if (monthlyLabel) monthlyLabel.classList.add('toggle-active');
+                if (annualLabel) annualLabel.classList.remove('toggle-active');
             }
         });
     }
@@ -123,24 +139,28 @@ document.addEventListener('DOMContentLoaded', function() {
                 this.classList.add('active');
                 
                 const tagFilter = this.getAttribute('data-tag');
-                filterContent(tagFilter, searchInput.value);
+                filterContent(tagFilter, searchInput ? searchInput.value : '');
             });
         });
         
         // Search functionality
-        if (searchBtn) {
+        if (searchBtn && searchInput) {
             searchBtn.addEventListener('click', function() {
-                const activeTag = document.querySelector('.tag.active').getAttribute('data-tag');
-                filterContent(activeTag, searchInput.value);
+                const activeTag = document.querySelector('.tag.active');
+                if (activeTag) {
+                    const tagFilter = activeTag.getAttribute('data-tag');
+                    filterContent(tagFilter, searchInput.value);
+                }
             });
-        }
-        
-        // Enter key in search input
-        if (searchInput) {
+            
+            // Enter key in search input
             searchInput.addEventListener('keyup', function(e) {
                 if (e.key === 'Enter') {
-                    const activeTag = document.querySelector('.tag.active').getAttribute('data-tag');
-                    filterContent(activeTag, searchInput.value);
+                    const activeTag = document.querySelector('.tag.active');
+                    if (activeTag) {
+                        const tagFilter = activeTag.getAttribute('data-tag');
+                        filterContent(tagFilter, searchInput.value);
+                    }
                 }
             });
         }
@@ -148,11 +168,13 @@ document.addEventListener('DOMContentLoaded', function() {
         // Clear filters
         if (clearFilters) {
             clearFilters.addEventListener('click', function() {
-                searchInput.value = '';
+                if (searchInput) searchInput.value = '';
                 const allTag = document.querySelector('.tag[data-tag="all"]');
-                tags.forEach(t => t.classList.remove('active'));
-                allTag.classList.add('active');
-                filterContent('all', '');
+                if (allTag) {
+                    tags.forEach(t => t.classList.remove('active'));
+                    allTag.classList.add('active');
+                    filterContent('all', '');
+                }
             });
         }
         
@@ -161,15 +183,15 @@ document.addEventListener('DOMContentLoaded', function() {
             let visibleCount = 0;
             
             blogCards.forEach(card => {
-                const cardTags = card.getAttribute('data-tags').split(',');
-                const cardTitle = card.querySelector('.blog-title').textContent.toLowerCase();
-                const cardExcerpt = card.querySelector('.blog-excerpt').textContent.toLowerCase();
+                const cardTags = card.getAttribute('data-tags') ? card.getAttribute('data-tags').split(',') : [];
+                const cardTitle = card.querySelector('.blog-title') ? card.querySelector('.blog-title').textContent.toLowerCase() : '';
+                const cardExcerpt = card.querySelector('.blog-excerpt') ? card.querySelector('.blog-excerpt').textContent.toLowerCase() : '';
                 
                 // Check if card matches tag filter
                 const matchesTag = tagFilter === 'all' || cardTags.includes(tagFilter);
                 
                 // Check if card matches search query
-                const searchLower = searchQuery.toLowerCase();
+                const searchLower = searchQuery ? searchQuery.toLowerCase() : '';
                 const matchesSearch = searchLower === '' || 
                                     cardTitle.includes(searchLower) || 
                                     cardExcerpt.includes(searchLower);
@@ -209,7 +231,81 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+    
+    // Add smooth fade-in effect for content sections
+    const fadeElements = document.querySelectorAll('.service-card, .process-step, .blog-card, .pricing-plan');
+    if (fadeElements.length > 0) {
+        fadeElements.forEach(el => el.classList.add('fade-in'));
+    }
+    
+    // Scroll to top button functionality
+    const scrollTopBtn = document.getElementById('scrollTop');
+    if (scrollTopBtn) {
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+        
+        // Scroll to top on click
+        scrollTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+    
+    // Handle active navigation links based on current page
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    if (navLinks.length > 0) {
+        navLinks.forEach(link => {
+            const linkPath = link.getAttribute('href');
+            
+            // Check if link path matches current page
+            if (linkPath === currentPath || 
+                (currentPath.includes(linkPath) && linkPath !== '/')) {
+                link.classList.add('current');
+            }
+        });
+    }
+    
+    // Lazy load images for better performance
+    const lazyImages = document.querySelectorAll('.lazy-image');
+    if ('IntersectionObserver' in window && lazyImages.length > 0) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    const src = img.getAttribute('data-src');
+                    
+                    if (src) {
+                        img.src = src;
+                        img.classList.add('loaded');
+                        imageObserver.unobserve(img);
+                    }
+                }
+            });
+        });
+        
+        lazyImages.forEach(img => {
+            imageObserver.observe(img);
+        });
+    }
 });
 
 // Current year for copyright
-document.write(new Date().getFullYear());
+document.addEventListener('DOMContentLoaded', function() {
+    const yearElements = document.querySelectorAll('.current-year');
+    if (yearElements.length > 0) {
+        const currentYear = new Date().getFullYear();
+        yearElements.forEach(el => {
+            el.textContent = currentYear;
+        });
+    }
+});
