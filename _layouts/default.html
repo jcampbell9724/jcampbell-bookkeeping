@@ -15,6 +15,18 @@
     
     <!-- Link to external CSS file -->
     <link rel="stylesheet" href="{{ site.baseurl }}/css/styles.css">
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Add preload for critical resources -->
+    <link rel="preload" href="{{ site.baseurl }}/css/styles.css" as="style">
+    <link rel="preload" href="{{ site.baseurl }}/js/main.js" as="script">
+
+    <!-- Add defer to non-critical JavaScript -->
+    <script src="{{ site.baseurl }}/js/main.js" defer></script>
+    
 </head>
 <body>
     <!-- Header -->
