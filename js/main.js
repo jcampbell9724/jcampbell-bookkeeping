@@ -36,11 +36,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // FAQ Accordion functionality - FIXED VERSION
-    const accordionItems = document.querySelectorAll('.accordion-item');
+    // FAQ Accordion functionality - UPDATED VERSION
+    const accordionItems = document.querySelectorAll('.accordion-item, .faq-item');
     if (accordionItems.length > 0) {
         accordionItems.forEach(item => {
-            const header = item.querySelector('.accordion-header');
+            const header = item.querySelector('.accordion-header, .faq-question');
             if (header) {
                 header.addEventListener('click', () => {
                     // Check if this item is already active
@@ -49,18 +49,26 @@ document.addEventListener('DOMContentLoaded', function() {
                     // Close all accordion items
                     accordionItems.forEach(accItem => {
                         accItem.classList.remove('active');
-                        const content = accItem.querySelector('.accordion-content');
+                        const content = accItem.querySelector('.accordion-content, .faq-answer');
                         if (content) {
-                            content.style.maxHeight = null;
+                            if (content.classList.contains('accordion-content')) {
+                                content.style.maxHeight = null;
+                            } else {
+                                content.style.display = 'none';
+                            }
                         }
                     });
 
                     // Open the clicked item if it was not already active
                     if (!isActive) {
                         item.classList.add('active');
-                        const content = item.querySelector('.accordion-content');
+                        const content = item.querySelector('.accordion-content, .faq-answer');
                         if (content) {
-                            content.style.maxHeight = content.scrollHeight + 'px';
+                            if (content.classList.contains('accordion-content')) {
+                                content.style.maxHeight = content.scrollHeight + 'px';
+                            } else {
+                                content.style.display = 'block';
+                            }
                         }
                     }
                 });
