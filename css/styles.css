@@ -1909,10 +1909,7 @@ footer {
 }
 
 .faq-answer {
-    padding: 0 20px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 20px 20px;
 }
 
 .faq-item.active .faq-answer {
@@ -2501,8 +2498,7 @@ input:checked + .slider:before {
     .about-feature,
     .testimonial,
     .pricing-plan,
-    .addon-card,
-    .blog-card {
+    .addon-card {
         padding: 20px;
         margin-bottom: 15px;
     }
@@ -2591,17 +2587,7 @@ input:checked + .slider:before {
 
 /* Fix for Markdown pages top spacing and header consistency */
 
-/* 1. Reduce the space after header and standardize all Markdown page headers */
-.about-container, 
-.hiw-container, 
-.pricing-container, 
-.services-container,
-.post-container,
-.blog-container {
-    padding-top: 90px !important; /* Reduce the excessive space after header */
-}
-
-/* 2. Make all page headers consistent */
+/* 1. Standardize all page headers */
 .page-header, 
 .post-header, 
 .blog-header,
@@ -2609,10 +2595,10 @@ input:checked + .slider:before {
 .process-hero,
 .pricing-hero,
 .services-hero {
-    margin-top: 0 !important; /* Remove the excessive top margin */
+    margin-top: 0 !important;
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: white;
-    padding: 30px;
+    padding: 40px 20px;
     text-align: center;
     margin-bottom: 40px;
     border-radius: 8px;
@@ -2634,35 +2620,119 @@ input:checked + .slider:before {
     color: white !important;
 }
 
-/* Fix blog-specific styling */
-.blog-header {
-    margin-bottom: 30px !important;
-}
-
-/* Fix post-specific styling */
-.post-container {
-    padding-top: 90px !important;
-}
-
-.post-title {
-    color: var(--primary-color) !important;
-}
-
-/* Ensure body content has proper spacing */
+/* 2. Add more side padding and space before footer for markdown pages */
 .page-content,
 .post-content,
 .blog-content,
 .services-content {
-    padding: 0 !important;
+    padding: 0 40px !important;
+    margin-bottom: 60px !important;
 }
 
-/* Fix for fixed header overlap */
+/* 3. Fix container spacing */
+.about-container, 
+.hiw-container, 
+.pricing-container, 
+.services-container,
+.post-container,
+.blog-container {
+    padding-top: 90px !important;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 4. Ensure consistent spacing for blog and post content */
+.blog-container,
+.post-container {
+    padding-bottom: 80px !important;
+}
+
+/* 5. Fix mobile responsiveness */
+@media (max-width: 768px) {
+    .page-content,
+    .post-content,
+    .blog-content,
+    .services-content {
+        padding: 0 20px !important;
+    }
+    
+    .page-header, 
+    .post-header, 
+    .blog-header,
+    .about-hero,
+    .process-hero,
+    .pricing-hero,
+    .services-hero {
+        padding: 30px 15px;
+        margin-bottom: 30px;
+    }
+}
+
+/* Performance Optimizations */
+
+/* 1. Optimize animations for performance */
+@media (prefers-reduced-motion: no-preference) {
+    .fade-in,
+    .nav-link::after,
+    .btn,
+    .service-card,
+    .process-step,
+    .testimonial,
+    .pricing-plan,
+    .blog-card,
+    .accordion-content,
+    .faq-answer {
+        will-change: transform, opacity;
+        backface-visibility: hidden;
+    }
+}
+
+/* 2. Optimize paint operations */
+.navbar,
+header,
+footer,
+.service-card,
+.process-step,
+.testimonial,
+.pricing-plan,
+.blog-card,
+.accordion-item,
+.faq-item {
+    contain: content;
+}
+
+/* 3. Optimize layout calculations */
+.services-grid,
+.process-steps,
+.blog-grid,
+.pricing-plans,
+.about-grid,
+.contact-grid {
+    contain: layout style;
+}
+
+/* 4. Optimize image loading */
+img {
+    loading: lazy;
+    decoding: async;
+}
+
+/* 5. Reduce repaints for fixed elements */
 header {
-    height: auto !important;
-    min-height: 70px;
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
-/* Fix for any potential body padding */
-body {
-    padding-top: 0 !important;
+/* 6. Optimize font loading */
+:root {
+    font-display: swap;
+}
+
+/* 7. Optimize transitions */
+@media (prefers-reduced-motion: no-preference) {
+    * {
+        transition-property: transform, opacity, box-shadow;
+        transition-duration: 0.3s;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
 }
