@@ -27,6 +27,8 @@ body {
     line-height: 1.7;
     color: var(--dark-color);
     background-color: #ffffff;
+    margin-top: 0; /* Reset any potential default margins */
+    padding-top: 0; /* Reset any potential default padding */
 }
 
 a {
@@ -107,6 +109,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.page-header, .post-header, .blog-header {
+    margin-top: 90px; /* Add space beneath fixed header */
 }
 
 .logo {
@@ -1327,4 +1333,52 @@ footer {
     .post-nav-link {
         max-width: 100%;
     }
+}
+
+/* Add this to your styles.css file */
+
+/* MD page containers */
+.about-container, 
+.hiw-container, 
+.pricing-container, 
+.services-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 20px 60px; /* Top padding accounts for fixed header */
+}
+
+/* Hero sections for MD pages */
+.about-hero,
+.process-hero,
+.pricing-hero,
+.services-hero {
+    background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 100%);
+    color: white;
+    padding: 50px 30px;
+    text-align: center;
+    margin-bottom: 60px;
+    border-radius: 8px;
+}
+
+.about-hero h1,
+.process-hero h1,
+.pricing-hero h1,
+.services-hero h1 {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.about-hero p,
+.process-hero p,
+.pricing-hero p,
+.services-hero p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: white;
+}
+
+/* Services content specific fix */
+.services-content {
+    padding: 0; /* Reset any unwanted padding */
 }
