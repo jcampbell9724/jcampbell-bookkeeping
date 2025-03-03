@@ -370,3 +370,107 @@ description: Comprehensive bookkeeping services, financial analysis, tax prepara
                         <li>Cash flow management</li>
                         <li>Financial decision support</li>
                         <li>Growth strategy development</li>
+                        <li>Regular financial reviews</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    ⚙️
+                </div>
+                <div class="service-content">
+                    <h3>Business Process Improvement</h3>
+                    <p>Streamline your financial operations for greater efficiency and accuracy.</p>
+                    <ul>
+                        <li>Financial workflow assessment</li>
+                        <li>Process documentation</li>
+                        <li>Efficiency recommendations</li>
+                        <li>Internal controls development</li>
+                        <li>Technology integration advice</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    💻
+                </div>
+                <div class="service-content">
+                    <h3>Software Selection & Implementation</h3>
+                    <p>Expert guidance on choosing and implementing the right financial technology for your business.</p>
+                    <ul>
+                        <li>Accounting software assessment</li>
+                        <li>System requirements analysis</li>
+                        <li>Software implementation assistance</li>
+                        <li>Data migration support</li>
+                        <li>User training and support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Specialized Services -->
+        <h3 id="specialized" class="category-title">Specialized Services</h3>
+        <p class="category-desc">Additional services designed to address specific financial needs and situations within your business.</p>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    🧹
+                </div>
+                <div class="service-content">
+                    <h3>Catch-up Bookkeeping</h3>
+                    <p>Get your books back on track with our specialized catch-up services.</p>
+                    <ul>
+                        <li>Backlog transaction entry</li>
+                        <li>Historical reconciliation</li>
+                        <li>Financial record reconstruction</li>
+                        <li>System cleanup and organization</li>
+                        <li>Current-state financial reporting</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    🔍
+                </div>
+                <div class="service-content">
+                    <h3>Audit Preparation & Support</h3>
+                    <p>Comprehensive assistance to help you navigate financial audits with confidence.</p>
+                    <ul>
+                        <li>Pre-audit financial review</li>
+                        <li>Documentation organization</li>
+                        <li>Audit schedule preparation</li>
+                        <li>Auditor liaison services</li>
+                        <li>Post-audit implementation support</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    📦
+                </div>
+                <div class="service-content">
+                    <h3>Inventory Management</h3>
+                    <p>Optimize your inventory tracking and valuation for better financial control.</p>
+                    <ul>
+                        <li>Inventory tracking system setup</li>
+                        <li>Cost of goods sold calculations</li>
+                        <li>Inventory valuation methods</li>
+                        <li>Inventory count procedures</li>
+                        <li>Inventory reporting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>Let's Create a Tailored Financial Solution for Your Business</h2>
+            <p>Every business has unique financial needs. Contact us today to discuss how our services can be customized to help your business thrive.</p>
+            <a href="{{ site.baseurl }}/#contact" class="btn">Schedule Your Free Consultation</a>
+        </div>
+    </div>
+</div>
