@@ -1,11 +1,11 @@
-title: Jcampbell Bookkeeping Blog
+title: Foundation Bookkeeping Blog
 description: Financial insights for small businesses
 theme: minima
-url: "https://jcampbell9724.github.io"
-baseurl: "/jcampbell-bookkeeping"
-# Build settings
+url: "https://foundationbookkeeping.net"
+baseurl: ""
+
 markdown: kramdown
-# Default front matter
+
 defaults:
   - scope:
       path: ""
@@ -22,5 +22,5 @@ collections:
     output: true
     permalink: /blog/:title/
 include:
-  - services.md  # Changed from services.html to services.md
+  - services.md
   - how-it-works.md
