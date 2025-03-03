@@ -2547,3 +2547,81 @@ input:checked + .slider:before {
         font-size: 1.1rem;
     }
 }
+
+/* Fix for Markdown pages top spacing and header consistency */
+
+/* 1. Reduce the space after header and standardize all Markdown page headers */
+.about-container, 
+.hiw-container, 
+.pricing-container, 
+.services-container,
+.post-container,
+.blog-container {
+    padding-top: 90px !important; /* Reduce the excessive space after header */
+}
+
+/* 2. Make all page headers consistent */
+.page-header, 
+.post-header, 
+.blog-header,
+.about-hero,
+.process-hero,
+.pricing-hero,
+.services-hero {
+    margin-top: 0 !important; /* Remove the excessive top margin */
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+}
+
+/* Ensure headers in these elements are white */
+.page-header h1, 
+.post-header h1, 
+.blog-header h1,
+.about-hero h1,
+.process-hero h1,
+.pricing-hero h1,
+.services-hero h1,
+.about-hero p,
+.process-hero p,
+.pricing-hero p,
+.services-hero p {
+    color: white !important;
+}
+
+/* Fix blog-specific styling */
+.blog-header {
+    margin-bottom: 30px !important;
+}
+
+/* Fix post-specific styling */
+.post-container {
+    padding-top: 90px !important;
+}
+
+.post-title {
+    color: var(--primary-color) !important;
+}
+
+/* Ensure body content has proper spacing */
+.page-content,
+.post-content,
+.blog-content,
+.services-content {
+    padding: 0 !important;
+}
+
+/* Fix for fixed header overlap */
+header {
+    height: auto !important;
+    min-height: 70px;
+}
+
+/* Fix for any potential body padding */
+body {
+    padding-top: 0 !important;
+}
