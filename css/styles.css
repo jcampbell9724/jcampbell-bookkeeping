@@ -2156,3 +2156,394 @@ input:checked + .slider:before {
         padding: 15px;
     }
 }
+
+/* Home page improvements */
+
+/* Make process steps into cards */
+.process-step {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    padding: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.process-step:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+/* Alternate section background colors */
+.services {
+    background-color: var(--light-color);
+}
+
+.process {
+    background-color: white;
+}
+
+.about {
+    background-color: #f8fafc; /* Slightly different from light-color */
+}
+
+.faq {
+    background-color: var(--light-color);
+}
+
+/* Fix FAQ dropdowns to match others */
+.accordion-item {
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    background-color: white;
+    box-shadow: var(--box-shadow);
+}
+
+.accordion-header {
+    padding: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.accordion-header::after {
+    content: '+';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.accordion-item.active .accordion-header::after {
+    content: '-';
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 20px;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 500px;
+    padding: 0 20px 20px;
+}
+
+/* Header and responsive layout improvements */
+
+/* Better responsive header */
+.navbar {
+    flex-wrap: wrap;
+    padding: 0 10px;
+}
+
+.logo {
+    font-size: 1.5rem; /* Smaller size for better fit */
+    white-space: nowrap;
+    padding: 10px 0;
+}
+
+.nav-menu {
+    flex-wrap: wrap;
+}
+
+/* Make "How It Works" display properly */
+.nav-link {
+    white-space: nowrap;
+    text-align: center;
+}
+
+/* Improve medium-sized screen experience (tablet and half-width desktops) */
+@media (max-width: 1200px) {
+    .nav-menu .btn {
+        margin-left: 10px;
+    }
+    
+    .nav-link {
+        margin: 0 8px; /* Smaller margins between menu items */
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar {
+        justify-content: space-between;
+    }
+    
+    .logo {
+        font-size: 1.2rem;
+    }
+}
+
+/* Improved mobile menu */
+@media (max-width: 768px) {
+    .nav-menu {
+        width: 100%;
+        left: -100%;
+        top: var(--header-height);
+        position: fixed;
+        background: white;
+        flex-direction: column;
+        padding: 20px 0;
+        z-index: 1000;
+        transform: translateX(-100%);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+    
+    .nav-menu.active {
+        transform: translateX(0);
+        left: 0;
+    }
+    
+    .nav-link {
+        padding: 15px 0;
+        width: 100%;
+        font-size: 1.1rem;
+    }
+}
+
+/* Services page improvements */
+
+/* More contrast for cards */
+.services-grid .service-card {
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.services-grid {
+    row-gap: 40px; /* Add more space between rows */
+}
+
+/* Services page specific improvements */
+.services-container .services-hero {
+    margin-bottom: 50px;
+}
+
+.category-title {
+    margin-top: 60px;
+}
+
+/* How It Works page improvements */
+
+/* Card styling for steps */
+.hiw-container .process-step {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.hiw-container .process-step:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+/* Testimonial improvements with more contrast */
+.testimonials-section .testimonial {
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+    position: relative;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.testimonials-section .testimonial:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+/* About page improvements */
+
+/* Fix hero section */
+.about-hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 50px 30px;
+    text-align: center;
+    margin-bottom: 60px;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+}
+
+/* Add animations to credential cards */
+.credential {
+    transition: var(--transition);
+}
+
+.credential:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+/* Pricing page improvements */
+
+/* Fix spacing and colors */
+.pricing-plans {
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.pricing-plan {
+    box-shadow: var(--box-shadow);
+    padding: 40px 30px;
+    border: 1px solid #e2e8f0;
+}
+
+.pricing-plan:nth-child(2) {
+    border-color: var(--accent-color);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-toggle {
+    margin: 30px 0 50px;
+}
+
+.addons-section {
+    margin: 80px 0;
+    padding: 50px 30px;
+    background-color: var(--light-color);
+    border-radius: 12px;
+}
+
+.faq-item {
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 1px solid #e2e8f0;
+    background-color: white;
+}
+
+.faq-question {
+    padding: 20px;
+    background-color: white;
+}
+
+.faq-answer {
+    padding: 0 20px 20px;
+}
+
+/* Additional mobile improvements */
+
+/* Improved mobile typography */
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 1.8rem;
+        line-height: 1.3;
+    }
+    
+    .section-title h2 {
+        font-size: 1.6rem;
+    }
+    
+    .about-hero h1, 
+    .process-hero h1, 
+    .pricing-hero h1, 
+    .services-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    /* Better spacing for cards on mobile */
+    .service-card,
+    .process-step,
+    .about-feature,
+    .testimonial,
+    .pricing-plan,
+    .addon-card,
+    .blog-card {
+        padding: 20px;
+        margin-bottom: 15px;
+    }
+    
+    /* Adjust spacing for grid layouts */
+    .services-grid,
+    .process-steps,
+    .pricing-plans,
+    .blog-grid,
+    .addons-container {
+        gap: 15px;
+    }
+    
+    /* Better form elements on mobile */
+    .form-control {
+        padding: 14px;
+        font-size: 16px; /* Prevent zoom on iOS */
+    }
+    
+    .btn {
+        padding: 14px 20px;
+        font-size: 16px;
+    }
+    
+    /* Make sure "Free Consultation" button is visible */
+    .nav-menu .btn {
+        margin: 10px auto;
+        width: 90%;
+    }
+    
+    /* Improve spacing for sections */
+    .section-padding {
+        padding: 40px 0;
+    }
+    
+    /* Fix page containers on mobile */
+    .about-container, 
+    .hiw-container, 
+    .pricing-container, 
+    .services-container,
+    .post-container,
+    .blog-container {
+        padding: 100px 15px 40px; /* Reduced padding */
+    }
+    
+    /* Fix hero sections on mobile */
+    .about-hero,
+    .process-hero,
+    .pricing-hero,
+    .services-hero {
+        padding: 30px 20px;
+        margin-bottom: 30px;
+    }
+    
+    /* Contact section improvements */
+    .contact-form,
+    .contact-info {
+        padding: 25px 20px;
+    }
+    
+    /* Fix footer on mobile */
+    .footer-top {
+        text-align: center;
+    }
+    
+    .footer-info p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Fix for very small screens */
+@media (max-width: 360px) {
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+    
+    .navbar {
+        padding: 0 5px;
+    }
+    
+    .logo {
+        font-size: 1.1rem;
+    }
+}
