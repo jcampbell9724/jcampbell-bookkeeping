@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Point to sitemap location
-Sitemap: https://jcampbellbookkeeping.com/sitemap.xml
+Sitemap: https://foundationbookkeeping.net/sitemap.xml
