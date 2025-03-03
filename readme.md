@@ -1,11 +1,18 @@
-# Jcampbell Bookkeeping Website
+# Foundation Bookkeeping Website
 
-This repository contains the professional website for Jcampbell Bookkeeping, a bookkeeping service specializing in full cycle accounting, data visualization, and tax preparation for small businesses.
+This repository contains the professional website for Foundation Bookkeeping, a bookkeeping service specializing in full cycle accounting, data visualization, and tax preparation for small businesses.
 
 ## Website Structure
 
 - `index.html` - Main website with services, process, about, and contact sections
-- `blog.html` - Blog page with financial insights and bookkeeping tips
+- `services.md` - Services page detailing all bookkeeping and financial services offered
+- `how-it-works.md` - Page explaining the client onboarding and service process
+- `about.md` - About page with company information and values
+- `pricing.md` - Pricing page with service packages and pricing structure
+- `blog/index.html` - Blog landing page with posts on financial topics
+- `_posts/` - Directory containing all blog post files
+- `css/styles.css` - Main CSS file for all styling
+- `js/main.js` - Main JavaScript file for all interactive elements
 - `sitemap.xml` - XML sitemap for search engines
 - `robots.txt` - Instructions for web crawlers
 
@@ -19,9 +26,10 @@ This repository contains the professional website for Jcampbell Bookkeeping, a b
 ## Development
 
 This website is built with:
+- Jekyll (static site generator)
 - HTML5
 - CSS3
-- Vanilla JavaScript
+- JavaScript
 
 ## Deployment
 
@@ -30,5 +38,5 @@ This website is deployed using GitHub Pages. Any changes pushed to the main bran
 ## Contact
 
 For questions or inquiries about this website, please contact:
-- Email: Jcampbellbookkeeping@gmail.com
+- Email: info@foundationbookkeeping.net
 - Phone: 978-273-0229
