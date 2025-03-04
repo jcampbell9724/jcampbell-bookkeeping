@@ -3304,3 +3304,23 @@ header {
         grid-template-columns: 1fr;
     }
 }
+
+@media (max-width: 576px) {
+    .payment-option {
+        padding: 16px;
+    }
+
+    .payment-option h3 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .payment-option ul {
+        padding-left: 14px;
+    }
+
+    .payment-option ul li {
+        margin-bottom: 5px;
+        font-size: 0.9rem;
+    }
+}
