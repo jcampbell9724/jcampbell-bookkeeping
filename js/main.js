@@ -42,40 +42,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const allAccordionItems = document.querySelectorAll('.accordion-item, .faq-item');
     
     if (allAccordionItems.length > 0) {
-        // Initialize - hide all content sections
-        allAccordionItems.forEach(item => {
-            const content = item.querySelector('.accordion-content, .faq-answer');
-            if (content) {
-                // Apply initial state
-                content.style.display = 'none';
-            }
-        });
-        
         // Add click event to all headers
         allAccordionItems.forEach(item => {
             const header = item.querySelector('.accordion-header, .faq-question');
             if (header) {
                 header.addEventListener('click', () => {
-                    // Check if this item is already active
-                    const isActive = item.classList.contains('active');
-                    
-                    // Close all accordion items first
-                    allAccordionItems.forEach(accItem => {
-                        accItem.classList.remove('active');
-                        const content = accItem.querySelector('.accordion-content, .faq-answer');
-                        if (content) {
-                            content.style.display = 'none';
-                        }
-                    });
-                    
-                    // Open the clicked item if it was not already active
-                    if (!isActive) {
-                        item.classList.add('active');
-                        const content = item.querySelector('.accordion-content, .faq-answer');
-                        if (content) {
-                            content.style.display = 'block';
-                        }
-                    }
+                    // Toggle active class
+                    item.classList.toggle('active');
                 });
             }
         });
