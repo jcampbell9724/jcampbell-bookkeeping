@@ -179,22 +179,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
-
-    // Form validation
-    const contactForm = document.querySelector('.contact-form form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function (e) {
-            const emailInput = document.getElementById('email');
-            if (emailInput) {
-                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailPattern.test(emailInput.value)) {
-                    e.preventDefault();
-                    alert('Please enter a valid email address.');
-                    emailInput.focus();
-                }
-            }
-        });
-    }
     
     // Add smooth fade-in effect for content sections
     const fadeElements = document.querySelectorAll('.service-card, .process-step, .blog-card, .pricing-plan');
