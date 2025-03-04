@@ -37,23 +37,26 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // UNIFIED Accordion/FAQ functionality
-// This handles both homepage accordions and the FAQ page items
-document.addEventListener('DOMContentLoaded', function() {
-    const allAccordionItems = document.querySelectorAll('.accordion-item, .faq-item');
+    const allAccordionItems = document.querySelectorAll('.faq-item');
     
     if (allAccordionItems.length > 0) {
         // Add click event to all headers
         allAccordionItems.forEach(item => {
-            const header = item.querySelector('.accordion-header, .faq-question');
+            const header = item.querySelector('.faq-question');
             if (header) {
                 header.addEventListener('click', () => {
-                    // Toggle active class
+                    // Close all other items
+                    allAccordionItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
                     item.classList.toggle('active');
                 });
             }
         });
     }
-});
     
     // Pricing toggle between monthly and annual
     const pricingToggle = document.getElementById('pricing-toggle');

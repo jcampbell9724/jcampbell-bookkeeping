@@ -832,12 +832,17 @@ header {
     background-color: var(--light-color);
 }
 
+.faq-section {
+    margin: 60px 0;
+}
+
 .faq-item {
     margin-bottom: 20px;
     border-radius: 12px;
     overflow: hidden;
     background-color: white;
     box-shadow: var(--box-shadow);
+    border: 1px solid #e2e8f0;
     contain: content;
 }
 
@@ -872,11 +877,35 @@ header {
     overflow: hidden;
     transition: max-height 0.3s ease-out;
     padding: 0 20px;
+    will-change: transform, opacity;
+    backface-visibility: hidden;
 }
 
 .faq-item.active .faq-answer {
     max-height: 500px;
     padding: 20px;
+}
+
+@media (max-width: 576px) {
+    .faq-section {
+        padding: 15px;
+    }
+    
+    .faq-item {
+        margin-bottom: 15px;
+    }
+    
+    .faq-question {
+        padding: 15px;
+    }
+    
+    .faq-answer {
+        padding: 0 15px;
+    }
+    
+    .faq-item.active .faq-answer {
+        padding: 15px;
+    }
 }
 
 /* CTA Section */
@@ -1801,7 +1830,6 @@ footer {
 .services-grid > *:nth-child(n+4),
 .process-steps > *:nth-child(n+3),
 .about-features > *:nth-child(n+3),
-.accordion-item:nth-child(n+3),
 .blog-card:nth-child(n+4),
 .pricing-plans > *:nth-child(n+2),
 .addons-container > *:nth-child(n+4),
@@ -2104,58 +2132,6 @@ footer {
 .process-step ul li {
     margin-bottom: 8px;
     color: var(--grey-color);
-}
-
-/* FAQ specific styling */
-.faq-section {
-    margin: 60px 0;
-}
-
-.faq-item {
-    margin-bottom: 20px;
-    border-radius: 12px;
-    overflow: hidden;
-    background-color: white;
-    box-shadow: var(--box-shadow);
-    contain: content;
-}
-
-.faq-question {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    cursor: pointer;
-    font-weight: 600;
-    background-color: #f9f9f9;
-    position: relative;
-}
-
-.faq-question::after {
-    content: '';
-    width: 20px;
-    height: 20px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='12' y1='5' x2='12' y2='19'%3E%3C/line%3E%3Cline x1='5' y1='12' x2='19' y2='12'%3E%3C/line%3E%3C/svg%3E");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: transform 0.3s ease;
-}
-
-.faq-item.active .faq-question::after {
-    transform: rotate(45deg);
-}
-
-.faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    padding: 0 20px;
-}
-
-.faq-item.active .faq-answer {
-    max-height: 500px;
-    padding: 20px;
 }
 
 /* Pricing specific classes */
@@ -2467,10 +2443,6 @@ input:checked + .slider:before {
     padding: 80px 0;
 }
 
-.faq {
-    background-color: var(--light-color);
-}
-
 /* Better responsive header */
 .navbar {
     flex-wrap: wrap;
@@ -2649,24 +2621,6 @@ input:checked + .slider:before {
     padding: 50px 30px;
     background-color: var(--light-color);
     border-radius: 12px;
-}
-
-.faq-item {
-    border-radius: 8px;
-    box-shadow: var(--box-shadow);
-    overflow: hidden;
-    margin-bottom: 20px;
-    border: 1px solid #e2e8f0;
-    background-color: white;
-}
-
-.faq-question {
-    padding: 20px;
-    background-color: white;
-}
-
-.faq-answer {
-    padding: 0 20px 20px;
 }
 
 /* Additional mobile improvements */
@@ -2945,7 +2899,6 @@ input:checked + .slider:before {
     .testimonial,
     .pricing-plan,
     .blog-card,
-    .accordion-content,
     .faq-answer {
         will-change: transform, opacity;
         backface-visibility: hidden;
@@ -2961,7 +2914,6 @@ footer,
 .testimonial,
 .pricing-plan,
 .blog-card,
-.accordion-item,
 .faq-item {
     contain: content;
 }
