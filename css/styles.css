@@ -872,14 +872,14 @@ header {
 .accordion-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    transition: max-height 0.3s ease-out;
     padding: 0 20px;
-    background-color: white;
 }
 
 .accordion-item.active .accordion-content {
-    max-height: 1000px;
+    max-height: 500px; /* Adjust this value based on your content */
     padding: 20px;
+    transition: max-height 0.5s ease-in;
 }
 
 /* CTA Section */
@@ -2505,13 +2505,14 @@ input:checked + .slider:before {
 .accordion-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    transition: max-height 0.3s ease-out;
     padding: 0 20px;
 }
 
 .accordion-item.active .accordion-content {
-    max-height: 500px;
-    padding: 0 20px 20px;
+    max-height: 500px; /* Adjust this value based on your content */
+    padding: 20px;
+    transition: max-height 0.5s ease-in;
 }
 
 /* Header and responsive layout improvements */
