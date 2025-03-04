@@ -300,30 +300,236 @@ keywords: bookkeeping, small business accounting, tax preparation, financial ser
             </div>
             <div class="contact-form">
                 <h3>Send Us a Message</h3>
-                <form action="https://formspree.io/f/xvgzjeak" method="POST">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" class="form-control" placeholder="Your name" required>
+                <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js'></script>
+
+                <style>
+                .wf_customMessageBox {
+                    font-family: Arial, Helvetica, sans-serif;
+                    color: #132C14;
+                    background:  #F5FAF5;
+                    box-shadow:0 2px 6px 0 rgba(0,0,0,0.25);
+                    max-width: 90%;
+                    width:max-content;
+                    word-break: break-word;
+                    z-index: 11000;
+                    border-radius: 6px;
+                    border: 1px solid #A9D3AB;
+                    min-width: 100px;
+                    padding: 10px 15px;
+                    display: flex;
+                    align-items: center;
+                    position: fixed;
+                    top: 20px;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                }
+                .wf_customCircle {
+                    position: relative;
+                    background-color: #12AA67;
+                    border-radius: 100%;
+                    width: 20px;
+                    height: 20px;
+                    flex:none;
+                    margin-right: 7px;
+                }
+                .wf_customCheckMark {
+                    box-sizing: unset !important;
+                    position: absolute;
+                    transform: rotate(45deg) translate(-50%, -50%);
+                    left: 6px;
+                    top: 9px;
+                    height: 8px;
+                    width: 3px;
+                    border-bottom: 2px solid #fff;
+                    border-right: 2px solid #fff;
+                }
+                .wf_customClose {
+                    box-sizing: border-box;
+                    position: relative;
+                    width: 18px;
+                    height: 18px;
+                }
+                .wf_customClose::after,
+                .wf_customClose::before {
+                    content: '';
+                    display: block;
+                    box-sizing: border-box;
+                    position: absolute;
+                    width: 12px;
+                    height: 1.5px;
+                    background: #616E88;
+                    transform: rotate(45deg);
+                    border-radius: 5px;
+                    top: 8px;
+                    left: 1px
+                }
+                .wf_customClose::after {
+                    transform: rotate(-45deg)
+                }
+                </style>
+                <div class='wf_customMessageBox' id='wf_splash' style='display:none'>
+                    <div class='wf_customCircle'>
+                        <div class='wf_customCheckMark'></div>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" class="form-control" placeholder="Your email" required>
+                    <span id='wf_splash_info'></span>
+                </div>
+                <form id='webform6656282000000530011' name=WebToLeads6656282000000530011 accept-charset='UTF-8'>
+                    <input type='text' style='display:none;' name='xnQsjsdp' value='0ed55ae14884c788e9fd059e647036f36c0f54a5299b420b84abd365174d0f7a'></input> 
+                    <input type='hidden' name='zc_gad' id='zc_gad' value=''></input>
+                    <input type='text' style='display:none;' name='xmIwtLD' value='ed61e690d758d8e3dc00d21c0b4d04ed69cb6d5f13156af44999da502a4529bec40d5f1f384522ee7922975e90351c50'></input> 
+                    <input type='text'  style='display:none;' name='actionType' value='TGVhZHM='></input>
+                    <input type='text' style='display:none;' name='returnURL' value='null' > </input>
+                    <div class='zcwf_title' style='max-width: 404px;color: black; font-family:Arial;'>Website Leads</div>
+                    <div class='zcwf_row'>
+                        <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='First_Name'>First Name</label></div>
+                        <div class='zcwf_col_fld'><input type='text' id='First_Name' aria-required='false' aria-label='First Name' name='First Name' aria-valuemax='40' maxlength='40'></input><div class='zcwf_col_help'></div></div>
                     </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" class="form-control" placeholder="Your phone number">
+                    <div class='zcwf_row'>
+                        <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='Last_Name'>Last Name<span style='color:red;'>*</span></label></div>
+                        <div class='zcwf_col_fld'><input type='text' id='Last_Name' aria-required='true' aria-label='Last Name' name='Last Name' aria-valuemax='80' maxlength='80'></input><div class='zcwf_col_help'></div></div>
                     </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" class="form-control" placeholder="How can we help?">
+                    <div class='zcwf_row'>
+                        <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='Company'>Company<span style='color:red;'>*</span></label></div>
+                        <div class='zcwf_col_fld'><input type='text' id='Company' aria-required='true' aria-label='Company' name='Company' aria-valuemax='200' maxlength='200'></input><div class='zcwf_col_help'></div></div>
                     </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" class="form-control" placeholder="Your message" required></textarea>
+                    <div class='zcwf_row'>
+                        <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='Phone'>Phone</label></div>
+                        <div class='zcwf_col_fld'><input type='text' id='Phone' aria-required='false' aria-label='Phone' name='Phone' aria-valuemax='30' maxlength='30'></input><div class='zcwf_col_help'></div></div>
                     </div>
-                    <!-- Anti-spam honeypot field -->
-                    <input type="text" name="_gotcha" style="display: none">
-                    <button type="submit" class="btn btn-block">Send Message</button>
+                    <div class='zcwf_row'>
+                        <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='Email'>Email</label></div>
+                        <div class='zcwf_col_fld'><input type='text' ftype='email' autocomplete='false' id='Email' aria-required='false' aria-label='Email' name='Email' aria-valuemax='100' crmlabel='' maxlength='100'></input><div class='zcwf_col_help'></div></div>
+                    </div>
+                    <div class='zcwf_row'>
+                        <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='Description'>Description</label></div>
+                        <div class='zcwf_col_fld'><textarea style='font-family: Arial, sans-serif;' aria-multiline='true' id='Description' aria-required='false' aria-label='Description' name='Description'></textarea><div class='zcwf_col_help'></div></div>
+                    </div>
+                    <div class='zcwf_row'>
+                        <div class='zcwf_col_lab'></div>
+                        <div class='zcwf_col_fld'>
+                            <input type='submit' id='formsubmit' role='button' class='formsubmit zcwf_button' value='Submit' aria-label='Submit' title='Submit'>
+                            <input type='reset' class='zcwf_button' role='button' name='reset' value='Reset' aria-label='Reset' title='Reset'>
+                        </div>
+                    </div>
+                    <script>
+                    function validateEmail6656282000000530011() {
+                        var form = document.forms['WebToLeads6656282000000530011'];
+                        var emailFld = form.querySelectorAll('[ftype=email]');
+                        var i;
+                        for (i = 0; i < emailFld.length; i++) {
+                            var emailVal = emailFld[i].value;
+                            if((emailVal.replace(/^\s+|\s+$/g, '')).length!=0 ) {
+                                var atpos=emailVal.indexOf('@');
+                                var dotpos=emailVal.lastIndexOf('.');
+                                if (atpos<1 || dotpos<atpos+2 || dotpos+2>=emailVal.length) {
+                                    alert('Please enter a valid email address. ');
+                                    emailFld[i].focus();
+                                    return false;
+                                }
+                            }
+                        }
+                        return true;
+                    }
+
+                    function checkMandatory6656282000000530011() {
+                        var mndFileds = new Array('Company','Last Name');
+                        var fldLangVal = new Array('Company','Last\x20Name');
+                        for(i=0;i<mndFileds.length;i++) {
+                            var fieldObj=document.forms['WebToLeads6656282000000530011'][mndFileds[i]];
+                            if(fieldObj) {
+                                if (((fieldObj.value).replace(/^\s+|\s+$/g, '')).length==0) {
+                                    if(fieldObj.type =='file') { 
+                                        alert('Please select a file to upload.'); 
+                                        fieldObj.focus(); 
+                                        return false;
+                                    } 
+                                    alert(fldLangVal[i] +' cannot be empty.'); 
+                                    fieldObj.focus();
+                                    return false;
+                                } else if(fieldObj.nodeName=='SELECT') {
+                                    if(fieldObj.options[fieldObj.selectedIndex].value=='-None-') {
+                                        alert(fldLangVal[i] +' cannot be none.'); 
+                                        fieldObj.focus();
+                                        return false;
+                                    }
+                                } else if(fieldObj.type =='checkbox'){
+                                    if(fieldObj.checked == false){
+                                        alert('Please accept  '+fldLangVal[i]);
+                                        fieldObj.focus();
+                                        return false;
+                                    } 
+                                } 
+                                try {
+                                    if(fieldObj.name == 'Last Name') {
+                                        name = fieldObj.value;
+                                    }
+                                } catch (e) {}
+                            }
+                        }
+                        if(!validateEmail6656282000000530011()){return false;}
+                        
+                        var urlparams = new URLSearchParams( window.location.search);
+                        if(urlparams.has('service') && (urlparams.get('service')==='smarturl')){
+                            var webform = document.getElementById('webform6656282000000530011');
+                            var service =  urlparams.get('service'); 
+                            var smarturlfield = document.createElement('input');
+                            smarturlfield.setAttribute('type','hidden');
+                            smarturlfield.setAttribute('value',service);
+                            smarturlfield.setAttribute('name','service');
+                            webform.appendChild(smarturlfield); 
+                        }
+
+                        document.querySelector('.crmWebToEntityForm .formsubmit').setAttribute('disabled', true);
+                        return true;
+                    }
+
+                    $(document).ready(function () {
+                        $('#webform6656282000000530011').submit(function (e) {
+                            var ismandatory = checkMandatory6656282000000530011();
+                            e.preventDefault();
+                            if(ismandatory){
+                                if(typeof _wfa_track != 'undefined' && _wfa_track.wfa_submit){ _wfa_track.wfa_submit(e); }
+                                var formData = new FormData(this);
+                                $.ajax({
+                                    url :'https://crm.zoho.com/crm/WebToLeadForm',
+                                    type : 'POST',
+                                    data : formData,
+                                    cache: false,
+                                    contentType: false,
+                                    processData: false,
+                                    success: function(data) {
+                                        var splashinfodom = document.getElementById('wf_splash_info');
+                                        splashinfodom.innerText=data.actionvalue;
+                                        var splashdom = document.getElementById('wf_splash');
+                                        document.getElementById('webform6656282000000530011').reset.click();
+                                        splashdom.style.display = '';
+                                        setTimeout(function(){
+                                            splashdom.style.display = 'none';
+                                        },5000);
+                                        document.querySelector('.crmWebToEntityForm .formsubmit').removeAttribute('disabled');
+                                    },
+                                    error: function(data){
+                                        alert('an error occurred');
+                                    } 
+                                });
+                            }
+                        });
+                    });
+                    function tooltipShow6656282000000530011(el){
+                        var tooltip = el.nextElementSibling;
+                        var tooltipDisplay = tooltip.style.display;
+                        if(tooltipDisplay == 'none'){
+                            var allTooltip = document.getElementsByClassName('zcwf_tooltip_over');
+                            for(i=0; i<allTooltip.length; i++){
+                                allTooltip[i].style.display='none';
+                            }
+                            tooltip.style.display = 'block';
+                        }else{
+                            tooltip.style.display='none';
+                        }
+                    }
+                    </script>
+                    <script id='wf_anal' src='https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=d47eeab9cf1739737fdfb8bff80df9dc31a23dde1691e44d4b3492907d9d894d76cab3fa791043d2525bf9b98f95795agid25f698a3195e07e65821d19232e4accabd96a5d219fd460c7a6b4d73bbfbc127gid1d04576de7028d6ad0a03318c998e0c564c67ba2c871a7d5c2b4dd3a28a6e142gid5b782a42f6bd82755603e0e4ec2d0723009d3023b7af4d86ef4608543a451a95&tw=652986bfabb47588b946ce2ffd78861cbcff1e8b36537c6038e75a6ed71487f4'></script>
                 </form>
             </div>
         </div>
