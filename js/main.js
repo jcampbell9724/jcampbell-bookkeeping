@@ -1,40 +1,40 @@
 // Main JavaScript file with all functionality
-// Mobile Menu Toggle - Place this at the top of your main.js file
 document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Menu Toggle
     const mobileToggle = document.getElementById('mobile-toggle');
     const navMenu = document.getElementById('nav-menu');
     
     if (mobileToggle && navMenu) {
-        mobileToggle.addEventListener('click', function() {
+        mobileToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
-            this.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
-            
-            // Prevent body scrolling when menu is open
-            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
-        });
-        
-        // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
-            if (navMenu.classList.contains('active') && 
-                !navMenu.contains(event.target) && 
-                event.target !== mobileToggle) {
-                navMenu.classList.remove('active');
-                mobileToggle.textContent = '☰';
-                document.body.style.overflow = '';
-            }
-        });
-        
-        // Close menu when clicking on a menu link
-        const navLinks = navMenu.querySelectorAll('a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                navMenu.classList.remove('active');
-                mobileToggle.textContent = '☰';
-                document.body.style.overflow = '';
-            });
+            mobileToggle.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
         });
     }
-});
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            if (navMenu && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                if (mobileToggle) {
+                    mobileToggle.textContent = '☰';
+                }
+            }
+
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
 
     // UNIFIED Accordion/FAQ functionality
 // This handles both homepage accordions and the FAQ page items
