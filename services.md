@@ -18,7 +18,7 @@ description: Comprehensive bookkeeping services, financial analysis, tax prepara
         </div>
 
         <h2 style="text-align: center; margin-bottom: 30px;">Our Service Packages</h2>
-        <p style="text-align: center; max-width: 800px; margin: 0 auto 50px; color: #718096;">We've developed our service offerings based on extensive experience with businesses at various stages of growth. Our tiered packages ensure you receive the appropriate level of financial support for your business size and complexity, with room to scale as you grow.</p>
+        <p style="text-align: center; margin: 0 auto 50px; color: #718096;">We've developed our service offerings based on extensive experience with businesses at various stages of growth. Our tiered packages ensure you receive the appropriate level of financial support for your business size and complexity, with room to scale as you grow.</p>
 
         <!-- Core Service Packages -->
         <h3 id="foundation-package" class="category-title">Core Service Packages</h3>
