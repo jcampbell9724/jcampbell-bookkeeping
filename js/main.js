@@ -37,7 +37,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // UNIFIED Accordion/FAQ functionality
-    // This handles both homepage accordions and the FAQ page items
+// This handles both homepage accordions and the FAQ page items
+document.addEventListener('DOMContentLoaded', function() {
     const allAccordionItems = document.querySelectorAll('.accordion-item, .faq-item');
     
     if (allAccordionItems.length > 0) {
@@ -45,11 +46,8 @@ document.addEventListener('DOMContentLoaded', function() {
         allAccordionItems.forEach(item => {
             const content = item.querySelector('.accordion-content, .faq-answer');
             if (content) {
-                if (content.classList.contains('accordion-content')) {
-                    content.style.maxHeight = null;
-                } else {
-                    content.style.display = 'none';
-                }
+                // Apply initial state
+                content.style.display = 'none';
             }
         });
         
@@ -60,36 +58,29 @@ document.addEventListener('DOMContentLoaded', function() {
                 header.addEventListener('click', () => {
                     // Check if this item is already active
                     const isActive = item.classList.contains('active');
-
-                    // Close all accordion items
+                    
+                    // Close all accordion items first
                     allAccordionItems.forEach(accItem => {
                         accItem.classList.remove('active');
                         const content = accItem.querySelector('.accordion-content, .faq-answer');
                         if (content) {
-                            if (content.classList.contains('accordion-content')) {
-                                content.style.maxHeight = null;
-                            } else {
-                                content.style.display = 'none';
-                            }
+                            content.style.display = 'none';
                         }
                     });
-
+                    
                     // Open the clicked item if it was not already active
                     if (!isActive) {
                         item.classList.add('active');
                         const content = item.querySelector('.accordion-content, .faq-answer');
                         if (content) {
-                            if (content.classList.contains('accordion-content')) {
-                                content.style.maxHeight = content.scrollHeight + 'px';
-                            } else {
-                                content.style.display = 'block';
-                            }
+                            content.style.display = 'block';
                         }
                     }
                 });
             }
         });
     }
+});
     
     // Pricing toggle between monthly and annual
     const pricingToggle = document.getElementById('pricing-toggle');
