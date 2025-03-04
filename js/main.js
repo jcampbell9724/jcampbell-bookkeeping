@@ -36,10 +36,25 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // FAQ Accordion functionality - UPDATED VERSION
-    const accordionItems = document.querySelectorAll('.accordion-item, .faq-item');
-    if (accordionItems.length > 0) {
-        accordionItems.forEach(item => {
+    // UNIFIED Accordion/FAQ functionality
+    // This handles both homepage accordions and the FAQ page items
+    const allAccordionItems = document.querySelectorAll('.accordion-item, .faq-item');
+    
+    if (allAccordionItems.length > 0) {
+        // Initialize - hide all content sections
+        allAccordionItems.forEach(item => {
+            const content = item.querySelector('.accordion-content, .faq-answer');
+            if (content) {
+                if (content.classList.contains('accordion-content')) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.display = 'none';
+                }
+            }
+        });
+        
+        // Add click event to all headers
+        allAccordionItems.forEach(item => {
             const header = item.querySelector('.accordion-header, .faq-question');
             if (header) {
                 header.addEventListener('click', () => {
@@ -47,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     const isActive = item.classList.contains('active');
 
                     // Close all accordion items
-                    accordionItems.forEach(accItem => {
+                    allAccordionItems.forEach(accItem => {
                         accItem.classList.remove('active');
                         const content = accItem.querySelector('.accordion-content, .faq-answer');
                         if (content) {
@@ -75,33 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-
-    // Simple toggle for FAQ questions on individual pages - FIXED VERSION
-    const faqQuestions = document.querySelectorAll('.faq-question');
-    if (faqQuestions.length > 0) {
-        // Initialize all FAQ answers as hidden
-        document.querySelectorAll('.faq-answer').forEach(answer => {
-            answer.style.display = 'none';
-        });
-        
-        faqQuestions.forEach(question => {
-            question.addEventListener('click', () => {
-                // Toggle active class
-                question.classList.toggle('active');
-                
-                // Get the answer element
-                const answer = question.nextElementSibling;
-                
-                // Toggle display of the answer
-                if (answer.style.display === 'block') {
-                    answer.style.display = 'none';
-                } else {
-                    answer.style.display = 'block';
-                }
-            });
-        });
-    }
-
+    
     // Pricing toggle between monthly and annual
     const pricingToggle = document.getElementById('pricing-toggle');
     if (pricingToggle) {
