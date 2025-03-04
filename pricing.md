@@ -26,39 +26,40 @@ description: Transparent and flexible pricing options for professional bookkeepi
         
         <div class="pricing-plans">
             <div class="pricing-plan">
-                <div class="plan-name">Startup</div>
-                <div class="plan-description">Essential bookkeeping for new and small businesses</div>
+                <div class="plan-name">Foundation Package</div>
+                <div class="plan-description">Essential bookkeeping for startups and small businesses</div>
                 <div class="plan-price">
-                    <div class="price monthly-price">$349</div>
-                    <div class="price annual-price" style="display: none;">$314</div>
+                    <div class="price monthly-price">$299</div>
+                    <div class="price annual-price" style="display: none;">$269</div>
                     <div class="price-period">per month</div>
                 </div>
                 <div class="plan-features">
                     <div class="feature-item">
                         <div class="feature-icon">✓</div>
-                        <div class="feature-text">Monthly bookkeeping</div>
+                        <div class="feature-text">Monthly bookkeeping & reconciliation</div>
                     </div>
                     <div class="feature-item">
                         <div class="feature-icon">✓</div>
-                        <div class="feature-text">Bank & credit card reconciliation</div>
+                        <div class="feature-text">Up to 150 monthly transactions</div>
                     </div>
                     <div class="feature-item">
                         <div class="feature-icon">✓</div>
-                        <div class="feature-text">Monthly financial statements</div>
+                        <div class="feature-text">Basic financial statements (P&L, Balance Sheet)</div>
                     </div>
                     <div class="feature-item">
                         <div class="feature-icon">✓</div>
-                        <div class="feature-text">Basic financial dashboard</div>
+                        <div class="feature-text">Digital receipt management</div>
                     </div>
                     <div class="feature-item">
                         <div class="feature-icon">✓</div>
-                        <div class="feature-text">Up to 100 monthly transactions</div>
+                        <div class="feature-text">Quarterly advisory check-in call (30 minutes)</div>
                     </div>
                     <div class="feature-item">
                         <div class="feature-icon">✓</div>
-                        <div class="feature-text">Email support</div>
+                        <div class="feature-text">Email support (response within 48 hours)</div>
                     </div>
                 </div>
+                <div class="plan-details">Up to 5 hours of service per month</div>
                 <div class="plan-cta">
                     <a href="{{ site.baseurl }}/#contact" class="btn btn-outline">Get Started</a>
                 </div>
@@ -66,17 +67,21 @@ description: Transparent and flexible pricing options for professional bookkeepi
             
             <div class="pricing-plan">
                 <div class="popular-tag">Most Popular</div>
-                <div class="plan-name">Growth</div>
-                <div class="plan-description">Comprehensive bookkeeping for growing businesses</div>
+                <div class="plan-name">Growth Package</div>
+                <div class="plan-description">Comprehensive bookkeeping for established small businesses</div>
                 <div class="plan-price">
-                    <div class="price monthly-price">$649</div>
-                    <div class="price annual-price" style="display: none;">$584</div>
+                    <div class="price monthly-price">$549</div>
+                    <div class="price annual-price" style="display: none;">$494</div>
                     <div class="price-period">per month</div>
                 </div>
                 <div class="plan-features">
                     <div class="feature-item">
                         <div class="feature-icon">✓</div>
-                        <div class="feature-text">Everything in Startup, plus:</div>
+                        <div class="feature-text">Everything in Foundation Package, plus:</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-text">Up to 300 monthly transactions</div>
                     </div>
                     <div class="feature-item">
                         <div class="feature-icon">✓</div>
@@ -88,62 +93,35 @@ description: Transparent and flexible pricing options for professional bookkeepi
                     </div>
                     <div class="feature-item">
                         <div class="feature-icon">✓</div>
-                        <div class="feature-text">Cash flow forecasting</div>
+                        <div class="feature-text">Cash flow forecasting (13-week projection)</div>
                     </div>
                     <div class="feature-item">
                         <div class="feature-icon">✓</div>
-                        <div class="feature-text">Enhanced PowerBI dashboard</div>
+                        <div class="feature-text">Monthly financial review call (45 minutes)</div>
                     </div>
                     <div class="feature-item">
                         <div class="feature-icon">✓</div>
-                        <div class="feature-text">Up to 250 monthly transactions</div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">✓</div>
-                        <div class="feature-text">Email & phone support</div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">✓</div>
-                        <div class="feature-text">Monthly review calls</div>
+                        <div class="feature-text">Basic PowerBI dashboard</div>
                     </div>
                 </div>
+                <div class="plan-details">Up to 10 hours of service per month</div>
                 <div class="plan-cta">
                     <a href="{{ site.baseurl }}/#contact" class="btn btn-accent">Get Started</a>
                 </div>
             </div>
             
             <div class="pricing-plan">
-                <div class="plan-name">Premium</div>
-                <div class="plan-description">Advanced financial management for established businesses</div>
+                <div class="plan-name">Premium Package</div>
+                <div class="plan-description">Strategic financial management for complex businesses</div>
                 <div class="plan-price">
-                    <div class="price monthly-price">$949</div>
-                    <div class="price annual-price" style="display: none;">$854</div>
+                    <div class="price monthly-price">$849</div>
+                    <div class="price annual-price" style="display: none;">$764</div>
                     <div class="price-period">per month</div>
                 </div>
                 <div class="plan-features">
                     <div class="feature-item">
                         <div class="feature-icon">✓</div>
-                        <div class="feature-text">Everything in Growth, plus:</div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">✓</div>
-                        <div class="feature-text">Dedicated bookkeeper</div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">✓</div>
-                        <div class="feature-text">Monthly profitability analysis</div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">✓</div>
-                        <div class="feature-text">Budget creation & monitoring</div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">✓</div>
-                        <div class="feature-text">Custom PowerBI dashboards</div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">✓</div>
-                        <div class="feature-text">Financial strategy consulting</div>
+                        <div class="feature-text">Everything in Growth Package, plus:</div>
                     </div>
                     <div class="feature-item">
                         <div class="feature-icon">✓</div>
@@ -151,11 +129,115 @@ description: Transparent and flexible pricing options for professional bookkeepi
                     </div>
                     <div class="feature-item">
                         <div class="feature-icon">✓</div>
-                        <div class="feature-text">Priority support</div>
+                        <div class="feature-text">Dedicated bookkeeper</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-text">Monthly strategy calls with detailed analysis (60 minutes)</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-text">Custom PowerBI financial dashboard</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-text">Department/class tracking</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-text">Budget creation and variance analysis</div>
                     </div>
                 </div>
+                <div class="plan-details">Up to 15 hours of service per month</div>
                 <div class="plan-cta">
                     <a href="{{ site.baseurl }}/#contact" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pricing-section industry-packages-section">
+        <h2>Industry-Specific Packages</h2>
+        <p>Specialized solutions designed for the unique financial needs of specific industries.</p>
+        
+        <div class="pricing-plans">
+            <div class="pricing-plan">
+                <div class="plan-name">Real Estate Professional Package</div>
+                <div class="plan-description">Specialized financial management for real estate professionals</div>
+                <div class="plan-price">
+                    <div class="price monthly-price">$499</div>
+                    <div class="price annual-price" style="display: none;">$449</div>
+                    <div class="price-period">per month</div>
+                </div>
+                <div class="plan-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-text">Everything in Foundation Package, plus:</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-text">Property-by-property P&L tracking</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-text">Commission income tracking</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-text">Transaction-based reporting</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-text">Client trust account reconciliation</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-text">Real estate KPI dashboard</div>
+                    </div>
+                </div>
+                <div class="plan-details">Up to 8 hours of service per month</div>
+                <div class="plan-cta">
+                    <a href="{{ site.baseurl }}/#contact" class="btn btn-outline">Get Started</a>
+                </div>
+            </div>
+            
+            <div class="pricing-plan">
+                <div class="plan-name">Property Manager Package</div>
+                <div class="plan-description">Specialized for property management companies</div>
+                <div class="plan-price">
+                    <div class="price monthly-price">$699</div>
+                    <div class="price annual-price" style="display: none;">$629</div>
+                    <div class="price-period">per month</div>
+                </div>
+                <div class="plan-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-text">Everything in Growth Package, plus:</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-text">Property-by-property financial tracking</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-text">Owner statement preparation</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-text">Security deposit reconciliation</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-text">Rent roll preparation</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-text">Trust account reconciliation</div>
+                    </div>
+                </div>
+                <div class="plan-details">Up to 12 hours of service per month</div>
+                <div class="plan-cta">
+                    <a href="{{ site.baseurl }}/#contact" class="btn btn-outline">Get Started</a>
                 </div>
             </div>
         </div>
@@ -167,39 +249,39 @@ description: Transparent and flexible pricing options for professional bookkeepi
         
         <div class="addons-container">
             <div class="addon-card">
-                <div class="addon-name">Payroll Processing</div>
-                <div class="addon-price">Starting at $149/month</div>
-                <div class="addon-description">Complete payroll management including direct deposits, tax withholding, and compliance reporting.</div>
-            </div>
-            
-            <div class="addon-card">
-                <div class="addon-name">Tax Preparation</div>
-                <div class="addon-price">Starting at $499/year</div>
-                <div class="addon-description">Annual business tax return preparation and filing with strategic tax planning.</div>
-            </div>
-            
-            <div class="addon-card">
                 <div class="addon-name">Catch-Up Bookkeeping</div>
-                <div class="addon-price">Custom Quote</div>
-                <div class="addon-description">Get your books up-to-date with our specialized catch-up bookkeeping services.</div>
+                <div class="addon-price">$85-$95/hour</div>
+                <div class="addon-description">Get your books up-to-date with our specialized catch-up bookkeeping services. Volume discounts available for longer periods.</div>
             </div>
             
             <div class="addon-card">
-                <div class="addon-name">Custom PowerBI Dashboard</div>
-                <div class="addon-price">Starting at $349 (one-time)</div>
-                <div class="addon-description">Tailored financial dashboards designed specifically for your business metrics and KPIs.</div>
+                <div class="addon-name">System Setup & Implementation</div>
+                <div class="addon-price">Starting at $500</div>
+                <div class="addon-description">Initial QuickBooks/Xero setup, chart of accounts restructuring, and accounting software migration services.</div>
+            </div>
+            
+            <div class="addon-card">
+                <div class="addon-name">PowerBI Dashboards</div>
+                <div class="addon-price">$550-$950 + monthly maintenance</div>
+                <div class="addon-description">Custom financial dashboards designed specifically for your business metrics and KPIs.</div>
             </div>
             
             <div class="addon-card">
                 <div class="addon-name">CFO Advisory Services</div>
-                <div class="addon-price">$199/hour</div>
+                <div class="addon-price">$175/hour</div>
                 <div class="addon-description">Strategic financial consulting and planning from experienced financial advisors.</div>
             </div>
             
             <div class="addon-card">
-                <div class="addon-name">Financial Process Setup</div>
-                <div class="addon-price">Starting at $599 (one-time)</div>
-                <div class="addon-description">Implementation of efficient financial workflows and accounting systems.</div>
+                <div class="addon-name">Business Plan Financial Projections</div>
+                <div class="addon-price">$750-$1,500</div>
+                <div class="addon-description">Comprehensive financial projections and analysis for your business plan or growth strategy.</div>
+            </div>
+            
+            <div class="addon-card">
+                <div class="addon-name">Specialized Reporting</div>
+                <div class="addon-price">$250-$750</div>
+                <div class="addon-description">Custom financial reports, loan package preparation, investor packages, and board meeting financial packages.</div>
             </div>
         </div>
     </div>
@@ -210,55 +292,88 @@ description: Transparent and flexible pricing options for professional bookkeepi
         <div class="faq-container">
             <div class="faq-item">
                 <div class="faq-question">
-                    Are there any setup fees?
+                    How does the monthly hours allocation work?
                 </div>
                 <div class="faq-answer">
-                    <p>No, there are no setup fees for our standard bookkeeping packages. We believe in transparent pricing with no hidden costs. The only time you might encounter a one-time fee is for specialized services like custom dashboard development or if extensive system setup is required for complex businesses.</p>
+                    <p>Each package includes a set number of service hours per month. We track our time carefully and provide monthly summaries of how time was spent. If you consistently exceed your allocation, we'll discuss upgrading to a more suitable package.</p>
                 </div>
             </div>
             
             <div class="faq-item">
                 <div class="faq-question">
-                    What if I have more transactions than my plan allows?
+                    What if my needs don't fit a standard package?
                 </div>
                 <div class="faq-answer">
-                    <p>If your business consistently exceeds the transaction limit in your current plan, we'll reach out to discuss upgrading to a more suitable package. For occasional months with higher volume, we charge a small per-transaction fee for the excess transactions. We'll always discuss this with you before applying any additional charges.</p>
+                    <p>We're happy to create a custom package tailored to your specific needs. During our consultation, we'll identify your requirements and design a service plan that addresses them perfectly.</p>
                 </div>
             </div>
             
             <div class="faq-item">
                 <div class="faq-question">
-                    Can I change plans as my business grows?
+                    How do you handle transaction volume increases?
                 </div>
                 <div class="faq-answer">
-                    <p>Absolutely! We design our service model to be flexible and scalable. You can upgrade your plan at any time as your business needs change. If you're on an annual plan and need to upgrade mid-year, we'll simply prorate the difference. Downgrades can be made at the end of your current billing cycle.</p>
+                    <p>If you occasionally exceed your transaction limit, we bill for the additional transactions at the specified per-transaction rate. If this becomes consistent, we'll recommend upgrading to a more appropriate package.</p>
                 </div>
             </div>
             
             <div class="faq-item">
                 <div class="faq-question">
-                    Do you offer a discount for non-profits?
+                    What accounting software do you use?
                 </div>
                 <div class="faq-answer">
-                    <p>Yes, we offer a 15% discount on all our service packages for registered non-profit organizations. We're committed to supporting the important work non-profits do and understand they often operate with limited resources. Please mention your non-profit status during your consultation.</p>
+                    <p>We primarily work with QuickBooks Online and Xero, but can accommodate other platforms if needed. If you don't currently use accounting software, we'll recommend the best option for your business.</p>
                 </div>
             </div>
             
             <div class="faq-item">
                 <div class="faq-question">
-                    What software do you use for bookkeeping?
+                    How do we share documents securely?
                 </div>
                 <div class="faq-answer">
-                    <p>We're proficient in most major accounting platforms including QuickBooks, Xero, and FreshBooks. We typically work with whatever system you're already using, or we can recommend and implement the best solution for your specific business needs. For data visualization and reporting, we use PowerBI to create custom dashboards that give you actionable insights.</p>
+                    <p>We use a secure client portal for all document sharing and communication. This ensures your financial information remains protected at all times.</p>
                 </div>
             </div>
             
             <div class="faq-item">
                 <div class="faq-question">
-                    What if my business doesn't fit neatly into one of your packages?
+                    Can I upgrade or downgrade my package?
                 </div>
                 <div class="faq-answer">
-                    <p>We understand that every business is unique. If our standard packages don't align perfectly with your needs, we're happy to create a custom solution tailored specifically to your business. Contact us for a free consultation, and we'll work together to design a service package that addresses your exact requirements and budget.</p>
+                    <p>Yes, you can upgrade at any time. Downgrades can be made at the end of your current billing cycle with 30 days' notice.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pricing-section special-offers-section">
+        <h2>Special Offers</h2>
+        
+        <div class="offers-container">
+            <div class="offer-card">
+                <div class="offer-name">Founding Client Discount</div>
+                <div class="offer-description">
+                    <p>15% discount for the first 6 months</p>
+                    <p>Available to the first 10 clients only</p>
+                    <p>Requires 12-month service commitment</p>
+                </div>
+            </div>
+            
+            <div class="offer-card">
+                <div class="offer-name">Annual Prepayment Discount</div>
+                <div class="offer-description">
+                    <p>10% discount when paying annually</p>
+                    <p>Improved cash flow for your business</p>
+                    <p>Lock in current rates for 12 months</p>
+                </div>
+            </div>
+            
+            <div class="offer-card">
+                <div class="offer-name">Referral Program</div>
+                <div class="offer-description">
+                    <p>$250 account credit for referring a client who signs up</p>
+                    <p>$100 gift card for the referred client</p>
+                    <p>No limit on number of referrals</p>
                 </div>
             </div>
         </div>
