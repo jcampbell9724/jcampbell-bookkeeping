@@ -40,9 +40,9 @@
     --transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
     
     /* Layout */
-    --container-max-width: 1200px;
+    --container-max-width: 90rem;
     --section-padding: 70px 0;
-    --content-padding: 20px;
+    --content-padding: 2rem;
     --header-height: 70px;
     
     /* Breakpoints */
@@ -121,9 +121,11 @@ ul {
 }
 
 .container {
-    max-width: 1200px;
+    width: 100%;
+    max-width: var(--container-max-width);
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 var(--content-padding);
+    box-sizing: border-box;
 }
 
 .section-padding {
@@ -2985,8 +2987,8 @@ header {
 
 @media (max-width: var(--breakpoint-lg)) {
     .container {
-        padding-left: var(--spacing-md);
-        padding-right: var(--spacing-md);
+        max-width: 100%;
+        padding: 0 1.5rem;
     }
     
     .services-grid {
