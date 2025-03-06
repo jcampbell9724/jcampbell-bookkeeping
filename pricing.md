@@ -29,94 +29,6 @@ description: Transparent and flexible pricing options for professional bookkeepi
             <span class="toggle-label annual-label">Annual <span style="color: #ed8936; font-size: 0.9rem;">(Save 10%)</span></span>
         </div>
         
-        <!-- New Comparison Table -->
-        <div class="package-comparison">
-            <table class="comparison-table">
-                <thead>
-                    <tr>
-                        <th>Features</th>
-                        <th>Foundation</th>
-                        <th>Growth</th>
-                        <th>Premium</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Monthly Price</td>
-                        <td>$299</td>
-                        <td>$549</td>
-                        <td>$849</td>
-                    </tr>
-                    <tr>
-                        <td>Annual Price (per month)</td>
-                        <td>$269</td>
-                        <td>$494</td>
-                        <td>$764</td>
-                    </tr>
-                    <tr>
-                        <td>Service Hours</td>
-                        <td>Up to 5 hours</td>
-                        <td>Up to 10 hours</td>
-                        <td>Up to 15 hours</td>
-                    </tr>
-                    <tr>
-                        <td>Monthly Transactions</td>
-                        <td>Up to 150</td>
-                        <td>Up to 300</td>
-                        <td>Up to 500</td>
-                    </tr>
-                    <tr>
-                        <td>Basic Bookkeeping</td>
-                        <td>✓</td>
-                        <td>✓</td>
-                        <td>✓</td>
-                    </tr>
-                    <tr>
-                        <td>Financial Statements</td>
-                        <td>Basic</td>
-                        <td>Enhanced</td>
-                        <td>Comprehensive</td>
-                    </tr>
-                    <tr>
-                        <td>Advisory Calls</td>
-                        <td>Quarterly (30 min)</td>
-                        <td>Monthly (45 min)</td>
-                        <td>Monthly (60 min)</td>
-                    </tr>
-                    <tr>
-                        <td>A/P & A/R Management</td>
-                        <td>-</td>
-                        <td>✓</td>
-                        <td>✓</td>
-                    </tr>
-                    <tr>
-                        <td>Cash Flow Forecasting</td>
-                        <td>-</td>
-                        <td>✓</td>
-                        <td>✓</td>
-                    </tr>
-                    <tr>
-                        <td>PowerBI Dashboard</td>
-                        <td>-</td>
-                        <td>Basic</td>
-                        <td>Custom</td>
-                    </tr>
-                    <tr>
-                        <td>Budget Creation & Analysis</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>✓</td>
-                    </tr>
-                    <tr>
-                        <td>Response Time</td>
-                        <td>48 hours</td>
-                        <td>24 hours</td>
-                        <td>Same Day</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        
         <div class="pricing-plans">
             <div id="foundation-package" class="pricing-plan">
                 <div class="plan-name">Foundation Package</div>
@@ -307,6 +219,100 @@ description: Transparent and flexible pricing options for professional bookkeepi
                     <a href="/services/#property-manager-package" class="btn btn-outline">Learn More</a>
                 </div>
             </div>
+        </div>
+    </div>
+    
+    <!-- Pricing Comparison Table - Moved below Industry-Specific Packages -->
+    <div class="pricing-section pricing-comparison-section">
+        <h2>Pricing Comparison</h2>
+        <p>Compare our service packages to find the perfect fit for your business needs.</p>
+        
+        <!-- New Comparison Table -->
+        <div class="package-comparison">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Features</th>
+                        <th>Foundation</th>
+                        <th>Growth</th>
+                        <th>Premium</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="monthly-row">
+                        <td>Monthly Price</td>
+                        <td>$299</td>
+                        <td>$549</td>
+                        <td>$849</td>
+                    </tr>
+                    <tr class="annual-row" style="display: none;">
+                        <td>Annual Price (per month)</td>
+                        <td>$269</td>
+                        <td>$494</td>
+                        <td>$764</td>
+                    </tr>
+                    <tr>
+                        <td>Service Hours</td>
+                        <td>Up to 5 hours</td>
+                        <td>Up to 10 hours</td>
+                        <td>Up to 15 hours</td>
+                    </tr>
+                    <tr>
+                        <td>Monthly Transactions</td>
+                        <td>Up to 150</td>
+                        <td>Up to 300</td>
+                        <td>Up to 500</td>
+                    </tr>
+                    <tr>
+                        <td>Basic Bookkeeping</td>
+                        <td>✓</td>
+                        <td>✓</td>
+                        <td>✓</td>
+                    </tr>
+                    <tr>
+                        <td>Financial Statements</td>
+                        <td>Basic</td>
+                        <td>Enhanced</td>
+                        <td>Comprehensive</td>
+                    </tr>
+                    <tr>
+                        <td>Advisory Calls</td>
+                        <td>Quarterly (30 min)</td>
+                        <td>Monthly (45 min)</td>
+                        <td>Monthly (60 min)</td>
+                    </tr>
+                    <tr>
+                        <td>A/P & A/R Management</td>
+                        <td>-</td>
+                        <td>✓</td>
+                        <td>✓</td>
+                    </tr>
+                    <tr>
+                        <td>Cash Flow Forecasting</td>
+                        <td>-</td>
+                        <td>✓</td>
+                        <td>✓</td>
+                    </tr>
+                    <tr>
+                        <td>PowerBI Dashboard</td>
+                        <td>-</td>
+                        <td>Basic</td>
+                        <td>Custom</td>
+                    </tr>
+                    <tr>
+                        <td>Budget Creation & Analysis</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>✓</td>
+                    </tr>
+                    <tr>
+                        <td>Response Time</td>
+                        <td>48 hours</td>
+                        <td>24 hours</td>
+                        <td>Same Day</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 

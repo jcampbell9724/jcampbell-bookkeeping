@@ -116,6 +116,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const annualLabel = document.querySelector('.annual-label');
         const monthlyPrices = document.querySelectorAll('.monthly-price');
         const annualPrices = document.querySelectorAll('.annual-price');
+        const monthlyRows = document.querySelectorAll('.monthly-row');
+        const annualRows = document.querySelectorAll('.annual-row');
         
         pricingToggle.addEventListener('change', function() {
             if (this.checked) {
@@ -123,12 +125,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 monthlyPrices.forEach(price => price.style.display = 'none');
                 annualPrices.forEach(price => price.style.display = 'block');
                 
+                // Annual table rows
+                monthlyRows.forEach(row => row.style.display = 'none');
+                annualRows.forEach(row => row.style.display = 'table-row');
+                
                 if (monthlyLabel) monthlyLabel.classList.remove('toggle-active');
                 if (annualLabel) annualLabel.classList.add('toggle-active');
             } else {
                 // Monthly pricing
                 monthlyPrices.forEach(price => price.style.display = 'block');
                 annualPrices.forEach(price => price.style.display = 'none');
+                
+                // Monthly table rows
+                monthlyRows.forEach(row => row.style.display = 'table-row');
+                annualRows.forEach(row => row.style.display = 'none');
                 
                 if (monthlyLabel) monthlyLabel.classList.add('toggle-active');
                 if (annualLabel) annualLabel.classList.remove('toggle-active');
