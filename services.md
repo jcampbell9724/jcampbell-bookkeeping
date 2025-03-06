@@ -52,7 +52,9 @@ description: Comprehensive bookkeeping services, financial analysis, tax prepara
                     </ul>
                     
                     <p><strong>Ideal For:</strong> Sole proprietors and startups, businesses with simple finances, 0-2 employees, single bank/credit card account</p>
-                    <a href="/pricing/#foundation-package" class="btn btn-primary">View Pricing</a>
+                    <div class="button-container">
+                        <a href="/pricing/#foundation-package" class="btn btn-primary">View Pricing</a>
+                    </div>
                 </div>
             </div>
             
@@ -87,7 +89,9 @@ description: Comprehensive bookkeeping services, financial analysis, tax prepara
                     </ul>
                     
                     <p><strong>Ideal For:</strong> Established small businesses, companies with 3-10 employees, multiple revenue streams, 2-3 bank/credit card accounts</p>
-                    <a href="/pricing/#growth-package" class="btn btn-primary">View Pricing</a>
+                    <div class="button-container">
+                        <a href="/pricing/#growth-package" class="btn btn-primary">View Pricing</a>
+                    </div>
                 </div>
             </div>
             
@@ -122,7 +126,9 @@ description: Comprehensive bookkeeping services, financial analysis, tax prepara
                     </ul>
                     
                     <p><strong>Ideal For:</strong> Complex small businesses, companies with 10+ employees, multiple departments or revenue streams, businesses requiring strategic financial guidance</p>
-                    <a href="/pricing/#premium-package" class="btn btn-primary">View Pricing</a>
+                    <div class="button-container">
+                        <a href="/pricing/#premium-package" class="btn btn-primary">View Pricing</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -160,7 +166,10 @@ description: Comprehensive bookkeeping services, financial analysis, tax prepara
                         <li>Trust account compliance</li>
                     </ul>
                     
-                    <a href="/pricing/#real-estate-package" class="btn btn-primary">View Pricing</a>
+                    <p><strong>Ideal For:</strong> Real estate professionals</p>
+                    <div class="button-container">
+                        <a href="/pricing/#real-estate-package" class="btn btn-primary">View Pricing</a>
+                    </div>
                 </div>
             </div>
             
@@ -192,7 +201,10 @@ description: Comprehensive bookkeeping services, financial analysis, tax prepara
                         <li>Improved trust account compliance</li>
                     </ul>
                     
-                    <a href="/pricing/#property-manager-package" class="btn btn-primary">View Pricing</a>
+                    <p><strong>Ideal For:</strong> Property management companies</p>
+                    <div class="button-container">
+                        <a href="/pricing/#property-manager-package" class="btn btn-primary">View Pricing</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -210,3 +222,21 @@ description: Comprehensive bookkeeping services, financial analysis, tax prepara
         </div>
     </div>
 </div>
+
+<style>
+.service-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.service-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.button-container {
+    margin-top: auto;
+    padding-top: 20px;
+}
+</style>
