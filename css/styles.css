@@ -1,106 +1,78 @@
-/* Basic CSS Reset */
-* {
-  margin: 0;
-  padding: 0;
-}
-
-/* Typography */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #222;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 0.5em;
-  font-weight: 700;
-}
-
-h1 {
-  font-size: 2.5em;
-}
-
-h2 {
-  font-size: 2em;
-}
-
-h3 {
-  font-size: 1.75em;
-}
-
-h4 {
-  font-size: 1.5em;
-}
-
-p {
-  margin-bottom: 1em;
-}
-
-a {
-  color: #0066cc;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Layout */
-.container {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-header, footer {
-  padding: 20px 0;
-}
-
-section {
-  margin: 20px 0;
-}
-
-/* Navigation */
-nav ul {
-  list-style-type: none;
-  display: flex;
-}
-
-nav li {
-  margin-right: 20px;
-}
-
-nav li:last-child {
-  margin-right: 0;
-}
-
-/* Buttons */
-.btn {
-  display: inline-block;
-  padding: 8px 16px;
-  background-color: #0066cc;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.btn:hover {
-  background-color: #0052a3;
-}
-
-/* Forms */
-input, textarea, select {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-}
+:root {
+    --primary: #2D5B89;
+    --primary-dark: #1e4066;
+    --primary-light: #477ab0;
+    --secondary: #6A8EAE;
+    --accent: #FFCC4D;
+    --accent-dark: #e6b43a;
+    --background: #F5F7FA;
+    --card-bg: #ffffff;
+    --text: #333333;
+    --text-light: #666666;
+    --border-color: #e0e6ed;   
+    }
+    
+    * {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    
+    html{
+    font-size: 16px;
+    scroll-behavior: smooth; 
+    }
+    
+    body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--background);
+    max-width: 85vw;
+    margin: 0 auto;
+    padding: 0 20px;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.5em;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--text);
+    }
+    
+    h1 { font-size: 2.25rem; } /* Largest */
+    h2 { font-size: 1.85rem; }
+    h3 { font-size: 1.5rem; }
+    h4 { font-size: 1.25rem; }
+    h5 { font-size: 1rem; }
+    h6 { font-size: 0.875rem; } /* Smallest */
+    
+    p {
+    margin-bottom: 1rem;
+    }
+    
+    a {
+    color: var(--primary);
+    text-decoration: none;
+    }
+    
+    a:hover {
+    text-decoration: underline;
+    }
+    
+    .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    }
+    
+    header, footer {
+    padding: 2rem 0;
+    }
+    
+    section {
+    margin: 1.5rem 0;
+    }
+    
