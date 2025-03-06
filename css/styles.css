@@ -76,3 +76,97 @@
     margin: 1.5rem 0;
     }
     
+    /* Navbar Styles */
+    .navbar {
+        background-color: var(--primary);
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .navbar .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .navbar .logo img {
+        height: 40px;
+        width: auto;
+    }
+    
+    .navbar .logo:hover {
+        text-decoration: none;
+        opacity: 0.9;
+    }
+    
+    .nav-menu {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        align-items: center;
+    }
+    
+    .nav-menu .nav-link {
+        color: white;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+    
+    .nav-menu .nav-link:hover {
+        color: var(--accent);
+        text-decoration: none;
+    }
+    
+    .nav-menu .btn {
+        background-color: var(--accent);
+        color: var(--text);
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        font-weight: 600;
+        transition: background-color 0.3s;
+    }
+    
+    .nav-menu .btn:hover {
+        background-color: var(--accent-dark);
+        text-decoration: none;
+    }
+    
+    .mobile-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    
+    @media (max-width: 768px) {
+        .nav-menu {
+            position: fixed;
+            right: -100%;
+            top: 5rem;
+            flex-direction: column;
+            background-color: var(--primary-dark);
+            width: 100%;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            padding: 2rem 0;
+            z-index: 10;
+        }
+        
+        .nav-menu.active {
+            right: 0;
+        }
+        
+        .mobile-toggle {
+            display: block;
+        }
+    }
+    
