@@ -121,11 +121,10 @@ ul {
 }
 
 .container {
-    width: 100%;
-    max-width: var(--container-max-width);
+    max-width: 1280px;
+    width: 90%;
     margin: 0 auto;
-    padding: 0 var(--content-padding);
-    box-sizing: border-box;
+    padding: 0 20px;
 }
 
 .section-padding {
@@ -2670,3 +2669,75 @@ header {
     margin-bottom: 8px;
     color: var(--grey-color);
 }
+
+/* Content Width Adjustments - Start */
+/* These rules will make the content wider across all pages */
+
+/* Global container adjustments */
+.container {
+    max-width: 1280px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Page-specific container adjustments */
+.services-container, 
+.hiw-container, 
+.pricing-container, 
+.about-container {
+    max-width: 1280px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Fix narrow content in individual sections */
+.services-content,
+.services-grid,
+.process-steps,
+.pricing-plans,
+.about-section,
+.two-column,
+.values-grid,
+.why-choose-grid,
+.credentials-list,
+.testimonials-section,
+.faq-section {
+    width: 100%;
+}
+
+/* Grid layouts for cards and sections */
+.services-grid,
+.pricing-plans,
+.values-grid,
+.why-choose-grid,
+.credentials-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Two column layout for about page */
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container,
+    .services-container,
+    .hiw-container,
+    .pricing-container,
+    .about-container {
+        width: 95%;
+        padding: 0 15px;
+    }
+    
+    .two-column {
+        grid-template-columns: 1fr;
+    }
+}
+/* Content Width Adjustments - End */
