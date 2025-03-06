@@ -12,3 +12,7 @@
     --text-light: #666666;
     --border-color: #e0e6ed;
 }
+
+body {
+    background-color: var(--background);
+  }
