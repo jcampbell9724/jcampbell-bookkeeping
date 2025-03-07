@@ -5,7 +5,7 @@ permalink: /services/
 description: Comprehensive bookkeeping services, financial analysis, tax preparation, and PowerBI dashboards for small businesses by Foundation Bookkeeping.
 ---
 
-<div class="services-container">
+<div>
     <div class="services-content">
         
         <div class="process-hero">
