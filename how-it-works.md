@@ -4,64 +4,60 @@ title: How It Works
 permalink: /how-it-works/
 description: Learn about our proven process for helping small businesses manage their finances effectively with Foundation Bookkeeping.
 ---
-
-<div class="hiw-container">
-    <div class="process-hero">
-        <div class="container">
-            <h1>How We Work With You</h1>
-            <p>Our streamlined process makes getting started simple and ensures you receive the financial guidance your business needs. We've developed a proven approach that delivers results while minimizing disruption to your business operations.</p>
-        </div>
+<!-- Hero Section -->
+<section id="hiw-hero" class="process-hero">
+    <div class="container">
+        <h1>How We Work With You</h1>
+        <p>Our streamlined process makes getting started simple and ensures you receive the financial guidance your business needs. We've developed a proven approach that delivers results while minimizing disruption to your business operations.</p>
     </div>
-
-    <div class="process-steps">
-        <div class="process-step">
-            <div class="step-number">1</div>
-            <h3>Initial Consultation</h3>
-            <p>We begin with a comprehensive discussion about your business to understand your unique needs, challenges, and goals.</p>
-            <ul>
-                <li>Assessment of current financial processes</li>
-                <li>Discussion of business goals</li>
-                <li>Identification of pain points</li>
-                <li>Transparent pricing discussion</li>
-            </ul>
-        </div>
-        
-        <div class="process-step">
-            <div class="step-number">2</div>
-            <h3>Customized Plan</h3>
-            <p>Based on your unique needs, we develop a tailored service package and implementation strategy.</p>
-            <ul>
-                <li>Detailed service recommendations</li>
-                <li>Clear pricing structure</li>
-                <li>Implementation timeline</li>
-                <li>Technology recommendations</li>
-            </ul>
-        </div>
-        
-        <div class="process-step">
-            <div class="step-number">3</div>
-            <h3>Seamless Onboarding</h3>
-            <p>We implement your plan with minimal disruption, setting up systems and organizing your financial records.</p>
-            <ul>
-                <li>Software setup & configuration</li>
-                <li>Financial records organization</li>
-                <li>Workflow implementation</li>
-                <li>Secure access setup</li>
-            </ul>
-        </div>
-        
-        <div class="process-step">
-            <div class="step-number">4</div>
-            <h3>Ongoing Support</h3>
-            <p>We provide regular reporting, proactive guidance, and responsive support to help your business thrive.</p>
-            <ul>
-                <li>Regular financial reporting</li>
-                <li>Scheduled review meetings</li>
-                <li>Proactive recommendations</li>
-                <li>Responsive support</li>
-            </ul>
-        </div>
+</section>
+<!-- Process Steps -->
+<section id="process-steps" class="container">
+    <div class="process-step">
+        <div class="step-number">1</div>
+        <h3>Initial Consultation</h3>
+        <p>We begin with a comprehensive discussion about your business to understand your unique needs, challenges, and goals.</p>
+        <ul>
+            <li>Assessment of current financial processes</li>
+            <li>Discussion of business goals</li>
+            <li>Identification of pain points</li>
+            <li>Transparent pricing discussion</li>
+        </ul>
     </div>
+    <div class="process-step">
+        <div class="step-number">2</div>
+        <h3>Customized Plan</h3>
+        <p>Based on your unique needs, we develop a tailored service package and implementation strategy.</p>
+        <ul>
+            <li>Detailed service recommendations</li>
+            <li>Clear pricing structure</li>
+            <li>Implementation timeline</li>
+            <li>Technology recommendations</li>
+        </ul>
+    </div>    
+    <div class="process-step">
+        <div class="step-number">3</div>
+        <h3>Seamless Onboarding</h3>
+        <p>We implement your plan with minimal disruption, setting up systems and organizing your financial records.</p>
+        <ul>
+            <li>Software setup & configuration</li>
+            <li>Financial records organization</li>
+            <li>Workflow implementation</li>
+            <li>Secure access setup</li>
+        </ul>
+    </div>    
+    <div class="process-step">
+        <div class="step-number">4</div>
+        <h3>Ongoing Support</h3>
+        <p>We provide regular reporting, proactive guidance, and responsive support to help your business thrive.</p>
+        <ul>
+            <li>Regular financial reporting</li>
+            <li>Scheduled review meetings</li>
+            <li>Proactive recommendations</li>
+            <li>Responsive support</li>
+        </ul>
+    </div>
+</section>
 
     <div class="testimonials-section">
         <div class="container">

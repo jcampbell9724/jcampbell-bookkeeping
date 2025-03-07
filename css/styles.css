@@ -1276,30 +1276,6 @@ input:checked + .slider:before {
     color: var(--primary);
 }
 
-/* Process Steps */
-.process-steps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--space-lg);
-    max-width: 1200px;
-    margin: 0 auto var(--space-xl);
-}
-
-.process-step {
-    background-color: var(--card-bg);
-    border-radius: var(--radius-md);
-    padding: var(--space-lg);
-    box-shadow: var(--shadow-sm);
-    transition: all var(--transition-normal);
-    position: relative;
-    border: 1px solid var(--border-color);
-}
-
-.process-step:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
-}
-
 .step-number {
     width: 40px;
     height: 40px;
@@ -1313,40 +1289,6 @@ input:checked + .slider:before {
     margin-bottom: var(--space-md);
     margin-left: var(--space-xs);
     margin-top: var(--space-xs);
-}
-
-.process-step h3 {
-    margin-bottom: var(--space-sm);
-    color: var(--text);
-}
-
-.process-step p {
-    color: var(--text-light);
-    margin-bottom: var(--space-md);
-}
-
-.process-step ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.process-step li {
-    padding: 0.5rem 0;
-    color: var(--text-light);
-    border-bottom: 1px solid var(--border-color);
-    display: flex;
-    align-items: center;
-}
-
-.process-step li:last-child {
-    border-bottom: none;
-}
-
-.process-step li::before {
-    content: "✓";
-    color: var(--primary);
-    margin-right: var(--space-sm);
 }
 
 /* CTA Section */
@@ -1667,7 +1609,6 @@ input:checked + .slider:before {
 /* Animated elements */
 .service-card,
 .action-card,
-.process-step,
 .testimonial,
 .pricing-plan {
     opacity: 0;
@@ -1677,7 +1618,6 @@ input:checked + .slider:before {
 
 .service-card.animated,
 .action-card.animated,
-.process-step.animated,
 .testimonial.animated,
 .pricing-plan.animated {
     opacity: 1;
@@ -1744,7 +1684,7 @@ input:checked + .slider:before {
     }
     
     .card, .service-card, .action-card, 
-    .pricing-plan, .process-step {
+    .pricing-plan {
         break-inside: avoid;
         box-shadow: none;
         border: 1px solid #ccc;
