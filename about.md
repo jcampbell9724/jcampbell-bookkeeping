@@ -6,9 +6,11 @@ description: Learn about Foundation Bookkeeping, our story, our approach, and wh
 ---
 
 <div class="about-container">
-    <div class="about-hero">
-        <h1>About Foundation Bookkeeping</h1>
-        <p>We're more than just bookkeepers. We're dedicated financial partners committed to helping small businesses thrive through expert financial management, strategic insights, and personalized service.</p>
+    <div class="process-hero">
+        <div class="container">
+            <h1>About Foundation Bookkeeping</h1>
+            <p>We're more than just bookkeepers. We're dedicated financial partners committed to helping small businesses thrive through expert financial management, strategic insights, and personalized service.</p>
+        </div>
     </div>
 
     <div class="about-section">

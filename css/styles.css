@@ -1851,7 +1851,6 @@ input:checked + .slider:before {
 .services-container {
     max-width: var(--container-max);
     margin: 0 auto;
-    padding: 0 var(--space-sm);
 }
 
 .services-content {

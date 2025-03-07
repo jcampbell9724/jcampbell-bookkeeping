@@ -6,10 +6,10 @@ description: Transparent and flexible pricing options for professional bookkeepi
 ---
 
 <div class="pricing-container">
-    <div class="hero-section">
+    <div class="process-hero">
         <div class="container">
             <h1>Simple, Transparent Pricing</h1>
-            <p class="hero-subtitle">Flexible bookkeeping packages designed to fit your business size and needs. No hidden fees, no surprises—just clear pricing for professional financial management.</p>
+            <p>Flexible bookkeeping packages designed to fit your business size and needs. No hidden fees, no surprises—just clear pricing for professional financial management.</p>
             <div class="hero-cta">
                 <a href="{{ site.baseurl }}/services/" class="btn btn-primary">Explore Services</a>
                 <a href="{{ site.baseurl }}/portfolio/" class="btn btn-outline">View Portfolio</a>
