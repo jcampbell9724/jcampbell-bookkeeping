@@ -11,7 +11,7 @@ description: Comprehensive bookkeeping services, financial analysis, tax prepara
         <h1>Comprehensive Financial Services</h1>
             <p>At Foundation Bookkeeping, we believe that financial clarity leads to better business decisions. Our service model is designed to provide small business owners with not just accurate books, but actionable financial insights that drive growth and profitability.</p>
     </div>
-</div>
+</section>
 
 <!-- Service cards -->
 <section id="services-cards" class="container">
