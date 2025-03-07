@@ -1167,6 +1167,9 @@ input:checked + .slider:before {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-md);
     margin-top: var(--space-lg);
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .about-feature {
@@ -1178,6 +1181,7 @@ input:checked + .slider:before {
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
     transition: all var(--transition-normal);
+    text-align: left;
 }
 
 .about-feature:hover {
@@ -1188,6 +1192,10 @@ input:checked + .slider:before {
 .feature-icon {
     font-size: 1.5rem;
     color: var(--primary);
+}
+
+.feature-text {
+    text-align: left;
 }
 
 .feature-text h4 {
@@ -1729,6 +1737,7 @@ input:checked + .slider:before {
 /* About Section */
 .about-content {
     padding: var(--space-lg) 0;
+    text-align: center;
 }
 
 .about-content h2 {
@@ -1742,6 +1751,9 @@ input:checked + .slider:before {
     line-height: 1.7;
     color: var(--text);
     margin-bottom: var(--space-md);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .about-content .btn {
@@ -1761,27 +1773,34 @@ input:checked + .slider:before {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* FAQ Accordion */
-.faq-question::after {
-    content: '+';
-    font-size: 1.5rem;
-    color: var(--primary);
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+.about-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.faq-item.active .faq-question::after {
-    transform: rotate(45deg);
+.about-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+    background-color: var(--card-bg);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
+    text-align: left;
 }
 
-.faq-answer {
-    padding: 0 var(--space-md) var(--space-md);
-    color: var(--text-light);
-    display: none;
-    opacity: 0;
-    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+.feature-text {
+    text-align: left;
 }
 
-.faq-item.active .faq-answer {
-    display: block;
-    opacity: 1;
+@media (max-width: 768px) {
+    .about-features {
+        grid-template-columns: 1fr;
+    }
 }
