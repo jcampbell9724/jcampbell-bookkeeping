@@ -1848,10 +1848,6 @@ input:checked + .slider:before {
 }
 
 /* ===== SERVICES PAGE ===== */
-.services-container {
-    max-width: var(--container-max);
-    margin: 0 auto;
-}
 
 .services-content {
     padding: var(--space-xl) 0;
@@ -1983,13 +1979,6 @@ input:checked + .slider:before {
 }
 
 /* ===== PRICING PAGE ===== */
-.pricing-container {
-    max-width: var(--container-max);
-    margin: 0 auto;
-    padding: 0 var(--space-sm);
-}
-
-/* Hero Section */
 .hero-section {
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
     padding: 4rem 0;
