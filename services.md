@@ -6,7 +6,7 @@ description: Comprehensive bookkeeping services, financial analysis, tax prepara
 ---
 
 <div>
-    <div class="services-content">
+    <div>
         
         <div class="process-hero">
             <div class="container">
@@ -15,121 +15,123 @@ description: Comprehensive bookkeeping services, financial analysis, tax prepara
             </div>
         </div>
 
-        <h2 class="text-center mb-4">Our Service Packages</h2>
-        <p class="text-center mb-5 text-light">We've developed our service offerings based on extensive experience with businesses at various stages of growth. Our tiered packages ensure you receive the appropriate level of financial support for your business size and complexity, with room to scale as you grow.</p>
+        <section id="services-cards" class="container">
+            <h2 class="text-center mb-4">Our Service Packages</h2>
+            <p class="text-center mb-5 text-light">We've developed our service offerings based on extensive experience with businesses at various stages of growth. Our tiered packages ensure you receive the appropriate level of financial support for your business size and complexity, with room to scale as you grow.</p>
 
-        <!-- Core Service Packages -->
-        <h3 id="foundation-package" class="category-title">Core Service Packages</h3>
+            <!-- Core Service Packages -->
+            <h3 id="foundation-package" class="category-title">Core Service Packages</h3>
 
-        <div class="card-grid">
-            <div id="foundation-package" class="service-card">
-                <div class="service-icon">
-                    📗
-                </div>
-                <div class="service-content">
-                    <h3>Foundation Package</h3>
-                    <p>Essential bookkeeping for startups and small businesses</p>
-                    <p><strong>Service Allocation:</strong> Up to 5 hours of service per month</p>
-                    <ul>
-                        <li>Monthly bookkeeping & reconciliation</li>
-                        <li>Up to 150 monthly transactions</li>
-                        <li>Basic financial statements (P&L, Balance Sheet)</li>
-                        <li>Digital receipt management</li>
-                        <li>Quarterly advisory check-in call (30 minutes)</li>
-                        <li>Email support (response within 48 hours)</li>
-                        <li>Basic chart of accounts setup</li>
-                        <li>Year-end 1099 preparation (up to 5 vendors)</li>
-                    </ul>
+            <div class="card-grid">
+                <div id="foundation-package" class="service-card">
+                    <div class="service-icon">
+                        📗
+                    </div>
+                    <div class="service-content">
+                        <h3>Foundation Package</h3>
+                        <p>Essential bookkeeping for startups and small businesses</p>
+                        <p><strong>Service Allocation:</strong> Up to 5 hours of service per month</p>
+                        <ul>
+                            <li>Monthly bookkeeping & reconciliation</li>
+                            <li>Up to 150 monthly transactions</li>
+                            <li>Basic financial statements (P&L, Balance Sheet)</li>
+                            <li>Digital receipt management</li>
+                            <li>Quarterly advisory check-in call (30 minutes)</li>
+                            <li>Email support (response within 48 hours)</li>
+                            <li>Basic chart of accounts setup</li>
+                            <li>Year-end 1099 preparation (up to 5 vendors)</li>
+                        </ul>
                     
-                    <h4>Benefits:</h4>
-                    <ul>
-                        <li>Reclaim 5-10 hours per month of your time</li>
-                        <li>Maintain accurate, audit-ready financial records</li>
-                        <li>Ensure tax compliance and preparation readiness</li>
-                        <li>Gain clarity on your business's financial health</li>
-                    </ul>
+                        <h4>Benefits:</h4>
+                        <ul>
+                            <li>Reclaim 5-10 hours per month of your time</li>
+                            <li>Maintain accurate, audit-ready financial records</li>
+                            <li>Ensure tax compliance and preparation readiness</li>
+                            <li>Gain clarity on your business's financial health</li>
+                        </ul>
                     
-                    <p><strong>Ideal For:</strong> Sole proprietors and startups, businesses with simple finances, 0-2 employees, single bank/credit card account</p>
-                    <div class="button-container">
-                        <a href="/pricing/#foundation-package" class="btn btn-primary">View Pricing</a>
+                        <p><strong>Ideal For:</strong> Sole proprietors and startups, businesses with simple finances, 0-2 employees, single bank/credit card account</p>
+                        <div class="button-container">
+                            <a href="/pricing/#foundation-package" class="btn btn-primary">View Pricing</a>
+                        </div>
                     </div>
                 </div>
-            </div>
             
-            <div id="growth-package" class="service-card">
-                <div class="service-icon">
-                    📘
-                </div>
-                <div class="service-content">
-                    <h3>Growth Package</h3>
-                    <p>Comprehensive bookkeeping for established small businesses</p>
-                    <p><strong>Service Allocation:</strong> Up to 10 hours of service per month</p>
-                    <ul>
-                        <li>Everything in Foundation Package, plus:</li>
-                        <li>Up to 300 monthly transactions</li>
-                        <li>Accounts payable management</li>
-                        <li>Accounts receivable management</li>
-                        <li>Cash flow forecasting (13-week projection)</li>
-                        <li>Monthly financial review call (45 minutes)</li>
-                        <li>Enhanced financial reporting package</li>
-                        <li>Year-end 1099 preparation (up to 10 vendors)</li>
-                        <li>Email & phone support (response within 24 hours)</li>
-                        <li>Customized chart of accounts</li>
-                        <li>Basic PowerBI dashboard</li>
-                    </ul>
+                <div id="growth-package" class="service-card">
+                    <div class="service-icon">
+                        📘
+                    </div>
+                    <div class="service-content">
+                        <h3>Growth Package</h3>
+                        <p>Comprehensive bookkeeping for established small businesses</p>
+                        <p><strong>Service Allocation:</strong> Up to 10 hours of service per month</p>
+                        <ul>
+                            <li>Everything in Foundation Package, plus:</li>
+                            <li>Up to 300 monthly transactions</li>
+                            <li>Accounts payable management</li>
+                            <li>Accounts receivable management</li>
+                            <li>Cash flow forecasting (13-week projection)</li>
+                            <li>Monthly financial review call (45 minutes)</li>
+                            <li>Enhanced financial reporting package</li>
+                            <li>Year-end 1099 preparation (up to 10 vendors)</li>
+                            <li>Email & phone support (response within 24 hours)</li>
+                            <li>Customized chart of accounts</li>
+                            <li>Basic PowerBI dashboard</li>
+                        </ul>
                     
-                    <h4>Benefits:</h4>
-                    <ul>
-                        <li>Improved cash flow management</li>
-                        <li>More strategic financial decision-making</li>
-                        <li>Enhanced visibility into business performance</li>
-                        <li>Reduced financial administrative burden</li>
-                    </ul>
+                        <h4>Benefits:</h4>
+                        <ul>
+                            <li>Improved cash flow management</li>
+                            <li>More strategic financial decision-making</li>
+                            <li>Enhanced visibility into business performance</li>
+                            <li>Reduced financial administrative burden</li>
+                        </ul>
                     
-                    <p><strong>Ideal For:</strong> Established small businesses, companies with 3-10 employees, multiple revenue streams, 2-3 bank/credit card accounts</p>
-                    <div class="button-container">
+                        <p><strong>Ideal For:</strong> Established small businesses, companies with 3-10 employees, multiple revenue streams, 2-3 bank/credit card accounts</p>
+                        <div class="button-container">
                         <a href="/pricing/#growth-package" class="btn btn-primary">View Pricing</a>
+                        </div>
                     </div>
                 </div>
-            </div>
             
-            <div id="premium-package" class="service-card">
-                <div class="service-icon">
-                    📕
-                </div>
-                <div class="service-content">
-                    <h3>Premium Package</h3>
-                    <p>Strategic financial management for complex businesses</p>
-                    <p><strong>Service Allocation:</strong> Up to 15 hours of service per month</p>
-                    <ul>
-                        <li>Everything in Growth Package, plus:</li>
-                        <li>Up to 500 monthly transactions</li>
-                        <li>Dedicated bookkeeper</li>
-                        <li>Monthly strategy calls with detailed analysis (60 minutes)</li>
-                        <li>Custom PowerBI financial dashboard</li>
-                        <li>Department/class tracking</li>
-                        <li>Budget creation and variance analysis</li>
-                        <li>Multiple bank/credit card accounts</li>
-                        <li>Profitability analysis by service/product</li>
-                        <li>Year-end 1099 preparation (unlimited)</li>
-                        <li>Priority support (same-day response)</li>
-                    </ul>
+                <div id="premium-package" class="service-card">
+                    <div class="service-icon">
+                        📕
+                    </div>
+                    <div class="service-content">
+                        <h3>Premium Package</h3>
+                        <p>Strategic financial management for complex businesses</p>
+                        <p><strong>Service Allocation:</strong> Up to 15 hours of service   per month</p>
+                        <ul>
+                            <li>Everything in Growth Package, plus:</li>
+                            <li>Up to 500 monthly transactions</li>
+                            <li>Dedicated bookkeeper</li>
+                            <li>Monthly strategy calls with detailed analysis (60 minutes)</li>
+                            <li>Custom PowerBI financial dashboard</li>
+                            <li>Department/class tracking</li>
+                            <li>Budget creation and variance analysis</li>
+                            <li>Multiple bank/credit card accounts</li>
+                            <li>Profitability analysis by service/product</li>
+                            <li>Year-end 1099 preparation (unlimited)</li>
+                            <li>Priority support (same-day response)</li>
+                        </ul>
                     
-                    <h4>Benefits:</h4>
-                    <ul>
-                        <li>Enterprise-level financial insights</li>
-                        <li>Data-driven strategic planning</li>
-                        <li>Improved profitability tracking</li>
-                        <li>Scalable financial systems that grow with you</li>
-                    </ul>
+                        <h4>Benefits:</h4>
+                        <ul>
+                            <li>Enterprise-level financial insights</li>
+                            <li>Data-driven strategic planning</li>
+                            <li>Improved profitability tracking</li>
+                            <li>Scalable financial systems that grow with you</li>
+                        </ul>
                     
-                    <p><strong>Ideal For:</strong> Complex small businesses, companies with 10+ employees, multiple departments or revenue streams, businesses requiring strategic financial guidance</p>
-                    <div class="button-container">
-                        <a href="/pricing/#premium-package" class="btn btn-primary">View Pricing</a>
+                        <p><strong>Ideal For:</strong> Complex small businesses, companies with 10+ employees, multiple departments or revenue streams, businesses requiring strategic financial guidance</p>
+                        <div class="button-container">
+                            <a href="/pricing/#premium-package" class="btn btn-primary">View Pricing</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- Industry-Specific Packages -->
         <h3 id="industry-packages" class="category-title">Industry-Specific Packages</h3>

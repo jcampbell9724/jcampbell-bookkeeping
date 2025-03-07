@@ -1848,11 +1848,6 @@ input:checked + .slider:before {
 }
 
 /* ===== SERVICES PAGE ===== */
-
-.services-content {
-    padding: var(--space-xl) 0;
-}
-
 .services-hero {
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
     color: white;
