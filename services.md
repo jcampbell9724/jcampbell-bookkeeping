@@ -16,9 +16,10 @@ description: Comprehensive bookkeeping services, financial analysis, tax prepara
         </div>
 
         <section id="services-cards" class="container">
-            <h2 class="text-center mb-4">Our Service Packages</h2>
-            <p class="text-center mb-5 text-light">We've developed our service offerings based on extensive experience with businesses at various stages of growth. Our tiered packages ensure you receive the appropriate level of financial support for your business size and complexity, with room to scale as you grow.</p>
-
+            <div class="service-title">
+                <h2 class="text-center mb-4">Our Service Packages</h2>
+                <p class="text-center mb-5 text-light">We've developed our service offerings based on extensive experience with businesses at various stages of growth. Our tiered packages ensure you receive the appropriate level of financial support for your business size and complexity, with room to scale as you grow.</p>
+            </div>
             <!-- Core Service Packages -->
             <h3 id="foundation-package" class="category-title">Core Service Packages</h3>
 
