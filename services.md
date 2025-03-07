@@ -7,23 +7,19 @@ description: Comprehensive bookkeeping services, financial analysis, tax prepara
 
 <div class="services-container">
     <div class="services-content">
-        <!-- New Banner pointing to Pricing page -->
-        <div class="pricing-banner">
-            <p>Looking for package rates? <a href="/pricing/">View our pricing page</a></p>
-        </div>
         
         <div class="services-hero">
             <h1>Comprehensive Financial Services</h1>
             <p>At Foundation Bookkeeping, we believe that financial clarity leads to better business decisions. Our service model is designed to provide small business owners with not just accurate books, but actionable financial insights that drive growth and profitability.</p>
         </div>
 
-        <h2 style="text-align: center; margin-bottom: 30px;">Our Service Packages</h2>
-        <p style="text-align: center; margin: 0 auto 50px; color: #718096;">We've developed our service offerings based on extensive experience with businesses at various stages of growth. Our tiered packages ensure you receive the appropriate level of financial support for your business size and complexity, with room to scale as you grow.</p>
+        <h2 class="text-center mb-4">Our Service Packages</h2>
+        <p class="text-center mb-5 text-light">We've developed our service offerings based on extensive experience with businesses at various stages of growth. Our tiered packages ensure you receive the appropriate level of financial support for your business size and complexity, with room to scale as you grow.</p>
 
         <!-- Core Service Packages -->
         <h3 id="foundation-package" class="category-title">Core Service Packages</h3>
 
-        <div class="services-grid">
+        <div class="card-grid">
             <div id="foundation-package" class="service-card">
                 <div class="service-icon">
                     📗
@@ -137,7 +133,7 @@ description: Comprehensive bookkeeping services, financial analysis, tax prepara
         <h3 id="industry-packages" class="category-title">Industry-Specific Packages</h3>
         <p class="category-desc">Specialized financial solutions designed for the unique needs of specific industries.</p>
 
-        <div class="services-grid">
+        <div class="card-grid">
             <div id="real-estate-package" class="service-card">
                 <div class="service-icon">
                     🏘️
@@ -209,34 +205,15 @@ description: Comprehensive bookkeeping services, financial analysis, tax prepara
             </div>
         </div>
 
-        <!-- Rest of service details without pricing -->
-        <!-- ... Additional service sections ... -->
-
         <div class="cta-section">
-            <h2>Ready to Get Started with Professional Bookkeeping Services?</h2>
-            <p>Let's discuss your specific business needs and find the perfect financial solution. Schedule your free consultation today to discover how we can help provide the financial clarity your business needs to thrive.</p>
-            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                <a href="/pricing/" class="btn">View Our Pricing</a>
-                <a href="{{ site.baseurl }}/#contact" class="btn btn-accent">Schedule Your Free Consultation</a>
+            <div class="container">
+                <h2>Ready to Get Started with Professional Bookkeeping Services?</h2>
+                <p>Let's discuss your specific business needs and find the perfect financial solution. Schedule your free consultation today to discover how we can help provide the financial clarity your business needs to thrive.</p>
+                <div class="d-flex justify-center gap-3 flex-wrap">
+                    <a href="/pricing/" class="btn btn-primary">View Our Pricing</a>
+                    <a href="{{ site.baseurl }}/#contact" class="btn btn-accent">Schedule Your Free Consultation</a>
+                </div>
             </div>
         </div>
     </div>
 </div>
-
-<style>
-.service-card {
-    display: flex;
-    flex-direction: column;
-}
-
-.service-content {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-.button-container {
-    margin-top: auto;
-    padding-top: 20px;
-}
-</style>

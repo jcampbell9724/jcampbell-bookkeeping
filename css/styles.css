@@ -223,6 +223,7 @@ header {
     color: var(--text);
     font-weight: 500;
     transition: color var(--transition-normal);
+    position: relative;
 }
 
 .nav-link:hover {
@@ -230,9 +231,28 @@ header {
     text-decoration: none;
 }
 
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--primary);
+    transition: width var(--transition-normal);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
 .nav-link.active {
     color: var(--primary);
     font-weight: 700;
+}
+
+.nav-link.active::after {
+    width: 100%;
 }
 
 .mobile-toggle {
@@ -670,12 +690,11 @@ footer {
     border-radius: var(--radius-md);
     overflow: hidden;
     box-shadow: var(--shadow-sm);
-    transition: transform var(--transition-normal), 
-                box-shadow var(--transition-normal);
-    margin-bottom: var(--space-lg);
+    transition: all var(--transition-normal);
     height: 100%;
     display: flex;
     flex-direction: column;
+    border: 1px solid var(--border-color);
 }
 
 .service-card:hover {
@@ -700,6 +719,7 @@ footer {
 
 .service-content h3 {
     margin-bottom: var(--space-sm);
+    color: var(--text);
 }
 
 .service-content p {
@@ -707,9 +727,19 @@ footer {
     margin-bottom: var(--space-md);
 }
 
+.service-content ul {
+    margin-bottom: var(--space-md);
+    padding-left: var(--space-md);
+}
+
+.service-content h4 {
+    color: var(--text);
+    margin-bottom: var(--space-sm);
+}
+
 .button-container {
     margin-top: auto;
-    padding-top: var(--space-sm);
+    padding-top: var(--space-md);
 }
 
 /* Card Grid Layout */
@@ -1802,5 +1832,139 @@ input:checked + .slider:before {
 @media (max-width: 768px) {
     .about-features {
         grid-template-columns: 1fr;
+    }
+}
+
+/* ===== SERVICES PAGE ===== */
+.services-container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--space-sm);
+}
+
+.services-content {
+    padding: var(--space-xl) 0;
+}
+
+.services-hero {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    color: white;
+    padding: var(--space-xl) var(--space-md);
+    text-align: center;
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-xl);
+}
+
+.services-hero h1 {
+    color: white;
+    margin-bottom: var(--space-md);
+}
+
+.services-hero p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.category-title {
+    text-align: center;
+    margin: var(--space-xl) 0 var(--space-lg);
+    color: var(--text);
+}
+
+.category-desc {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: var(--space-lg);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service-card {
+    background-color: var(--card-bg);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border-color);
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    padding: var(--space-md);
+    background-color: var(--primary-light);
+    color: white;
+    text-align: center;
+}
+
+.service-content {
+    padding: var(--space-md);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-content h3 {
+    margin-bottom: var(--space-sm);
+    color: var(--text);
+}
+
+.service-content p {
+    color: var(--text-light);
+    margin-bottom: var(--space-md);
+}
+
+.service-content ul {
+    margin-bottom: var(--space-md);
+    padding-left: var(--space-md);
+}
+
+.service-content h4 {
+    color: var(--text);
+    margin-bottom: var(--space-sm);
+}
+
+.button-container {
+    margin-top: auto;
+    padding-top: var(--space-md);
+}
+
+.cta-section {
+    background-color: var(--primary-light);
+    color: white;
+    padding: var(--space-xl) 0;
+    text-align: center;
+    border-radius: var(--radius-md);
+    margin: var(--space-xl) 0;
+}
+
+.cta-section h2 {
+    color: white;
+    margin-bottom: var(--space-md);
+}
+
+.cta-section p {
+    max-width: 700px;
+    margin: 0 auto var(--space-lg);
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .services-hero {
+        padding: var(--space-lg) var(--space-sm);
+    }
+    
+    .services-hero p {
+        font-size: 1.1rem;
     }
 }
