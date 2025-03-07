@@ -5,19 +5,20 @@ permalink: /services/
 description: Comprehensive bookkeeping services, financial analysis, tax preparation, and PowerBI dashboards for small businesses by Foundation Bookkeeping.
 ---
 
-<div class="process-hero">
+<!-- HERO -->
+<section id="process-hero" class="process-hero">
     <div class="container">
         <h1>Comprehensive Financial Services</h1>
             <p>At Foundation Bookkeeping, we believe that financial clarity leads to better business decisions. Our service model is designed to provide small business owners with not just accurate books, but actionable financial insights that drive growth and profitability.</p>
     </div>
 </div>
 
+<!-- Service cards -->
 <section id="services-cards" class="container">
     <div class="service-title">
         <h2 class="text-center mb-4">Our Service Packages</h2>
         <p class="text-center mb-5 text-light">We've developed our service offerings based on extensive experience with businesses at various stages of growth. Our tiered packages ensure you receive the appropriate level of financial support for your business size and complexity, with room to scale as you grow.</p>
     </div>
-
     <div class="card-grid">
         <div id="foundation-package" class="service-card">
             <div class="service-icon">
@@ -37,22 +38,19 @@ description: Comprehensive bookkeeping services, financial analysis, tax prepara
                     <li>Basic chart of accounts setup</li>
                     <li>Year-end 1099 preparation (up to 5 vendors)</li>
                 </ul>
-                    
                 <h4>Benefits:</h4>
                 <ul>
                     <li>Reclaim 5-10 hours per month of your time</li>
                     <li>Maintain accurate, audit-ready financial records</li>
                     <li>Ensure tax compliance and preparation readiness</li>
                     <li>Gain clarity on your business's financial health</li>
-                </ul>
-                    
+                </ul>  
                 <p><strong>Ideal For:</strong> Sole proprietors and startups, businesses with simple finances, 0-2 employees, single bank/credit card account</p>
                 <div class="button-container">
                     <a href="/pricing/#foundation-package" class="btn btn-primary">View Pricing</a>
                 </div>
             </div>
-        </div>
-            
+        </div>           
         <div id="growth-package" class="service-card">
             <div class="service-icon">
                 📘
@@ -74,7 +72,6 @@ description: Comprehensive bookkeeping services, financial analysis, tax prepara
                     <li>Customized chart of accounts</li>
                     <li>Basic PowerBI dashboard</li>
                 </ul>
-            
                 <h4>Benefits:</h4>
                 <ul>
                     <li>Improved cash flow management</li>
@@ -82,14 +79,12 @@ description: Comprehensive bookkeeping services, financial analysis, tax prepara
                     <li>Enhanced visibility into business performance</li>
                     <li>Reduced financial administrative burden</li>
                 </ul>
-            
                 <p><strong>Ideal For:</strong> Established small businesses, companies with 3-10 employees, multiple revenue streams, 2-3 bank/credit card accounts</p>
                 <div class="button-container">
-                <a href="/pricing/#growth-package" class="btn btn-primary">View Pricing</a>
+                    <a href="/pricing/#growth-package" class="btn btn-primary">View Pricing</a>
                 </div>
-                    </div>
             </div>
-            
+        </div>
         <div id="premium-package" class="service-card">
             <div class="service-icon">
                 📕
@@ -111,7 +106,6 @@ description: Comprehensive bookkeeping services, financial analysis, tax prepara
                     <li>Year-end 1099 preparation (unlimited)</li>
                     <li>Priority support (same-day response)</li>
                 </ul>
-            
                 <h4>Benefits:</h4>
                 <ul>
                     <li>Enterprise-level financial insights</li>
@@ -119,7 +113,6 @@ description: Comprehensive bookkeeping services, financial analysis, tax prepara
                     <li>Improved profitability tracking</li>
                     <li>Scalable financial systems that grow with you</li>
                 </ul>
-            
                 <p><strong>Ideal For:</strong> Complex small businesses, companies with 10+ employees, multiple departments or revenue streams, businesses requiring strategic financial guidance</p>
                 <div class="button-container">
                     <a href="/pricing/#premium-package" class="btn btn-primary">View Pricing</a>
@@ -129,91 +122,87 @@ description: Comprehensive bookkeeping services, financial analysis, tax prepara
     </div>
 </section>
 
-        <!-- Industry-Specific Packages -->
+<!-- Industry Specific Section -->
+<section id="industries" class="container">
+    <div class="section-title">
         <h3 id="industry-packages" class="category-title">Industry-Specific Packages</h3>
         <p class="category-desc">Specialized financial solutions designed for the unique needs of specific industries.</p>
-
-        <div class="card-grid">
-            <div id="real-estate-package" class="service-card">
-                <div class="service-icon">
-                    🏘️
-                </div>
-                <div class="service-content">
-                    <h3>Real Estate Professional Package</h3>
-                    <p>Specialized financial management for real estate professionals</p>
-                    <p><strong>Service Allocation:</strong> Up to 8 hours of service per month</p>
-                    <ul>
-                        <li>Everything in Foundation Package, plus:</li>
-                        <li>Property-by-property P&L tracking</li>
-                        <li>Commission income tracking</li>
-                        <li>Transaction-based reporting</li>
-                        <li>Client trust account reconciliation</li>
-                        <li>Expense categorization by property</li>
-                        <li>Real estate-specific financial metrics</li>
-                        <li>Quarterly tax planning guidance</li>
-                        <li>Real estate KPI dashboard</li>
-                    </ul>
-                    
-                    <h4>Benefits:</h4>
-                    <ul>
-                        <li>Property-specific performance tracking</li>
-                        <li>Simplified tax preparation for real estate professionals</li>
-                        <li>Improved commission and transaction tracking</li>
-                        <li>Trust account compliance</li>
-                    </ul>
-                    
-                    <p><strong>Ideal For:</strong> Real estate professionals</p>
-                    <div class="button-container">
-                        <a href="/pricing/#real-estate-package" class="btn btn-primary">View Pricing</a>
-                    </div>
-                </div>
+    </div>
+    <div class="card-grid">
+        <div id="real-estate-package" class="service-card">
+            <div class="service-icon">
+                🏘️
             </div>
-            
-            <div id="property-manager-package" class="service-card">
-                <div class="service-icon">
-                    🏢
-                </div>
-                <div class="service-content">
-                    <h3>Property Manager Package</h3>
-                    <p>Specialized for property management companies</p>
-                    <p><strong>Service Allocation:</strong> Up to 12 hours of service per month</p>
-                    <ul>
-                        <li>Everything in Growth Package, plus:</li>
-                        <li>Property-by-property financial tracking</li>
-                        <li>Owner statement preparation</li>
-                        <li>Security deposit reconciliation</li>
-                        <li>Rent roll preparation</li>
-                        <li>Maintenance expense tracking</li>
-                        <li>Property performance analysis</li>
-                        <li>Owner distribution management</li>
-                        <li>Trust account reconciliation</li>
-                    </ul>
-                    
-                    <h4>Benefits:</h4>
-                    <ul>
-                        <li>Streamlined owner reporting</li>
-                        <li>Property-level performance metrics</li>
-                        <li>Simplified security deposit management</li>
-                        <li>Improved trust account compliance</li>
-                    </ul>
-                    
-                    <p><strong>Ideal For:</strong> Property management companies</p>
-                    <div class="button-container">
-                        <a href="/pricing/#property-manager-package" class="btn btn-primary">View Pricing</a>
-                    </div>
+            <div class="service-content">
+                <h3>Real Estate Professional Package</h3>
+                <p>Specialized financial management for real estate professionals</p>
+                <p><strong>Service Allocation:</strong> Up to 8 hours of service per month</p>
+                <ul>
+                    <li>Everything in Foundation Package, plus:</li>
+                    <li>Property-by-property P&L tracking</li>
+                    <li>Commission income tracking</li>
+                    <li>Transaction-based reporting</li>
+                    <li>Client trust account reconciliation</li>
+                    <li>Expense categorization by property</li>
+                    <li>Real estate-specific financial metrics</li>
+                    <li>Quarterly tax planning guidance</li>
+                    <li>Real estate KPI dashboard</li>
+                </ul>
+                <h4>Benefits:</h4>
+                <ul>
+                    <li>Property-specific performance tracking</li>
+                    <li>Simplified tax preparation for real estate professionals</li>
+                    <li>Improved commission and transaction tracking</li>
+                    <li>Trust account compliance</li>
+                </ul>
+                <p><strong>Ideal For:</strong> Real estate professionals</p>
+                <div class="button-container">
+                    <a href="/pricing/#real-estate-package" class="btn btn-primary">View Pricing</a>
                 </div>
             </div>
         </div>
-
-        <div class="cta-section">
-            <div class="container">
-                <h2>Ready to Get Started with Professional Bookkeeping Services?</h2>
-                <p>Let's discuss your specific business needs and find the perfect financial solution. Schedule your free consultation today to discover how we can help provide the financial clarity your business needs to thrive.</p>
-                <div class="d-flex justify-center gap-3 flex-wrap">
-                    <a href="/pricing/" class="btn btn-primary">View Our Pricing</a>
-                    <a href="{{ site.baseurl }}/#contact" class="btn btn-accent">Schedule Your Free Consultation</a>
+        <div id="property-manager-package" class="service-card">
+            <div class="service-icon">
+                🏢
+            </div>
+            <div class="service-content">
+                <h3>Property Manager Package</h3>
+                <p>Specialized for property management companies</p>
+                <p><strong>Service Allocation:</strong> Up to 12 hours of service per month</p>
+                <ul>
+                    <li>Everything in Growth Package, plus:</li>
+                    <li>Property-by-property financial tracking</li>
+                    <li>Owner statement preparation</li>
+                    <li>Security deposit reconciliation</li>
+                    <li>Rent roll preparation</li>
+                    <li>Maintenance expense tracking</li>
+                    <li>Property performance analysis</li>
+                    <li>Owner distribution management</li>
+                    <li>Trust account reconciliation</li>
+                </ul>
+                <h4>Benefits:</h4>
+                <ul>
+                    <li>Streamlined owner reporting</li>
+                    <li>Property-level performance metrics</li>
+                    <li>Simplified security deposit management</li>
+                    <li>Improved trust account compliance</li>
+                </ul>
+                <p><strong>Ideal For:</strong> Property management companies</p>
+                <div class="button-container">
+                    <a href="/pricing/#property-manager-package" class="btn btn-primary">View Pricing</a>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
+<!-- CTA Section -->
+<section id="cta-section" class="cta-section">
+    <div class="container">
+        <h2>Ready to Get Started with Professional Bookkeeping Services?</h2>
+        <p>Let's discuss your specific business needs and find the perfect financial solution. Schedule your free consultation today to discover how we can help provide the financial clarity your business needs to thrive.</p>
+        <div class="d-flex justify-center gap-3 flex-wrap">
+            <a href="/pricing/" class="btn btn-primary">View Our Pricing</a>
+            <a href="{{ site.baseurl }}/#contact" class="btn btn-accent">Schedule Your Free Consultation</a>
+        </div>
+    </div>
+</section>
