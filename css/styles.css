@@ -68,10 +68,6 @@
     margin-left: auto;
     }
     
-    section {
-    margin: 1.5rem 0;
-    }
-    
     /* Navbar Styles */
     .navbar {
         background-color: var(--primary);
@@ -367,4 +363,40 @@
 /* This ensures cards have equal height within the grid */
 .card-grid > * {
     height: 100%;
+}
+
+/* Outlined Buttons CSS */
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid;
+    font-weight: 500;
+}
+
+.btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn-outline-secondary {
+    color: var(--secondary);
+    border-color: var(--secondary);
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--secondary);
+    color: white;
+}
+
+.btn-outline-accent {
+    color: var(--text);
+    border-color: var(--accent);
+}
+
+.btn-outline-accent:hover {
+    background-color: var(--accent);
 }
