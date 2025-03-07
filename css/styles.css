@@ -228,6 +228,53 @@
         margin-bottom: 0;
     }
 
+    /* Basic Card CSS */
+.card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-title {
+    color: var(--text);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.card-text {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.card-bordered {
+    border: 1px solid var(--border-color);
+    box-shadow: none;
+}
+
+.card-elevated {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-colored {
+    background-color: var(--primary-light);
+    color: white;
+}
+
+.card-colored .card-title,
+.card-colored .card-text {
+    color: white;
+}
+
+.card-colored .card-text {
+    opacity: 0.9;
+}
+
     .gradient-hero {
         background: linear-gradient(135deg, var(--primary-dark), var(--primary), var(--primary-light));
         color: white;
