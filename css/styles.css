@@ -806,11 +806,6 @@ footer {
 }
 
 /* ===== FAQ SECTION ===== */
-.faq-section {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
 .faq-item {
     background-color: var(--card-bg);
     border-radius: var(--radius-md);
