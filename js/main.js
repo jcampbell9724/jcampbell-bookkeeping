@@ -87,23 +87,43 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // UNIFIED Accordion/FAQ functionality
-    const allAccordionItems = document.querySelectorAll('.faq-item');
+    // FAQ accordion functionality
+    const allFaqItems = document.querySelectorAll('.faq-item');
     
-    if (allAccordionItems.length > 0) {
-        // Add click event to all headers
-        allAccordionItems.forEach(item => {
+    if (allFaqItems.length > 0) {
+        // Add click event to all question headers
+        allFaqItems.forEach(item => {
             const header = item.querySelector('.faq-question');
-            if (header) {
+            const answer = item.querySelector('.faq-answer');
+            
+            if (header && answer) {
+                // Initially hide all answers except the first one
+                if (item !== allFaqItems[0]) {
+                    answer.style.display = 'none';
+                } else {
+                    item.classList.add('active');
+                }
+                
                 header.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
                     // Close all other items
-                    allAccordionItems.forEach(otherItem => {
+                    allFaqItems.forEach(otherItem => {
+                        const otherAnswer = otherItem.querySelector('.faq-answer');
                         if (otherItem !== item) {
                             otherItem.classList.remove('active');
+                            if (otherAnswer) otherAnswer.style.display = 'none';
                         }
                     });
+                    
                     // Toggle current item
-                    item.classList.toggle('active');
+                    if (isActive) {
+                        item.classList.remove('active');
+                        answer.style.display = 'none';
+                    } else {
+                        item.classList.add('active');
+                        answer.style.display = 'block';
+                    }
                 });
             }
         });
@@ -172,20 +192,16 @@ document.addEventListener('DOMContentLoaded', function() {
         if (searchBtn && searchInput) {
             searchBtn.addEventListener('click', function() {
                 const activeTag = document.querySelector('.tag.active');
-                if (activeTag) {
-                    const tagFilter = activeTag.getAttribute('data-tag');
-                    filterContent(tagFilter, searchInput.value);
-                }
+                const tagFilter = activeTag ? activeTag.getAttribute('data-tag') : 'all';
+                filterContent(tagFilter, searchInput.value);
             });
             
             // Enter key in search input
             searchInput.addEventListener('keyup', function(e) {
                 if (e.key === 'Enter') {
                     const activeTag = document.querySelector('.tag.active');
-                    if (activeTag) {
-                        const tagFilter = activeTag.getAttribute('data-tag');
-                        filterContent(tagFilter, searchInput.value);
-                    }
+                    const tagFilter = activeTag ? activeTag.getAttribute('data-tag') : 'all';
+                    filterContent(tagFilter, searchInput.value);
                 }
             });
         }
@@ -241,71 +257,62 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Add smooth fade-in effect for content sections
-    const fadeElements = document.querySelectorAll('.service-card, .process-step, .blog-card, .pricing-plan');
-    if (fadeElements.length > 0) {
-        fadeElements.forEach(el => el.classList.add('fade-in'));
-    }
-    
-    // Scroll to top button functionality
-    const scrollTopBtn = document.getElementById('scrollTop');
-    if (scrollTopBtn) {
-        // Show/hide button based on scroll position
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 300) {
-                scrollTopBtn.classList.add('visible');
-            } else {
-                scrollTopBtn.classList.remove('visible');
+    // Add animation for elements when they enter viewport
+    const animateOnScroll = () => {
+        const animatedElements = document.querySelectorAll('.service-card, .action-card, .process-step, .testimonial, .pricing-plan');
+        
+        animatedElements.forEach(el => {
+            const elementPosition = el.getBoundingClientRect().top;
+            const viewportHeight = window.innerHeight;
+            
+            if (elementPosition < viewportHeight * 0.9) {
+                el.classList.add('animated');
             }
         });
-        
-        // Scroll to top on click
-        scrollTopBtn.addEventListener('click', function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    }
+    };
     
-    // Handle active navigation links based on current page
-    const currentPath = window.location.pathname;
+    // Run on load
+    animateOnScroll();
+    
+    // Run on scroll
+    window.addEventListener('scroll', animateOnScroll);
+    
+    // Back to top button
+    const backToTopBtn = document.createElement('button');
+    backToTopBtn.classList.add('back-to-top');
+    backToTopBtn.innerHTML = '↑';
+    document.body.appendChild(backToTopBtn);
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
+    });
+    
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // Add active class to current navigation item based on URL
+    const currentLocation = window.location.pathname;
     const navLinks = document.querySelectorAll('.nav-link');
     
-    if (navLinks.length > 0) {
-        navLinks.forEach(link => {
-            const linkPath = link.getAttribute('href');
-            
-            // Check if link path matches current page
-            if (linkPath === currentPath || 
-                (currentPath.includes(linkPath) && linkPath !== '/')) {
-                link.classList.add('current');
-            }
-        });
-    }
-    
-    // Lazy load images for better performance
-    const lazyImages = document.querySelectorAll('.lazy-image');
-    if ('IntersectionObserver' in window && lazyImages.length > 0) {
-        const imageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    const src = img.getAttribute('data-src');
-                    
-                    if (src) {
-                        img.src = src;
-                        img.classList.add('loaded');
-                        imageObserver.unobserve(img);
-                    }
-                }
-            });
-        });
+    navLinks.forEach(link => {
+        const linkPath = new URL(link.href, window.location.origin).pathname;
         
-        lazyImages.forEach(img => {
-            imageObserver.observe(img);
-        });
-    }
+        // Account for trailing slashes and index.html
+        const normalizedCurrentPath = currentLocation.replace(/\/(index\.html)?$/, '/');
+        const normalizedLinkPath = linkPath.replace(/\/(index\.html)?$/, '/');
+        
+        if (normalizedCurrentPath === normalizedLinkPath) {
+            link.classList.add('active');
+        }
+    });
 });
 
 // Current year for copyright

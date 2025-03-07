@@ -1,10 +1,12 @@
 ---
+layout: default
 title: My Work
 description: A showcase of my bookkeeping and accounting projects
+permalink: /portfolio/
 ---
 
 <div class="gradient-hero">
-    <div class="gradient-hero-container">
+    <div class="container">
         <div class="gradient-hero-content">
             <h1 class="gradient-hero-title">My Work</h1>
             <p class="gradient-hero-subtitle">Take a look at some of my successful bookkeeping projects and client collaborations.</p>
@@ -12,8 +14,13 @@ description: A showcase of my bookkeeping and accounting projects
     </div>
 </div>
 
-<section>
+<section class="section-padding">
     <div class="container">
+        <div class="section-title">
+            <h2>Recent Projects</h2>
+            <p>Here are some examples of how I've helped businesses streamline their financial operations.</p>
+        </div>
+        
         <div class="card-grid">
             <div class="action-card">
                 <div class="action-card-header">
@@ -60,14 +67,10 @@ description: A showcase of my bookkeeping and accounting projects
     </div>
 </section>
 
-<section style="background-color: var(--background); padding: 3rem 0;">
+<section class="cta-section">
     <div class="container">
-        <div class="card card-elevated">
-            <div class="card-content" style="text-align: center;">
-                <h2>Ready to Get Started?</h2>
-                <p>Let's discuss how I can help optimize your business's financial management.</p>
-                <a href="/contact" class="btn" style="display: inline-block; margin-top: 1rem; background-color: var(--accent); padding: 0.75rem 1.5rem; border-radius: 4px; color: var(--text); font-weight: 600;">Contact Me</a>
-            </div>
-        </div>
+        <h2>Ready to Get Started?</h2>
+        <p>Let's discuss how I can help optimize your business's financial management.</p>
+        <a href="{{ site.baseurl }}/#contact" class="btn btn-accent">Contact Me</a>
     </div>
 </section> 
