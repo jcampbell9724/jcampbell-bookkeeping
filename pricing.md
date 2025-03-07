@@ -44,18 +44,16 @@ description: Transparent and flexible pricing options for professional bookkeepi
                         <span class="annual-price" style="display: none;">$269</span>
                         <span class="pricing-card-price-period">per month</span>
                     </div>
-                    <div class="pricing-card-content">
-                        <ul class="pricing-card-features">
-                            <li>Monthly bookkeeping & reconciliation</li>
-                            <li>Up to 150 monthly transactions</li>
-                            <li>Basic financial statements</li>
-                            <li>Quarterly advisory calls</li>
-                        </ul>
-                        <div class="pricing-card-details">Up to 5 hours of service per month</div>
-                        <div class="pricing-card-cta">
-                            <a href="{{ site.baseurl }}/#contact" class="btn btn-primary">Get Started</a>
-                            <a href="{{ site.baseurl }}/services/#foundation-package" class="btn btn-outline">Learn More</a>
-                        </div>
+                    <ul class="pricing-card-features">
+                        <li>Monthly bookkeeping & reconciliation</li>
+                        <li>Up to 150 monthly transactions</li>
+                        <li>Basic financial statements</li>
+                        <li>Quarterly advisory calls</li>
+                    </ul>
+                    <div class="pricing-card-details">Up to 5 hours of service per month</div>
+                    <div class="pricing-card-cta">
+                        <a href="{{ site.baseurl }}/#contact" class="btn btn-primary">Get Started</a>
+                        <a href="{{ site.baseurl }}/services/#foundation-package" class="btn btn-outline">Learn More</a>
                     </div>
                 </div>
                 
@@ -69,20 +67,18 @@ description: Transparent and flexible pricing options for professional bookkeepi
                         <span class="annual-price" style="display: none;">$494</span>
                         <span class="pricing-card-price-period">per month</span>
                     </div>
-                    <div class="pricing-card-content">
-                        <ul class="pricing-card-features">
-                            <li>Everything in Foundation, plus:</li>
-                            <li>Up to 300 monthly transactions</li>
-                            <li>A/P & A/R management</li>
-                            <li>Cash flow forecasting</li>
-                            <li>Monthly financial review calls</li>
-                            <li>Basic PowerBI dashboard</li>
-                        </ul>
-                        <div class="pricing-card-details">Up to 10 hours of service per month</div>
-                        <div class="pricing-card-cta">
-                            <a href="{{ site.baseurl }}/#contact" class="btn btn-primary">Get Started</a>
-                            <a href="{{ site.baseurl }}/services/#growth-package" class="btn btn-outline">Learn More</a>
-                        </div>
+                    <ul class="pricing-card-features">
+                        <li>Everything in Foundation, plus:</li>
+                        <li>Up to 300 monthly transactions</li>
+                        <li>A/P & A/R management</li>
+                        <li>Cash flow forecasting</li>
+                        <li>Monthly financial review calls</li>
+                        <li>Basic PowerBI dashboard</li>
+                    </ul>
+                    <div class="pricing-card-details">Up to 10 hours of service per month</div>
+                    <div class="pricing-card-cta">
+                        <a href="{{ site.baseurl }}/#contact" class="btn btn-primary">Get Started</a>
+                        <a href="{{ site.baseurl }}/services/#growth-package" class="btn btn-outline">Learn More</a>
                     </div>
                 </div>
                 
@@ -96,28 +92,25 @@ description: Transparent and flexible pricing options for professional bookkeepi
                         <span class="annual-price" style="display: none;">$764</span>
                         <span class="pricing-card-price-period">per month</span>
                     </div>
-                    <div class="pricing-card-content">
-                        <ul class="pricing-card-features">
-                            <li>Everything in Growth, plus:</li>
-                            <li>Up to 500 monthly transactions</li>
-                            <li>Dedicated bookkeeper</li>
-                            <li>Monthly strategy calls</li>
-                            <li>Custom PowerBI dashboard</li>
-                            <li>Budget creation & analysis</li>
-                        </ul>
-                        <div class="pricing-card-details">Up to 15 hours of service per month</div>
-                        <div class="pricing-card-cta">
-                            <a href="{{ site.baseurl }}/#contact" class="btn btn-primary">Get Started</a>
-                            <a href="{{ site.baseurl }}/services/#premium-package" class="btn btn-outline">Learn More</a>
-                        </div>
+                    <ul class="pricing-card-features">
+                        <li>Everything in Growth, plus:</li>
+                        <li>Up to 500 monthly transactions</li>
+                        <li>Dedicated bookkeeper</li>
+                        <li>Monthly strategy calls</li>
+                        <li>Custom PowerBI dashboard</li>
+                        <li>Budget creation & analysis</li>
+                    </ul>
+                    <div class="pricing-card-details">Up to 15 hours of service per month</div>
+                    <div class="pricing-card-cta">
+                        <a href="{{ site.baseurl }}/#contact" class="btn btn-primary">Get Started</a>
+                        <a href="{{ site.baseurl }}/services/#premium-package" class="btn btn-outline">Learn More</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Industry-Specific Packages -->
-    <div class="pricing-section industry-packages-section">
+    <div class="pricing-section">
         <div class="container">
             <div class="section-title">
                 <h2>Industry-Specific Packages</h2>
@@ -135,18 +128,16 @@ description: Transparent and flexible pricing options for professional bookkeepi
                         <span class="annual-price" style="display: none;">$449</span>
                         <span class="pricing-card-price-period">per month</span>
                     </div>
-                    <div class="pricing-card-content">
-                        <ul class="pricing-card-features">
-                            <li>Property-by-property tracking</li>
-                            <li>Commission income tracking</li>
-                            <li>Transaction-based reporting</li>
-                            <li>Trust account reconciliation</li>
-                        </ul>
-                        <div class="pricing-card-details">Up to 8 hours of service per month</div>
-                        <div class="pricing-card-cta">
-                            <a href="{{ site.baseurl }}/#contact" class="btn btn-primary">Get Started</a>
-                            <a href="{{ site.baseurl }}/services/#real-estate-package" class="btn btn-outline">Learn More</a>
-                        </div>
+                    <ul class="pricing-card-features">
+                        <li>Property-by-property tracking</li>
+                        <li>Commission income tracking</li>
+                        <li>Transaction-based reporting</li>
+                        <li>Trust account reconciliation</li>
+                    </ul>
+                    <div class="pricing-card-details">Up to 8 hours of service per month</div>
+                    <div class="pricing-card-cta">
+                        <a href="{{ site.baseurl }}/#contact" class="btn btn-primary">Get Started</a>
+                        <a href="{{ site.baseurl }}/services/#real-estate-package" class="btn btn-outline">Learn More</a>
                     </div>
                 </div>
                 
@@ -160,26 +151,23 @@ description: Transparent and flexible pricing options for professional bookkeepi
                         <span class="annual-price" style="display: none;">$629</span>
                         <span class="pricing-card-price-period">per month</span>
                     </div>
-                    <div class="pricing-card-content">
-                        <ul class="pricing-card-features">
-                            <li>Owner statement preparation</li>
-                            <li>Security deposit reconciliation</li>
-                            <li>Rent roll preparation</li>
-                            <li>Trust account reconciliation</li>
-                        </ul>
-                        <div class="pricing-card-details">Up to 12 hours of service per month</div>
-                        <div class="pricing-card-cta">
-                            <a href="{{ site.baseurl }}/#contact" class="btn btn-primary">Get Started</a>
-                            <a href="{{ site.baseurl }}/services/#property-manager-package" class="btn btn-outline">Learn More</a>
-                        </div>
+                    <ul class="pricing-card-features">
+                        <li>Owner statement preparation</li>
+                        <li>Security deposit reconciliation</li>
+                        <li>Rent roll preparation</li>
+                        <li>Trust account reconciliation</li>
+                    </ul>
+                    <div class="pricing-card-details">Up to 12 hours of service per month</div>
+                    <div class="pricing-card-cta">
+                        <a href="{{ site.baseurl }}/#contact" class="btn btn-primary">Get Started</a>
+                        <a href="{{ site.baseurl }}/services/#property-manager-package" class="btn btn-outline">Learn More</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     
-    <!-- Payment Options Section -->
-    <div class="pricing-section payment-options-section">
+    <div class="pricing-section">
         <div class="container">
             <div class="section-title">
                 <h2>Payment Options</h2>
@@ -228,7 +216,6 @@ description: Transparent and flexible pricing options for professional bookkeepi
         </div>
     </div>
 
-    <!-- Help Choosing Section -->
     <div class="help-choosing-section">
         <div class="container">
             <div class="help-choosing-content">
