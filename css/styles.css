@@ -227,3 +227,97 @@
         color: white;
         margin-bottom: 0;
     }
+
+    .gradient-hero {
+        background: linear-gradient(135deg, var(--primary-dark), var(--primary), var(--primary-light));
+        color: white;
+        padding: 5rem 2rem;
+        min-height: 500px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .gradient-hero-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .gradient-hero-content {
+        max-width: 600px;
+    }
+    
+    .gradient-hero-title {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+    }
+    
+    .gradient-hero-subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+    }
+    
+    .gradient-hero-image {
+        width: 40%;
+        max-width: 400px;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .gradient-hero-image img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .floating-element {
+        position: relative;
+        animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+        0% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .gradient-hero-container {
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .gradient-hero-content {
+            margin-bottom: 3rem;
+        }
+        
+        .gradient-hero-image {
+            width: 80%;
+            max-width: 300px;
+        }
+    }
+
+    /* Card Grid CSS */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+/* This ensures cards have equal height within the grid */
+.card-grid > * {
+    height: 100%;
+}
