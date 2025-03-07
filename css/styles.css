@@ -757,6 +757,13 @@ footer {
     margin: var(--space-lg) 0;
 }
 
+.card-grid-even {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    gap: var(--space-md);
+    margin: var(--space-lg) 0;
+}
+
 /* ===== TESTIMONIALS ===== */
 .testimonials-section {
     background-color: var(--background);
