@@ -752,7 +752,7 @@ footer {
 /* Card Grid Layout */
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
     gap: var(--space-md);
     margin: var(--space-lg) 0;
 }
