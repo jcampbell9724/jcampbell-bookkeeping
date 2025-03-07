@@ -6,9 +6,9 @@ description: Transparent and flexible pricing options for professional bookkeepi
 ---
 
 <div class="pricing-container">
-    <!-- New Banner pointing to Services page -->
+    <!-- New Banner pointing to Services and Portfolio pages -->
     <div class="services-banner">
-        <p>Want more service details? <a href="/services/">Explore our services page</a></p>
+        <p>Want more service details? <a href="/services/">Explore our services page</a> or <a href="/portfolio/">view my work</a></p>
     </div>
     
     <div class="pricing-hero">
