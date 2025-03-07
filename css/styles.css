@@ -1356,7 +1356,6 @@ input:checked + .slider:before {
     padding: var(--space-xl) 0;
     text-align: center;
     border-radius: var(--radius-md);
-    margin: var(--space-xl) 0;
 }
 
 .cta-section h2,
@@ -1899,26 +1898,6 @@ input:checked + .slider:before {
     padding-top: var(--space-md);
     display: flex;
     justify-content: center;
-}
-
-.cta-section {
-    background-color: var(--primary-light);
-    color: white;
-    padding: var(--space-xl) 0;
-    text-align: center;
-    border-radius: var(--radius-md);
-    margin: var(--space-xl) 0;
-}
-
-.cta-section h2 {
-    color: white;
-    margin-bottom: var(--space-md);
-}
-
-.cta-section p {
-    max-width: 700px;
-    margin: 0 auto var(--space-lg);
-    opacity: 0.9;
 }
 
 @media (max-width: 768px) {
