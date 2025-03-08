@@ -67,22 +67,21 @@ description: Learn about our proven process for helping small businesses manage 
     </div>    
     <div class="testimonial">
         <div class="quote-icon">"</div>
-        <p class="testimonial-quote">Working with Foundation Bookkeeping transformed our financial operations. Their team took the time to understand our unique business needs and implemented systems that gave us clear insight into our finances. The onboarding process was smooth, and their ongoing support has been invaluable.</p>
-        <p class="testimonial-author">Sarah Johnson</p>
-        <p class="testimonial-company">Owner, Bright Ideas Marketing</p>
+            <p class="testimonial-quote">Working with Foundation Bookkeeping transformed our financial operations. Their team took the time to understand our unique business needs and implemented systems that gave us clear insight into our finances. The onboarding process was smooth, and their ongoing support has been invaluable.</p>
+            <p class="testimonial-author">Sarah Johnson</p>
+            <p class="testimonial-company">Owner, Bright Ideas Marketing</p>
     </div>        
     <div class="testimonial">
         <div class="quote-icon">"</div>
             <p class="testimonial-quote">As a small business owner, I was spending too much time managing my books and not enough time growing my business. Foundation Bookkeeping changed that completely. Their customized approach and attention to detail have given me peace of mind and freed up my time to focus on what I do best.</p>
             <p class="testimonial-author">Michael Torres</p>
             <p class="testimonial-company">Founder, Torres Construction</p>
-        </div>    
-        <div class="testimonial">
-            <div class="quote-icon">"</div>
+    </div>    
+    <div class="testimonial">
+        <div class="quote-icon">"</div>
             <p class="testimonial-quote">The team at Foundation Bookkeeping doesn't just handle our day-to-day accounting needs—they provide strategic insights that have helped us make better business decisions. Their PowerBI dashboards have transformed how we view our financial data, making it accessible and actionable.</p>
             <p class="testimonial-author">Jennifer Lee</p>
             <p class="testimonial-company">CEO, Innovative Solutions</p>
-        </div>
     </div>
 </section>
 <!-- FAQ Section -->
