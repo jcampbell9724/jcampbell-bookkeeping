@@ -1,0 +1,34 @@
+<!-- SEO Meta Tags -->
+<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}bookkeeping, accounting, small business, financial services{% endif %}">
+
+<!-- OpenGraph Meta Tags -->
+<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta property="og:image" content="{{ site.url }}/assets/images/og-image.jpg">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.title }}">
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@{{ site.twitter.username }}">
+<meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta name="twitter:image" content="{{ site.url }}/assets/images/twitter-card.jpg">
+
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="/assets/favicon/site.webmanifest">
+
+<!-- Preload Critical Resources -->
+<link rel="preload" href="/assets/fonts/main-font.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/css/styles.css" as="style">
+<link rel="preload" href="/assets/js/main.js" as="script">
+
+<!-- CSS -->
+<link rel="stylesheet" href="/assets/css/styles.css">
+
+{% include json-ld.html %} 

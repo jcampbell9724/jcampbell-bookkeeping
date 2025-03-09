@@ -1,0 +1,42 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Foundation Bookkeeping",
+  "image": "{{ site.url }}/assets/images/logo.png",
+  "description": "Professional bookkeeping services designed to give small businesses the financial clarity they need to thrive and grow.",
+  "@id": "{{ site.url }}",
+  "url": "{{ site.url }}",
+  "telephone": "{{ site.phone }}",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "{{ site.city }}",
+    "addressRegion": "{{ site.state }}",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "{{ site.latitude }}",
+    "longitude": "{{ site.longitude }}"
+  },
+  "sameAs": [
+    "{{ site.social.links[0] }}",
+    "{{ site.social.links[1] }}",
+    "{{ site.social.links[2] }}"
+  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "opens": "09:00",
+    "closes": "17:00"
+  },
+  "priceRange": "$$",
+  "servesCuisine": "Bookkeeping Services"
+}
+</script> 
