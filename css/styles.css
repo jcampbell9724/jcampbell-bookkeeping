@@ -1721,7 +1721,8 @@ input:checked + .slider:before {
 
 .action-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary);
 }
 
 .about-features {
@@ -1985,18 +1986,29 @@ input:checked + .slider:before {
     border-radius: var(--radius-md);
     padding: var(--space-lg);
     box-shadow: var(--shadow-sm);
-    transition: all var(--transition-normal);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .pricing-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary);
 }
 
 .pricing-card-popular {
     border: 2px solid var(--primary);
+    background: linear-gradient(to bottom, var(--card-bg), var(--card-bg)) padding-box,
+                linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%) border-box;
+}
+
+.pricing-card-popular:hover {
+    background: linear-gradient(to bottom, var(--card-bg), var(--background)) padding-box,
+                linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%) border-box;
 }
 
 .pricing-card-popular::before {
@@ -2019,60 +2031,73 @@ input:checked + .slider:before {
 }
 
 .pricing-card-title {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     margin-bottom: var(--space-xs);
     color: var(--text);
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .pricing-card-subtitle {
     color: var(--text-light);
-    font-size: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: var(--space-md);
+    line-height: 1.5;
 }
 
 .pricing-card-price {
     text-align: center;
-    margin-bottom: var(--space-lg);
-}
-
-.pricing-card-price span {
-    display: block;
+    margin: var(--space-lg) 0;
+    padding: var(--space-md) 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .pricing-card-price .monthly-price,
 .pricing-card-price .annual-price {
-    font-size: 2.5rem;
-    font-weight: bold;
+    font-size: 3rem;
+    font-weight: 700;
     color: var(--primary);
-    line-height: 1;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
 }
 
-.pricing-card-price-period {
-    color: var(--text-light);
-    font-size: 1rem;
+.pricing-card-price .monthly-price::before,
+.pricing-card-price .annual-price::before {
+    content: "$";
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-right: var(--space-xs);
+    opacity: 0.8;
 }
 
 .pricing-card-features {
     list-style: none;
     padding: 0;
-    margin: 0 0 var(--space-lg);
+    margin: 0;
+    flex-grow: 1;
 }
 
 .pricing-card-features li {
-    padding: 0.5rem 0;
-    color: var(--text-light);
+    padding: 0.75rem 0;
+    color: var(--text);
     border-bottom: 1px solid var(--border-color);
     display: flex;
     align-items: center;
-}
-
-.pricing-card-features li:last-child {
-    border-bottom: none;
+    gap: var(--space-sm);
+    font-size: 1.05rem;
 }
 
 .pricing-card-features li::before {
     content: "✓";
     color: var(--primary);
-    margin-right: var(--space-sm);
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .pricing-card-details {
@@ -2083,14 +2108,36 @@ input:checked + .slider:before {
 }
 
 .pricing-card-cta {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-sm);
+    margin-top: auto;
+    padding-top: var(--space-lg);
 }
 
 .pricing-card-cta .btn {
     width: 100%;
     text-align: center;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.pricing-card-cta .btn-primary {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    box-shadow: 0 4px 15px rgba(var(--primary-rgb), 0.2);
+}
+
+.pricing-card-cta .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(var(--primary-rgb), 0.3);
+}
+
+.pricing-card-cta .btn-outline {
+    border: 2px solid var(--primary);
+}
+
+.pricing-card-cta .btn-outline:hover {
+    background-color: var(--primary-light);
+    color: white;
 }
 
 /* Payment Options */
