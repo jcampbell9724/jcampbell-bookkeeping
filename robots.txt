@@ -1,0 +1,13 @@
+# Allow all web crawlers (search engine bots)
+User-agent: *
+Allow: /
+Allow: /blog/
+Allow: /services/
+Allow: /about/
+Allow: /contact/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+
+# Point to sitemap location
+Sitemap: https://foundationbookkeeping.net/sitemap.xml

@@ -1,0 +1,91 @@
+title: Foundation Bookkeeping Blog
+description: Professional bookkeeping services designed to give small businesses the financial clarity they need to thrive and grow.
+theme: minima
+url: "https://foundationbookkeeping.net"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Default front matter settings
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: "services.md"
+    values:
+      layout: "page"
+  - scope:
+      path: "how-it-works.md"
+    values:
+      layout: "page"
+  - scope:
+      path: "about.md"
+    values:
+      layout: "page"
+  - scope:
+      path: "pricing.md"
+    values:
+      layout: "page"
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:title/
+
+# Include files in build
+include:
+  - services.md
+  - how-it-works.md
+  - about.md
+  - pricing.md
+  - .htaccess
+
+# Exclude files from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+
+# Compression settings for faster loading
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  ignore:
+    envs: []
+  blanklines: false
+  profile: false
+  startings: [html, head, body]
+
+# Plugin settings
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# SEO settings
+logo: /assets/images/logo.png
+author: Foundation Bookkeeping
+twitter:
+  username: foundationbooks
+  card: summary_large_image
+social:
+  name: Foundation Bookkeeping
+  links:
+    - https://twitter.com/foundationbooks
+    - https://www.facebook.com/foundationbookkeeping
+    - https://www.linkedin.com/company/foundation-bookkeeping
+
+# Pagination settings
+paginate: 9
+paginate_path: "/blog/page:num/"
+
+# Performance optimizations
+incremental: true
